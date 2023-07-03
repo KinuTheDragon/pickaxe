@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Search</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Pickaxe Wiki: Search</h1>
+        <input type="text" id="text" oninput="update()" autofocus />
+        <ul id="items"></ul>
+        <script>
+const LINKS = [
+    {% for item, icon in links %}
+    ["{{ item|safe }}", "{{ icon|safe }}"],
+    {% endfor %}
+];
+const text = document.getElementById("text");
+const items = document.getElementById("items");
+function update() {
+    while (items.firstChild) items.removeChild(items.firstChild);
+    for (let x of LINKS) {
+        if (!x[0].toLowerCase().includes(text.value.toLowerCase()))
+            continue;
+        let listElement = document.createElement("li");
+        listElement.innerHTML = x[1];
+        items.appendChild(listElement);
+    }
+}
+update();
+        </script>
+    </body>
+</html>

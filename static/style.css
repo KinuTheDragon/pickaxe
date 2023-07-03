@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Noto Sans");
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Noto Sans";
+}
+
+a {
+    color: #77f;
+}
+
+a:active, a:hover {
+    color: #99f;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    min-width: 5em;
+    height: 50px;
+}
+
+.code {
+    font-family: Courier New;
+}
+
+.nl {
+    white-space: pre;
+}
+
+input:disabled {
+    background-color: #444;
+    color: #fff;
+}

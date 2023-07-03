@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Suggested Progression</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    {% macro item(name) -%}
+        {{ Item.new(name).icon(url_for)|safe }}
+    {%- endmacro %}
+    {% macro block(name) -%}
+        {{ Block.new(name).icon(url_for)|safe }}
+    {%- endmacro %}
+    <body>
+        <a href="/">Home</a>
+        <h1>Suggested Progression</h1>
+        Note: This is just my suggestion for ideal progression!
+        Do whatever works for you!
+        <h2>Just starting off</h2>
+        So you just joined Pickaxe and want to know how to progress.
+        <ol>
+            <li>Mine {{ item("Dirt (Item)") }}, then sell it at the NPC to the left of spawn.</li>
+            <li>Once you have enough for a {{ item("Wooden Shovel") }} ($50), buy it from the shop to the left of the NPC.</li>
+            <li>Use your new {{ item("Wooden Shovel") }} to mine {{ item("Dirt (Item)") }} faster, selling it when you can. Note that you might also want to forge the {{ item("Dirt (Item)") }} into an {{ item("Earth Crystal") }}, since this sells for more than just selling 5 {{ item("Dirt (Item)") }}.</li>
+            <li>Once you have enough for a {{ item("Stone Pick") }} ($100), buy it from the shop. This has breaking power 1, allowing you to mine {{ block("Stone (Block)") }}.</li>
+            <li>Keep mining and selling items to get more money. You'll probably want to purchase the {{ item("Miner's Helmet") }} ($500) and the {{ item("Miner's Chestplate") }} ($8000). You'll also probably want to get better pickaxes from the shop.</li>
+            <li>Once you have $25000, buy the {{ item("Aeroboots") }}. These allow you to get safely towards lower levels by giving you slow falling.</li>
+        </ol>
+        <h2>Meteorite Pickaxe</h2>
+        Alright, let's kick things up a notch and get ourselves a {{ item("Meteorite Pickaxe") }}.
+        <ol>
+            <li>First, we need to get a {{ item("Diamond Pickaxe") }}. Either buy it from the shop for $21500 or craft it from two {{ item("Budget Diamond Pickaxe") }}s and a {{ item("Glue") }}.</li>
+            <li>Now make a {{ item("Netherite Ingot") }} and craft it with your {{ item("Diamond Pickaxe") }} to create a {{ item("Netherite Pickaxe") }}. Better, but not quite where our goal is.</li>
+            <li>Next, make 5 {{ item("Glue") }} and forge them into a {{ item("Super Glue") }}.</li>
+            <li>Now comes the annoying part. Mine 5 {{ item("Boron Nitride") }} and be ready to forge them into a {{ item("Wurtzite Boron Nitride") }}. For the long forge time, there's two things that you can do to mitigate this:</li>
+            <ol>
+                <li>Log off for a while until it's finished</li>
+                <li>Make some fuel chunks ({{ item("Lesser Fuel Chunk") }}, {{ item("Greater Fuel Chunk") }}, {{ item("Super Fuel Chunk") }}) to speed up the forging</li>
+            </ol>
+            <li>Once you have that, buy a {{ item("Hat of Knowledge") }} from the nether shop. When worn, you will be able to see Tier 1 recipes in the crafting table.</li>
+            <li>Now you can craft yourself a {{ item("Boron Nitride Pickaxe") }}. Make sure to wear the {{ item("Hat of Knowledge") }}, since this is a Tier 1 recipe.</li>
+            <li>Now collect 3 {{ item("Magma Gem") }}s. You will need this for the {{ item("Meteorite Pickaxe") }}.</li>
+            <li>Wait until meteors fall to collect as much {{ item("Meteorite") }} as you can. You'll need 13.</li>
+            <li>Assuming you don't have any radiation protection, this will put you at 65% radiation. You can mitigate this by forging two {{ item("Meteorite Bar") }}s, bringing you down to 55%.</li>
+            <li>Now you can finally craft the {{ item("Meteorite Pickaxe") }}!</li>
+        </ol>
+        {# Goals after this: Hat of Wisdom, Void Cutter, Void Cutter+, Omega Cutter #}
+    </body>
+</html>

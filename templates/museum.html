@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Museum</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <a href="/items">All items</a>
+        <h1>Museum</h1>
+        {% for i, page in enumerate(items) %}
+        <h2>Page {{ i+1 }}</h2>
+        <table>
+            {% for row in page %}
+            {% if row|select|first %}
+            <tr>
+                {% for item in row %}
+                {% if item %}
+                <td>
+                    {{ item.icon(url_for)|safe }}
+                </td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: All Blocks</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>All Blocks</h1>
+        <ul>
+            {% for block in blocks %}
+            <li>{{ block.icon(url_for)|safe }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

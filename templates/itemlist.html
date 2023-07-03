@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: All Items</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <a href="/museum">Museum</a>
+        <h1>All Items</h1>
+        <ul>
+            {% for item in items %}
+            <li>{{ item.icon(url_for)|safe }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

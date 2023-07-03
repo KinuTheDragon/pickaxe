@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: {{ enchant.name }}</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <a href="/enchants">All enchantments</a>
+        <h1>{{ enchant.name }}</h1>
+        Effect: {{ enchant.effect }}<br/>
+        Location: {{ enchant.location }}<br/>
+        Requirements:
+        <table>
+            {% for i, req in enumerate(enchant.requirements) %}
+            <tr>
+                <th>Level {{ i+1 }}</th>
+                {% for item in req %}
+                <td>
+                    {% if item %}
+                    {{ item.icon(url_for)|safe }}
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

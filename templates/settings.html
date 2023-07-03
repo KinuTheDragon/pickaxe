@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Settings</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Settings</h1>
+        <form action="/updatesettings" method="POST">
+            <label for="tex">Use Sporefreak's textures</label>
+            <input type="checkbox" name="tex" id="tex" value=1
+                {% if settings.get("sporetex") %}
+                checked
+                {% endif %}
+                /><br/>
+            <input type="submit" value="Update" />
+        </form>
+    </body>
+</html>

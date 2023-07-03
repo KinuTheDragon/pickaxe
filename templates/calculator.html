@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Calculators</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Calculators</h1>
+        For each calculator, simply select the radio button corresponding to the box that should be used as the result.
+        <h2>Radiation</h2>
+        <input type="radio" id="rad-percent-btn"
+            name="radiation" value="rad-percent">
+        <label for="rad-percent-btn">
+            Radiation %: <input type="number" id="rad-percent" disabled>
+        </label><br/>
+        <input type="radio" id="rad-resist-btn"
+            name="radiation" value="rad-resist">
+        <label for="rad-resist-btn">
+            Radiation resistance: <input type="number" id="rad-resist" disabled>
+        </label><br/>
+        <input type="radio" id="rads-btn"
+            name="radiation" value="rads">
+        <label for="rads-btn">
+            Radiation (rads) of inventory:
+            <input type="number" id="rads" disabled>
+        </label>
+        <h2>Block mining</h2>
+        <input type="radio" id="mining-speed-btn"
+            name="block-mining" value="mining-speed">
+        <label for="mining-speed-btn">
+            Mining speed: <input type="number" id="mining-speed" disabled>
+        </label><br/>
+        <input type="radio" id="block-hardness-btn"
+            name="block-mining" value="block-hardness">
+        <label for="block-hardness-btn">
+            Block hardness: <input type="number" id="block-hardness" disabled>
+        </label><br/>
+        <input type="radio" id="mine-time-btn"
+            name="block-mining" value="mine-time">
+        <label for="mine-time-btn">
+            Mine time (seconds):
+            <input type="number" id="mine-time" disabled>
+        </label>
+        <h2>Luck</h2>
+        <input type="radio" id="luck-chance-btn"
+            name="luck" value="luck-chance">
+        <label for="luck-chance-btn">
+            Luck chance (as a "1 in" chance):
+            <input type="number" id="luck-chance" disabled>
+        </label><br/>
+        <input type="radio" id="luck-percentage-btn"
+            name="luck" value="luck-percentage">
+        <label for="luck-percentage-btn">
+            Luck percentage: <input type="number" id="luck-percentage" disabled>
+        </label><br/>
+        <input type="radio" id="base-chance-btn"
+            name="luck" value="base-chance">
+        <label for="base-chance-btn">
+            Base chance (as a "1 in" chance):
+            <input type="number" id="base-chance" disabled>
+        </label>
+        <h2>Pristine</h2>
+        <input type="radio" id="pristine-chance-btn"
+            name="pristine" value="pristine-chance">
+        <label for="pristine-chance-btn">
+            Pristine percentage chance:
+            <input type="number" id="pristine-chance" disabled>
+        </label><br/>
+        <input type="radio" id="pristine-level-btn"
+            name="pristine" value="pristine-level">
+        <label for="pristine-level-btn">
+            Pristine level: <input type="number" id="pristine-level" disabled>
+        </label>
+        <h2>Festive</h2>
+        <input type="radio" id="festive-chance-btn"
+            name="festive" value="festive-chance">
+        <label for="festive-chance-btn">
+            Festive percentage chance:
+            <input type="number" id="festive-chance" disabled>
+        </label><br/>
+        <input type="radio" id="festive-level-btn"
+            name="festive" value="festive-level">
+        <label for="festive-level-btn">
+            Festive level: <input type="number" id="festive-level" disabled>
+        </label>
+        <script>
+let inputs = {};
+
+function setValue(key, value) {
+    getDest(key).value = value;
+}
+
+function getDest(key) {
+    return inputs[key].find(x => x.disabled);
+}
+
+function getValues(key) {
+    return inputs[key].filter(x => !x.disabled).map(x => +x.value);
+}
+
+function assignValueFunctions(key, funcs) {
+    inputs[key].forEach(i => {
+        i.addEventListener("input", () => {
+            let d = getDest(key);
+            let value = funcs[d.id](...getValues(key));
+            setValue(key, value);
+        });
+    });
+}
+
+[...document.querySelectorAll("input[type=\"radio\"]")].forEach(radio => {
+    if (!inputs[radio.name]) {
+        inputs[radio.name] =
+            [...document.querySelectorAll("input[name=\"" + radio.name + "\"]")]
+            .map(x => document.getElementById(x.value));
+    }
+    radio.addEventListener("input", event => {
+        inputs[radio.name]
+            .forEach(i => {i.disabled = false;});
+        document.getElementById(event.target.value).disabled = true;
+    });
+});
+
+assignValueFunctions("radiation", {
+    "rad-percent": (radResist, rads) => rads * 100 / (radResist + 5),
+    "rad-resist": (radPercent, rads) => 100 * rads / radPercent - 5,
+    "rads": (radPercent, radResist) => radPercent * (radResist + 5) / 100
+});
+
+assignValueFunctions("block-mining", {
+    "mining-speed": (blockHardness, mineTime) => blockHardness / (20 * mineTime),
+    "block-hardness": (miningSpeed, mineTime) => miningSpeed * mineTime * 20,
+    "mine-time":
+        (miningSpeed, blockHardness) => blockHardness / (20 * miningSpeed)
+});
+
+assignValueFunctions("luck", {
+    "luck-percentage": (luckChance, baseChance) => 100 * luckChance / baseChance,
+    "luck-chance": (luckPercentage, baseChance) =>
+        100 * baseChance / luckPercentage,
+    "base-chance": (luckChance, luckPercentage) =>
+        luckPercentage / 100 * luckChance
+});
+
+assignValueFunctions("pristine", {
+    "pristine-chance": (pristineLevel) => (pristineLevel * 0.75 + 0.25) / 15,
+    "pristine-level": (pristineChance) => (15 * pristineChance - 0.25) / 0.75
+});
+
+assignValueFunctions("festive", {
+    "festive-chance": (festiveLevel) => (festiveLevel * 0.75 + 0.25) / 50,
+    "festive-level": (festiveChance) => (50 * festiveChance - 0.25) / 0.75
+});
+        </script>
+    </body>
+</html>

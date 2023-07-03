@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: {{ artifact.name }}</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <a href="/artifacts">All artifacts</a>
+        <h1 style="color:{{ artifact.color }}">{{ artifact.name }}</h1>
+        <img src="{{ url_for('static', filename=artifact.image_href) }}"
+            width=300 height=300 /><br/>
+        <span style="font-style:italic">
+        {% for line in artifact.lore %}
+        <br/>{{ line }}
+        {% endfor %}
+        </span>
+        {% if artifact.audio %}
+        <br/><button id="playscale">Play sound scale</button>
+        <script>
+let playScaleButton = document.getElementById("playscale");
+let audio = new Audio("{{ url_for('static', filename = artifact.audio) }}");
+playScaleButton.onclick = function() {
+    audio.play();
+}
+        </script>
+        {% endif %}
+    </body>
+</html>

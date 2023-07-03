@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Communist</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Pickaxe Wiki: Communist Items</h1>
+        <ul>
+            {% for item, gives_slot in items %}
+            <li>{{ item.icon(url_for)|safe }}
+                {% if gives_slot %}
+                    (upgrades accessory bag)
+                {% endif %}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

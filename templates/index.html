@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <h1>Pickaxe Wiki</h1>
+        {% if msg == "submit" %}
+        <span style="color:#0f0">Submitted suggestion!</span><br/>
+        {% elif msg == "updated" %}
+        <span style="color:#0f0">Updated settings!</span><br/>
+        {% endif %}
+        <ul>
+            <li><a href="/blocks">All blocks</a></li>
+            <li><a href="/items">All items</a></li>
+            <li><a href="/enchants">All enchantments</a></li>
+            <li><a href="/artifacts">All artifacts</a></li>
+            <li><a href="/museum">Museum</a></li>
+            <li><a href="/communist">Communist</a></li>
+            <li><a href="/sputtrooms">Sputtrooms</a></li>
+            <li><a href="/progression">Suggested Progression</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/api">API Reference</a></li>
+            <li><a href="/calculator">Calculator</a></li>
+            <li><a href="/credits">Credits</a></li>
+            <li><a href="/suggest">Suggestions</a></li>
+        </ul>
+    </body>
+</html>

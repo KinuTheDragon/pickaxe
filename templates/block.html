@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: {{ block.name }}</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <a href="/blocks">All blocks</a>
+        <h1>{{ block.name }}</h1>
+        <img src="{{ url_for('static', filename=block.image_href) }}"
+            width=300 height=300 /><br/>
+        {% if block.dew_to %}
+        <a href="/item/celestial-dew">Dews</a> into {{ block.dew_to.icon(url_for)|safe }}<br/>
+        {% endif %}
+        {% if block.dewed_from %}
+        <a href="/item/celestial-dew">Dewed</a> from: <ul>
+            {% for df in block.dewed_from %}
+            <li>{{ df.icon(url_for)|safe }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% if block.hardness %}
+        Hardness: {{ block.hardness }}<br/>
+        {% endif %}
+        {% if block.required_breaking_power is not none %}
+        Required breaking power: {{ block.required_breaking_power }}<br/>
+        {% endif %}
+        {% if block.layers %}
+        Spawns in: <ul>
+            {% for layer in block.layers %}
+            <li>{{ layer.value[0] }} Layer
+                ({% if layer.value[1] %}Overworld
+                 {% else %}Mesa
+                 {% endif %}
+                mine, {{ layer.value[2] }}m to {{ layer.value[3] }}m)</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% if not block.drops %}
+        Drops: Nothing
+        {% else %}
+        Drops:
+        <ul>
+            {% for drop, chance in block.drops %}
+            <li>{{ drop.icon(url_for)|safe }} (
+                {%- if chance is not none -%}
+                    1 in {{ "{:,}".format(chance) }} chance
+                {%- else -%}unknown chance
+                {%- endif -%})</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </body>
+</html>

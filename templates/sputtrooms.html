@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Sputtrooms</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Sputtrooms</h1>
+        Access the Sputtrooms by suffocating yourself, for example, in the dirt when it's refilling.<br/>
+        <img src="{{ url_for('static', filename='images/default/sputtrooms_map.png') }}" width=602 height=198 /><br/>
+        <ul>
+            <li>Gray: Floor</li>
+            <li>Black: Wall</li>
+            <li>Red: Inaccessible/wire</li>
+            <li>Blue: Beacon</li>
+            <li>Light blue: Glass</li>
+            <li>Brown: Soul sand</li>
+            <li>Dark gray: Door/iron bars</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: API</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>API</h1>
+        Note: "block", "item", and "enchant" types are strings. Simply prepend "/json" to get the new path to request for more information.
+        <h2 class="code">/json/block/&lt;block-name&gt;</h2>
+        <div class="code nl">{
+    "name": string,
+    "drops": {item, int?}[], // The int is the drop chance as a "1 in" value
+    "dew_to": block?,
+    "dewed_from": block[],
+    "hardness": int?,
+    "required_breaking_power": int?,
+    "id": string,
+    "layers": string[]
+}</div>
+        <h2 class="code">/json/item/&lt;item-name&gt;</h2>
+        <div class="code nl">{
+    "name": string,
+    "forge_result": item?,
+    "forged_from": item?,
+    "crafting_tier": string?,
+    "crafting_recipes": item[][][],
+    "special_obtain": string[],
+    "special_uses": string[],
+    "museum_position": int[]?,
+    "sell_price": int?,
+    "rarity": string?,
+    "radiation": int?,
+    "mining_speed": int?,
+    "breaking_power": int?,
+    "accessory_use": string?,
+    "accessory_slots": int?,
+    "module_effect": string?,
+    "module_slots": int?,
+    "modular_armor_slots": int?,
+    "modular_armor_capacity": int?,
+    "max_depth": int?,
+    "oxygen_capacity": int?,
+    "lore": string[],
+    "item": {
+        "id": string,
+        "enchanted"?: boolean, // Only present if true
+        "cmd": int, // The custom model data
+        "color"?: string, // A hex color; only present when the item is colorable
+        "value"?: string, // A head value string; only present when the item is a head
+        "water"?: boolean, // If the potion is water; only present if true
+    },
+    "dropped_from": {block, int?}, // The int is the drop chance as a "1 in" value
+    "crafting_uses": item[],
+    "enchantment_uses": {enchant, int}[] // The int is the level
+}</div>
+        <h2 class="code">/json/enchant/&lt;enchant-name&gt;</h2>
+        <div class="code nl">{
+    "name": string,
+    "effect": string,
+    "location": string,
+    "requirements": item[][]
+}</div>
+        <h2 class="code">/json/artifact/&lt;artifact-name&gt;</h2>
+        <div class="code nl">{
+    "name": string,
+    "number": int,
+    "lore": string[],
+    "color": string // A hex color for the name
+}</div>
+        <h2 class="code">/json/items</h2>
+        This returns a list of the below structures.
+        <div class="code nl">{
+    "name": string,
+    "id": string,
+    "enchanted": boolean,
+    "rarity": string,
+    "path": string,
+    "lore": string[]
+}
+    </body>
+</html>

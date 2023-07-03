@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: All Artifacts</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>All Artifacts</h1>
+        <ul>
+            {% for artifact in artifacts %}
+            <li>{{ artifact.icon(url_for)|safe }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Suggestion</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Suggestions</h1>
+        <form action="/submitsuggest" method="POST">
+            {% if error %}
+            <span style="color:#f00">Error. Please ensure the following:
+                <ul>
+                    <li>The suggestion box has content</li>
+                    <li>The username box is a valid Discord username
+                        (including discriminator if you have one;
+                        e.g. monochromeninja#0447) or your
+                        Minecraft username</li>
+                </ul>
+            </span><br/>
+            {% endif %}
+            <textarea id="suggestion" name="suggestion" autofocus
+                rows=10 cols=50></textarea>
+            <br/>
+            <label for="name">
+                Discord username (so I can contact you for clarification):
+            </label>
+            <input type="text" id="name" name="name"></input><br/>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

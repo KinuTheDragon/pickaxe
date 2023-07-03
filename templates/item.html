@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: {{ item.name }}</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <a href="/items">All items</a>
+        {% if item.museum_position %}
+        <br/><a href="/museum">Museum</a>
+        {% endif %}
+        <h1 style="color:{{ item.color }}">{{ item.name }}</h1>
+        <img src="{{ url_for('static', filename=item.image_href) }}"
+            width=300 height=300 />
+        {% if item.lore %}
+        <span style="font-style:italic">
+        {% for line in item.lore %}
+        <br/>{{ line }}
+        {% endfor %}
+        </span>
+        {% endif %}
+        <br/>
+        Rarity:
+        <span style="font-weight: bold; color: {{ item.color }}">
+            {% if item.rarity %}
+            {{ item.rarity.value }}
+            {% else %}
+            Unknown
+            {% endif %}
+        </span>
+        {% if item.radiation %}
+        <br/>
+        Radiation: {{ item.radiation }} rads
+        {% endif %}
+        <h2>Uses</h2>
+        <ul>
+            {% if item.forge_result %}
+            <li>Forges into {{ item.forge_result.icon(url_for)|safe }}</li>
+            {% else %}
+            <li>Unforgable</li>
+            {% endif %}
+            {% if item.museum_position %}
+            <li>Museumable on page
+                {{ item.museum_position[0] }}, row
+                {{ item.museum_position[1] }}, column
+                {{ item.museum_position[2] }}
+            </li>
+            {% else %}
+            <li>Unmuseumable</li>
+            {% endif %}
+            {% if item.sell_price %}
+            <li>Sellable for ${{ "{:,}".format(item.sell_price) }}</li>
+            {% else %}
+            <li>Unsellable</li>
+            {% endif %}
+            {% if item.crafting_uses %}
+            <li>Used in crafting:</li>
+            <ul>
+                {% for citem in item.crafting_uses %}
+                <li>{{ citem.icon(url_for)|safe }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% if item.enchantment_uses %}
+            <li>Used in enchantments:</li>
+            <ul>
+                {% for ench, level in item.enchantment_uses %}
+                <li><a href="{{ ench.href }}">
+                    {{ ench.name }} {{ level }}
+                </a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% if item.mining_speed %}
+            <li>Mining speed: {{ item.mining_speed }}</li>
+            {% endif %}
+            {% if item.breaking_power %}
+            <li>Breaking power: {{ item.breaking_power }}</li>
+            {% endif %}
+            {% if item.accessory_use %}
+            <li>When equipped as an accessory (takes {{ item.accessory_slots }} slot{% if item.accessory_slots != 1 %}s{% endif %}): {{ item.accessory_use }}</li>
+            {% endif %}
+            {% if item.module_use %}
+            <li>When equipped as a module (takes {{ item.module_slots }} slot{% if item.module_slots != 1 %}s{% endif %}): {{ item.module_use }}</li>
+            {% endif %}
+            {% if item.modular_armor_slots %}
+            <li>Can equip {{ item.modular_armor_slots }} modules</li>
+            <li>Total module capacity: {{ item.modular_armor_capacity }}</li>
+            {% endif %}
+            {% if item.max_depth %}
+            <li>Increases max depth by {{ item.max_depth }}m</li>
+            {% endif %}
+            {% if item.oxygen_capacity %}
+            <li>Increases oxygen capacity by {{ item.oxygen_capacity }} seconds</li>
+            {% endif %}
+            {% for use in special_uses %}
+            <li>{{ use|safe }}</li>
+            {% endfor %}
+            {% if item.audio %}
+            <li><button id="playscale">Play sound scale</button></li>
+            <script>
+let playScaleButton = document.getElementById("playscale");
+let audio = new Audio("{{ url_for('static', filename = item.audio) }}");
+playScaleButton.onclick = function() {
+    audio.play();
+}
+            </script>
+            {% endif %}
+        </ul>
+        <h2>Obtaining</h2>
+        <ul>
+            {% if item.forged_from %}
+            <li>Forged from {{ item.forged_from.icon(url_for)|safe }}</li>
+            {% endif %}
+            {% for block, chance in item.dropped_from %}
+            <li>Dropped from {{ block.icon(url_for)|safe }} with
+                {% if chance %}a 1 in {{ "{:,}".format(chance) }} chance
+                {% else %}a currently unknown chance{% endif %}</li>
+            {% endfor %}
+            {% if item.crafting_tier %}
+            <li>
+                {% if reqhat %}
+                Crafting: {{ item.crafting_tier.value[0] }} (Requires {{ Item.new(item.crafting_tier.value[1]).icon(url_for)|safe }})
+                {% else %}
+                Crafting: {{ item.crafting_tier.value }}
+                {% endif %}
+                {% for recipe in item.crafting_recipes %}
+                <table>
+                {% for row in recipe %}
+                    <tr>
+                    {% for citem in row %}
+                        <td>
+                        {% if citem %}
+                        {{ citem.icon(url_for)|safe }}
+                        {% endif %}
+                        </td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+                </table><br/>
+                {% endfor %}
+            </li>
+            {% endif %}
+            {% for method in special_obtains %}
+            <li>{{ method|safe }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
