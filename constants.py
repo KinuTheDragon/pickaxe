@@ -6013,6 +6013,22 @@ ITEMS = {
         }
     },
 
+    "Notebook": {
+        "rarity": Rarity.Common,
+        "item": {
+            "id": "writable_book",
+            "cmd": 1871
+        },
+        "craft": {
+            "tier": CraftTier.Crafting1,
+            "recipe": [
+                ["Fabric", "Coal", None],
+                [None] * 3,
+                [None] * 3
+            ]
+        }
+    },
+
     "Obsidian": {
         "forge": "Large Obsidian",
         "sell": 1000,
