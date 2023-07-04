@@ -1561,7 +1561,8 @@ BLOCKS = {
     "Obsidian": {
         "drops": [
             "Obsidian",
-            "Anthracite"
+            "Anthracite",
+            ("Onyx", 200)
         ],
         "dew": "Bedrock",
         "rbp": 5

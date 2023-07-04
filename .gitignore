@@ -1,1 +1,8 @@
-*.txt
+suggestions.txt
+unused.txt
+pyproject.toml
+__pycache__/*
+venv/*
+.breakpoints
+.replit
+replit.nix
