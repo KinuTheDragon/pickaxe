@@ -1684,7 +1684,8 @@ BLOCKS = {
             "Ancient Tooth",
             "Ancient Skull",
             "Elusive Fossil",
-            "Iridite Sod"
+            "Iridite Sod",
+            "Huge Compressed Stone"
         ]
     },
     "Sand": {
