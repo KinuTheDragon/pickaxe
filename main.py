@@ -6,7 +6,9 @@ from enchantment import Enchantment
 from flask.app import HTTPException
 import re, hashlib, hmac, os, sys
 
-if not "REPL_ID" in os.environ:
+is_dev_version = "REPL_ID" in os.environ
+
+if not is_dev_version:
     from dotenv import load_dotenv
     load_dotenv()
 
@@ -43,7 +45,9 @@ def github_webhook():
 
 @app.route("/")
 def index():
-    return render_template("index.html", msg = request.args.get("msg"))
+    return render_template("index.html",
+                           msg = request.args.get("msg"),
+                           is_dev_version = is_dev_version)
 
 @app.route("/block/<href>")
 def block(href):

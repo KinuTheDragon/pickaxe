@@ -8,6 +8,9 @@
     </head>
     <body>
         <h1>Pickaxe Wiki</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         {% if msg == "submit" %}
         <span style="color:#0f0">Submitted suggestion!</span><br/>
         {% elif msg == "updated" %}
