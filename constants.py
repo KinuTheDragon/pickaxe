@@ -62,6 +62,188 @@ class Layer(Enum):
     Ice = "Ice", False, 70, 119
     Cake = "Cake", False, 120, 180
 
+ACHIEVEMENTS = [
+    {
+        "name": "Celestial Bell",
+        "color": "61DEFF",
+        "description": "Ring the mountain bell.",
+        "lore": [
+            "Once forged by the mountain people, the bell",
+            "has since been charged with celestial power."
+        ],
+        "icon": "celestial-bell.png"
+    }, {
+        "name": "Nether Hub",
+        "color": "#8A2FCC",
+        "description": "Reach the Nether Hub.",
+        "lore": [
+            "A fortified underground outpost.",
+            "Long abandoned, its origin seemingly",
+            "forgotten in time."
+        ],
+        "icon": "nether-hub.png"
+    }, {
+        "name": "Rock Bottom...?",
+        "color": "#452766",
+        "description": "Reach the bottom of the \"Void\" Layer.",
+        "lore": [
+            "Why is there a floor here?"
+        ],
+        "icon": "rock-bottom.png"
+    }, {
+        "name": "The Sputtrooms",
+        "color": "#CCAD68",
+        "description": "Fall into the Sputtrooms.",
+        "lore": [
+            "Situated one millimetre into the 4th Dimension,",
+            "rendering it easy to fall into, would you",
+            "happen to get forced into that direction."
+        ],
+        "icon": "the-sputtrooms.png"
+    }, {
+        "name": "The Mesa",
+        "color": "#CC591B",
+        "description": "Gain access to the Mesa.",
+        "lore": [
+            "A dry sandscape filled with various",
+            "valuable resources."
+        ],
+        "icon": "the-mesa.png"
+    }, {
+        "name": "Ancient Treasure",
+        "color": "#FFB803",
+        "description": "Find an artifact in a chest.",
+        "lore": [
+            "One man's trash is another",
+            "man's treasure."
+        ],
+        "icon": "ancient-treasure.png"
+    }, {
+        "name": "The Contributor Offices",
+        "color": "#9BBECC",
+        "description": "Enter the Contributor Offices.",
+        "lore": [
+            "Oh-so many button clicks later, you",
+            "are greeted with a credit hall. Fun."
+        ],
+        "icon": "the-contributor-offices.png",
+        "hidden": True
+    }, {
+        "name": "Bob's Shop Bell",
+        "color": "#FF6BC7",
+        "description": "Hit the bell on top of Bob's Shop.",
+        "lore": [
+            "Is it a bird? Is it a plane?",
+            "Nobody knows."
+        ],
+        "icon": "bobs-shop-bell.png",
+        "hidden": True
+    }, {
+        "name": "Generous Stranger",
+        "color": "#FF6969",
+        "description": "Be gifted a present by someone.",
+        "lore": [
+            "Be grateful!"
+        ],
+        "icon": "generous-stranger.png"
+    }, {
+        "name": "Golden Altruism",
+        "color": "#FFDA42",
+        "description": "Gift someone a golden present.",
+        "lore": [
+            "Truly selfless."
+        ],
+        "icon": "golden-altruism.png"
+    }, {
+        "name": "Waluigi Cathedral",
+        "color": "#711599",
+        "description": "Find the holy cathedral of all that is holy.",
+        "lore": [
+            "For thine is the kingdom, and the poWAAr,",
+            "and the glory, for ever and ever."
+        ],
+        "icon": "waluigi-cathedral.png"
+    }, {
+        "name": "Goblo",
+        "color": "#58CC2B",
+        "description": "Find goblo.",
+        "lore": [
+            "Please don't kill me."
+        ],
+        "icon": "goblo.png",
+        "hidden": True
+    }, {
+        "name": "Enchanter",
+        "color": "#FF70CD",
+        "description": "Enchant an item.",
+        "lore": [
+            "Efficiency!!!!"
+        ],
+        "icon": "enchanter.png"
+    }, {
+        "name": "Accessorier",
+        "color": "#4E85CC",
+        "description": "Equip an accessory.",
+        "lore": [
+            "How do these work, anyway?"
+        ],
+        "icon": "accessorier.png"
+    }, {
+        "name": "Virtuoso",
+        "color": "#CCCACA",
+        "description": "Play an instrument artifact.",
+        "lore": [
+            "A miracle this thing still works."
+        ],
+        "icon": "virtuoso.png",
+        "hidden": True
+    }, {
+        "name": "Jackpot",
+        "color": "#9CFF75",
+        "description": "Get a drop rarer than 1 in 10 000",
+        "lore": [
+            "Get Big Win Big Prizes"
+        ],
+        "icon": "jackpot.png",
+        "hidden": True
+    }, {
+        "name": "Squash Time",
+        "color": "#FF6B00",
+        "description": "Plant some pumpkin seeds.",
+        "lore": [
+            "'Tis a time to be spooky."
+        ],
+        "icon": "squash-time.png"
+    }, {
+        "name": "Alchemist",
+        "color": "#FF00B8",
+        "description": "Drink a potion.",
+        "lore": [
+            "Conniving concoction."
+        ],
+        "icon": "alchemist.png"
+    }, {
+        "name": "Brewing Master",
+        "color": "#BD6908",
+        "description": "Achieve Expertise level 10 on a potion.",
+        "lore": [
+            "Perfecting your infusions."
+        ],
+        "icon": "brewing-master.png",
+        "hidden": True
+    }, {
+        "name": "Pumpkin Grove",
+        "color": "#9C4A10",
+        "description": "Open the path to the Pumpkin Grove by lighting the mesa jack o'lantern.",
+        "lore": [
+            "Unusual amounts of pumpkin planted and",
+            "cared for by a devoted pumpkin creature,",
+            "hidden in the mountains. Quite a sight to behold."
+        ],
+        "icon": "pumpkin-grove.png"
+    },
+]
+
 ARTIFACTS = {
     1: {
         "color": "#FF5",
