@@ -4,7 +4,7 @@ from block import Block
 from item import Item
 from enchantment import Enchantment
 from flask.app import HTTPException
-import re, hashlib, hmac, os
+import re, hashlib, hmac, os, sys
 
 if not "REPL_ID" in os.environ:
     from dotenv import load_dotenv
