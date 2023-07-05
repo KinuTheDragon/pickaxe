@@ -241,7 +241,7 @@ ACHIEVEMENTS = [
             "hidden in the mountains. Quite a sight to behold."
         ],
         "icon": "pumpkin-grove.png"
-    },
+    }
 ]
 
 ARTIFACTS = {

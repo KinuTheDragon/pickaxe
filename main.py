@@ -39,9 +39,7 @@ def github_webhook():
         request.headers.get("x-hub-signature-256"))
 
     os.system("git reset --hard && git pull")
-
-    python = sys.executable
-    os.execl(python, python, * sys.argv)
+    os._exit()
 
 @app.route("/")
 def index():
