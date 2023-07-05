@@ -7,3 +7,4 @@ venv/*
 .replit
 replit.nix
 poetry.lock
+.env
