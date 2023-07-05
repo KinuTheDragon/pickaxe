@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Credits</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Pickaxe Wiki: Achievements</h1>
+        {% for ach in achievements %}
+            <h2 style="color:{{ ach['color'] }}">{{ ach['name'] }}</h2>
+            {{ ach['description'] }}<br/>
+            <span class="nl" style="font-style:italic">{{ "\n".join(ach["lore"]) }}</span>
+            {% if ach['hidden'] %}
+            <br/><span style="color:#f00">
+                This achievement is hidden.
+            </span>
+            {% endif %}
+        {% endfor %}
+    </body>
+</html>

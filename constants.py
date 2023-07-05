@@ -65,7 +65,7 @@ class Layer(Enum):
 ACHIEVEMENTS = [
     {
         "name": "Celestial Bell",
-        "color": "61DEFF",
+        "color": "#61DEFF",
         "description": "Ring the mountain bell.",
         "lore": [
             "Once forged by the mountain people, the bell",

@@ -3,6 +3,7 @@ from load import blocks, items, enchants, communist_items, artifacts
 from block import Block
 from item import Item
 from enchantment import Enchantment
+from constants import ACHIEVEMENTS
 from flask.app import HTTPException
 import re, hashlib, hmac, os, sys
 
@@ -255,5 +256,9 @@ def api():
 @app.route("/calculator")
 def calculator():
     return render_template("calculator.html")
+
+@app.route("/achievements")
+def achievements():
+    return render_template("achievements.html", achievements = ACHIEVEMENTS)
 
 app.run(host = "0.0.0.0", port = 8080)
