@@ -62,6 +62,127 @@ class Layer(Enum):
     Ice = "Ice", False, 70, 119
     Cake = "Cake", False, 120, 180
 
+MEDALS = [
+    {
+        "name": "Faster Forging",
+        "icon": "faster-forging.png",
+        "description": [
+            "Decreases the forge time of all",
+            "forge recipes by around 10%",
+            "per level (multiplicative)"
+        ],
+        "costs": list(range(1, 31))
+    }, {
+        "name": "Big Smart",
+        "icon": "big-smart.png",
+        "description": [
+            "Allows you to use the respective",
+            "tier of crafting recipes without",
+            "having to wear the knowledge hats."
+        ],
+        "costs": [10, 20]
+    }, {
+        "name": "Expertise",
+        "icon": "expertise.png",
+        "description": [
+            "Increases mining speed by 3% per level."
+        ],
+        "costs":
+            [3, 4, 5, 7, 8, 10, 11, 13, 14] +
+            list(range(16, 23)) +
+            [24, 25, 26, 28, 29, 30, 31, 32, 32, 33, 34, 34, 35, 35]
+    }, {
+        "name": "Aureate Flex",
+        "icon": "aureate-flex.png",
+        "description": [
+            "Gives the borders around your",
+            "item in the @item command a",
+            "more exclusive color."
+        ],
+        "costs": [25]
+    }, {
+        "name": "Reset Priority",
+        "icon": "reset-priority.png",
+        "description": [
+            "Gives you an additional mine",
+            "reset vote per level."
+        ],
+        "costs": [10, 30, 45]
+    }, {
+        "name": "Fortune",
+        "icon": "fortune.png",
+        "description": [
+            "Increases your luck by",
+            "6% per level, giving you a higher",
+            "change to get rare drops."
+        ],
+        "costs":
+            [1, 4, 5, 7, 9, 10, 12, 14, 16, 17, 20, 22, 25, 28] +
+            list(range(30, 46))
+    }, {
+        "name": "Bargain",
+        "icon": "bargain.png",
+        "description": [
+            "Reduces the gatekeeper cost",
+            "when entering the Mesa."
+        ],
+        "costs": [6, 12, 16, 18, 20, 22, 25, 28, 30, 35]
+    }, {
+        "name": "Comrade",
+        "icon": "comrade.png",
+        "description": [
+            "Increases the transfer rate",
+            "of the Communist Cap."
+        ],
+        "costs": [5, 10, 15, 20, 28, 35, 40, 42, 45, 48, 50]
+    }, {
+        "name": "Capitalist",
+        "icon": "capitalist.png",
+        "description": [
+            "Makes you immune to others' communist",
+            "caps; you can neither lose nor gain coins."
+        ],
+        "costs": [20]
+    }, {
+        "name": "Chunkier Fuel",
+        "icon": "chunkier-fuel.png",
+        "description": [
+            "Increases the forge time reduction from",
+            "all fuel types by 10% per level."
+        ],
+        "costs": [10, 15, 20, 22, 25, 28, 30, 33, 36, 40]
+    }, {
+        "name": "Pouch Grande",
+        "icon": "pouch-grande.png",
+        "description": [
+            "Increases accessory slots by 1 per level."
+        ],
+        "costs": [10, 25, 50, 75, 100]
+    }, {
+        "name": "Potion Connoisseur",
+        "icon": "potion-connoisseur.png",
+        "description": [
+            "Increases the duration of all potions",
+            "you drink by 5% per level (additive)"
+        ],
+        "costs": [2, 3, 4, 4, 5, 5, 6, 6, 6, 7, 7, 7,
+                  8, 8, 8, 9, 9, 10, 10, 10] +
+                 sum([[x, x] for x in range(11, 21)], [])
+    }, {
+        "name": "Lift Engineer",
+        "icon": "lift-engineer.png",
+        "description": [
+            "Adds a 20% chance per level to not",
+            "consume elevator passes or lift",
+            "fuel cores upon use (additive).",
+            "At lv5 you don't need to hold an",
+            "elevator pass on your cursor at all",
+            "to take the communist lift."
+        ],
+        "costs": [5, 10, 15, 20, 30]
+    }
+]
+
 ACHIEVEMENTS = [
     {
         "name": "Celestial Bell",

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Medal Shop</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Pickaxe Wiki: Medal Shop</h1>
+        {% for medal_data in medals %}
+            <h2>
+                <img src="{{ url_for('static',
+                    filename='images/default/' + medal_data['icon']) }}"
+                    width=50 height=50 />
+                {{ medal_data['name'] }}
+            </h2>
+            <span style="font-style:italic">
+            {% for line in medal_data['description'] %}
+                {{ line }}<br/>
+            {% endfor %}
+            </span>
+            Costs: <table class="lopad">
+                <tr>
+                    <th>Level</th>
+                    {% for i in range(len(medal_data['costs'])) %}
+                    <td>{{ i+1 }}</td>
+                    {% endfor %}
+                </tr><tr>
+                    <th>Level cost</th>
+                    {% for cost in medal_data['costs'] %}
+                    <td>{{ cost }}</td>
+                    {% endfor %}
+                </tr><tr>
+                    <th>Cumulative cost</th>
+                    {% set cumulative_cost = 0 %}
+                    {% for cost in medal_data['costs'] %}
+                    {% set cumulative_cost = cumulative_cost + cost %}
+                    <td>{{ cumulative_cost }}</td>
+                    {% endfor %}
+                </tr>
+            </table>
+        {% endfor %}
+    </body>
+</html>

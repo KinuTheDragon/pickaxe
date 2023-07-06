@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Pickaxe Wiki: Credits</title>
+        <title>Pickaxe Wiki: Achievements</title>
         <link rel="stylesheet"
             href="{{ url_for('static', filename='style.css') }}">
         <link rel="shortcut icon"
@@ -14,7 +14,8 @@
                 <img src="{{ url_for('static',
                     filename='images/default/' + ach['icon']) }}"
                     width=50 height=50 />
-                {{ ach['name'] }}</h2>
+                {{ ach['name'] }}
+            </h2>
             {{ ach['description'] }}<br/>
             <span class="nl" style="font-style:italic">{{ "\n".join(ach["lore"]) }}</span>
             {% if ach['hidden'] %}

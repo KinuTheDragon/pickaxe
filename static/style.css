@@ -21,6 +21,11 @@ img {
 table, th, td {
     border: 1px solid #fff;
     border-collapse: collapse;
+    min-width: 2em;
+    height: 30px;
+}
+
+table:not(.lopad), table:not(.lopad) th, table:not(.lopad) td {
     min-width: 5em;
     height: 50px;
 }
