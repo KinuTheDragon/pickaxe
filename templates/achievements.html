@@ -10,11 +10,15 @@
         <a href="/">Home</a>
         <h1>Pickaxe Wiki: Achievements</h1>
         {% for ach in achievements %}
-            <h2 style="color:{{ ach['color'] }}">{{ ach['name'] }}</h2>
+            <h2 style="color:{{ ach['color'] }}">
+                <img src="{{ url_for('static',
+                    filename='images/default/' + ach['icon']) }}"
+                    width=50 height=50 />
+                {{ ach['name'] }}</h2>
             {{ ach['description'] }}<br/>
             <span class="nl" style="font-style:italic">{{ "\n".join(ach["lore"]) }}</span>
             {% if ach['hidden'] %}
-            <br/><span style="color:#f00">
+            <br/><span style="color:#f80">
                 This achievement is hidden.
             </span>
             {% endif %}
