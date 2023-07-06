@@ -34,10 +34,10 @@
                     {% endfor %}
                 </tr><tr>
                     <th>Cumulative cost</th>
-                    {% set cumulative_cost = 0 %}
+                    {% set ns = namespace(cumulative_cost = 0) %}
                     {% for cost in medal_data['costs'] %}
-                    {% set cumulative_cost = cumulative_cost + cost %}
-                    <td>{{ cumulative_cost }}</td>
+                    {% set ns.cumulative_cost = ns.cumulative_cost + cost %}
+                    <td>{{ ns.cumulative_cost }}</td>
                     {% endfor %}
                 </tr>
             </table>
