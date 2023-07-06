@@ -86,6 +86,10 @@
         <label for="festive-level-btn">
             Festive level: <input type="number" id="festive-level" disabled>
         </label>
+        <h2>Walgo Door Password</h2>
+        <a href="https://mcuuid.net/">Player UUID:</a>
+        <input type="text" id="uuid" oninput="updateWalgoPassword()"><br/>
+        Password: <input type="text" id="walgo-pass" disabled>
         <script>
 let inputs = {};
 
@@ -154,6 +158,13 @@ assignValueFunctions("festive", {
     "festive-chance": (festiveLevel) => (festiveLevel * 0.75 + 0.25) / 50,
     "festive-level": (festiveChance) => (50 * festiveChance - 0.25) / 0.75
 });
+
+function updateWalgoPassword() {
+    let uuid = document.getElementById("uuid").value;
+    let pass = "@" + uuid.substring(1, 5) + "9";
+    if (uuid.length < 5) pass = "???";
+    document.getElementById("walgo-pass").value = pass.toUpperCase();
+}
         </script>
     </body>
 </html>
