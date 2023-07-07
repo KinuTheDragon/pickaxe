@@ -81,7 +81,7 @@
             <li>Breaking power: {{ item.breaking_power }}</li>
             {% endif %}
             {% if item.accessory_use %}
-            <li>When equipped as an accessory (takes {{ item.accessory_slots }} slot{% if item.accessory_slots != 1 %}s{% endif %}): {{ item.accessory_use }}</li>
+            <li>When equipped as an accessory (takes {{ item.accessory_slots }} slot{% if item.accessory_slots != 1 %}s{% endif %}): {{ get_links(item.accessory_use)|safe }}</li>
             {% endif %}
             {% if item.module_use %}
             <li>When equipped as a module (takes {{ item.module_slots }} slot{% if item.module_slots != 1 %}s{% endif %}): {{ item.module_use }}</li>
@@ -97,7 +97,7 @@
             <li>Increases oxygen capacity by {{ item.oxygen_capacity }} seconds</li>
             {% endif %}
             {% for use in special_uses %}
-            <li>{{ use|safe }}</li>
+            <li>{{ get_links(use)|safe }}</li>
             {% endfor %}
             {% if item.audio %}
             <li><button id="playscale">Play sound scale</button></li>
@@ -145,7 +145,7 @@ playScaleButton.onclick = function() {
             </li>
             {% endif %}
             {% for method in special_obtains %}
-            <li>{{ method|safe }}</li>
+            <li>{{ get_links(method)|safe }}</li>
             {% endfor %}
         </ul>
     </body>

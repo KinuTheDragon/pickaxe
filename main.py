@@ -75,20 +75,14 @@ def item(href):
                 matches = block_matches + item_matches + enchantment_matches
                 assert len(matches) == 1, f"{len(matches)} matches found for {name}"
                 return matches[0]
-            def get_links(texts):
-                return [
-                    LINK_REGEX.sub(
-                        lambda m: get_block_item(m.group(1))
-                            .icon(url_for),
-                        x
-                    )
-                    for x in texts
-                ]
-            so = get_links(i.special_obtain)
-            su = get_links(i.special_uses)
+            def get_links(text):
+                return LINK_REGEX.sub(
+                    lambda m: get_block_item(m.group(1))
+                        .icon(url_for),
+                    text
+                )
             return render_template("item.html", item = i,
-                                   special_obtains = so,
-                                   special_uses = su,
+                                   get_links = get_links,
                                    Item = Item,
                                    reqhat = isinstance(
                                        i.crafting_tier.value, tuple
