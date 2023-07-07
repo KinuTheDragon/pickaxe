@@ -328,6 +328,15 @@ ACHIEVEMENTS = [
         "icon": "jackpot.png",
         "hidden": True
     }, {
+        "name": "Mustache Polishing Service",
+        "color": "#CC7343",
+        "description": "Polish Bob's mustache.",
+        "lore": [
+            "New killer move unlocked:",
+            "Unexpected Mustache Polish"
+        ],
+        "icon": "mustache-polishing-service.png"
+    }, {
         "name": "Squash Time",
         "color": "#FF6B00",
         "description": "Plant some pumpkin seeds.",
@@ -352,6 +361,14 @@ ACHIEVEMENTS = [
         ],
         "icon": "brewing-master.png",
         "hidden": True
+    }, {
+        "name": "Golden Treat",
+        "color": "#FFAE12",
+        "description": "Consume a golden candy.",
+        "lore": [
+            "Trick or treat any%"
+        ],
+        "icon": "golden-treat.png"
     }, {
         "name": "Pumpkin Grove",
         "color": "#9C4A10",
