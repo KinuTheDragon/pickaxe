@@ -2157,7 +2157,8 @@ BLOCKS = {
     "White Wool": {
         "drops": [
             "Potassium",
-            "Silica"
+            "Silica",
+            "Magnesium Ingot"
         ]
     },
     "Yellow Stained Glass": {
