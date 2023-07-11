@@ -96,7 +96,7 @@
             {% if item.oxygen_capacity %}
             <li>Increases oxygen capacity by {{ item.oxygen_capacity }} seconds</li>
             {% endif %}
-            {% for use in special_uses %}
+            {% for use in item.special_uses %}
             <li>{{ get_links(use)|safe }}</li>
             {% endfor %}
             {% if item.audio %}
@@ -144,7 +144,7 @@ playScaleButton.onclick = function() {
                 {% endfor %}
             </li>
             {% endif %}
-            {% for method in special_obtains %}
+            {% for method in item.special_obtain %}
             <li>{{ get_links(method)|safe }}</li>
             {% endfor %}
         </ul>
