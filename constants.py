@@ -5901,6 +5901,7 @@ ITEMS = {
 
     "Meteorite": {
         "forge": "Meteorite Bar",
+        "sell": 500,
         "rads": 0.25,
         "museum": (8, 1, 3),
         "rarity": Rarity.Epic,
@@ -5912,6 +5913,7 @@ ITEMS = {
     },
     "Meteorite Bar": {
         "rads": 1,
+        "sell": 3000,
         "museum": (8, 1, 4),
         "rarity": Rarity.Epic,
         "item": {
