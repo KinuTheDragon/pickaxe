@@ -1460,8 +1460,8 @@ BLOCKS = {
         "drops": [
             "Coal Piece",
             "Coal",
-            "Anthracite",
-            "Blackstone Chunk"
+            ("Anthracite", 200),
+            ("Blackstone Chunk", 100)
         ],
         "dew": "Block of Coal",
         "layers": [
@@ -1737,7 +1737,7 @@ BLOCKS = {
         "drops": [
             "Blackstone Chunk",
             "Gilded Chunk",
-            "Banana"
+            ("Banana", 200)
         ],
         "layers": [
             Layer.Blackstone,
@@ -1863,7 +1863,7 @@ BLOCKS = {
         "drops": [
             "Brimstone",
             "Corundum",
-            "Ruby",
+            ("Ruby", 200),
             ("Refined Ruby", 5000),
             "Sulfur",
             "Magma Stone",
@@ -2251,6 +2251,7 @@ ITEMS = {
     "Impure Aluminium": {
         "forge": "Aluminium Ingot",
         "museum": (5, 4, 9),
+        "lore": ["Lightweight but impure aluminium."],
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "player_head",
@@ -3028,6 +3029,10 @@ ITEMS = {
         "forge": "Refined Ruby",
         "obtain": [
             "The communist shop offers this for $6,000."
+        ],
+        "lore": [
+            "A blood-red gemstone with powerful",
+            "magical properties and a high durability."
         ],
         "sell": 3500,
         "museum": (1, 4, 8),
@@ -5281,6 +5286,7 @@ ITEMS = {
         "sell": 500000,
         "museum": (6, 2, 7),
         "rarity": Rarity.Legendary,
+        "lore": ["Flawless."],
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmE4OWI1MjM2MzIzZDhmNTc2ZTcxY2I0YTEyZjI4ODE0ZGQzMjIyOTQ3OWI5NzY1ZGVhNzEwZGY2ZTM5MTA0OCJ9fX0=",
@@ -5351,6 +5357,7 @@ ITEMS = {
         }
     },
     "Iron Ingot": {
+        "lore": ["A full bar of iron"],
         "sell": 1000,
         "museum": (2, 1, 3),
         "rarity": Rarity.Uncommon,
@@ -6367,6 +6374,7 @@ ITEMS = {
         "forge": "Onyx",
         "sell": 6000,
         "museum": (2, 2, 8),
+        "lore": ["A huge block of obsidian."],
         "rarity": Rarity.Epic,
         "item": {
             "id": "obsidian",
@@ -6388,6 +6396,7 @@ ITEMS = {
         "forge": "Perfect Onyx",
         "museum": (2, 3, 1),
         "rarity": Rarity.Legendary,
+        "lore": ["Reflects no light."],
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTg4YmNlNDk3Y2ZhNWY2MTE4MzlmNmRhMjFjOTVkMzRlM2U3MjNjMmNjNGMzYzMxOWI1NjI3NzNkMTIxNiJ9fX0=",
@@ -7832,6 +7841,11 @@ ITEMS = {
     "Red Herring": {
         "museum": (5, 2, 4),
         "rarity": Rarity.Godly,
+        "lore": ["It's a distraction."],
+        "use": [
+            "Gives +2% mining speed when worn",
+            "Gives +0.5 radiation resistance"
+        ],
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2VjOGZmNTc2NWQ3MmJhNmVhNzQzOTM4ZjAzM2E0NmFhMTlhZjYxMTkyNzhmZTIyN2E3YjZkNmJkZmYxOSJ9fX0=",
@@ -8132,6 +8146,7 @@ ITEMS = {
         "forge": "Hypercompact Sand",
         "museum": (5, 1, 2),
         "rarity": Rarity.Uncommon,
+        "lore": ["Sand compressed into a rigid block."],
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1MmZmNGM4ZjNhZDBiYmI2NWVlOTkyZTVkYjZjMjgxNDIxM2ZmN2E1M2NmZGY0M2NlNDM5Njk3MmE3OGY0NiJ9fX0=",
@@ -8173,6 +8188,10 @@ ITEMS = {
         "sell": 500,
         "museum": (5, 1, 7),
         "rarity": Rarity.Rare,
+        "lore": [
+            "Sandfish!",
+            "Also known as Scincus scincus."
+        ],
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTcwMDg3ZGRlMTMwODQ2YzBlOTc1ZmU2ODQzNWQ4OTQwZjA5MzM5ZmFiYzYwMjZhOTY5OWZkYjYxMmI0ZjEyMSJ9fX0=",
