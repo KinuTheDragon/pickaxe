@@ -15,6 +15,12 @@
         <span style="color:#0f0">Submitted suggestion!</span><br/>
         {% elif msg == "updated" %}
         <span style="color:#0f0">Updated settings!</span><br/>
+        {% elif msg == "admin" %}
+        <span style="color:#0f0">Granted admin mode!</span><br/>
+        {% elif msg == "unadmin" %}
+        <span style="color:#0f0">Removed admin mode!</span><br/>
+        {% elif msg == "noadmin" %}
+        <span style="color:#f00">Access denied. You are not an admin.</span><br/>
         {% endif %}
         <ul>
             <li><a href="/blocks">All blocks</a></li>
@@ -33,6 +39,16 @@
             <li><a href="/medals">Medal Shop</a></li>
             <li><a href="/credits">Credits</a></li>
             <li><a href="/suggest">Suggestions</a></li>
+            <li><a href="/admin">
+                {%- if admin -%}
+                    Disable Admin
+                {%- else -%}
+                    Enable Admin
+                {%- endif -%}
+            </a></li>
+            {% if admin %}
+            <li><a href="/suggestions" class="admin">Suggestion List</a></li>
+            {% endif %}
             <li><a href="https://monochromeninja.repl.co">My other websites</a></li>
         </ul>
     </body>

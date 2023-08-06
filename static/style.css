@@ -42,3 +42,11 @@ input:disabled {
     background-color: #444;
     color: #fff;
 }
+
+.error {
+    color: #f00;
+}
+
+.admin {
+    color: #80f;
+}

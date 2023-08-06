@@ -1197,7 +1197,7 @@ COMMUNIST = [(x, False) if isinstance(x, str) else x for x in [
     "Hypercompact Stone",
     "Aureate Grapes",
     "Meteorite Bar",
-    "Gold Ingot",
+    ("Gold Ingot", True),
     "Exquisite Pumpkin",
     "Flint Edge",
     "Mustache Polish",
@@ -4485,7 +4485,7 @@ ITEMS = {
         "craft": {
             "tier": CraftTier.Tech0,
             "recipe": [
-                ["Impure Lead", "Iron Ingot", "Impure Lead"],
+                ["Impure Lead", "Aluminium Ingot", "Impure Lead"],
                 ["Advanced Circuit", "Tech Perception Gear", "Glass"],
                 ["Uranium", None, "Cobalt"]
             ]

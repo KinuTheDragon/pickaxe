@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: Admin Mode</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <h1>Admin Mode</h1>
+        {% if error == "invalid" %}
+            <h2 class="error">
+                Invalid form response. Stop messing with the code!
+            </h2>
+        {% endif %}
+        <label for="password">Password:</label>
+        <input type="password" id="password" onchange="update()"></input>
+        <form action="/enableadmin" method="POST">
+            <input type="hidden" id="passhash" name="passhash"></input>
+            <input type="submit"></input>
+        </form>
+        <script>
+function sha512(str) {
+    return crypto.subtle.digest("SHA-512", new TextEncoder("utf-8").encode(str)).then(buf => {
+        return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
+    });
+}
+
+function update() {
+    sha512(document.getElementById("password").value).then(x => {
+        document.getElementById("passhash").value = x;
+    });
+}
+        </script>
+    </body>
+</html>

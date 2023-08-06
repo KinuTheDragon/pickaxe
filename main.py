@@ -1,10 +1,11 @@
-from flask import Flask, render_template, abort, request, redirect, make_response, url_for
+from flask import Flask, render_template, abort, request, redirect, make_response, url_for, jsonify
 from load import blocks, items, enchants, communist_items, artifacts
 from block import Block
 from item import Item
 from enchantment import Enchantment
 from constants import ACHIEVEMENTS, MEDALS
 from flask.app import HTTPException
+from jwt_util import create_jwt_token, verify_jwt_token
 import re, hashlib, hmac, os, sys
 
 is_dev_version = "REPL_ID" in os.environ
@@ -32,6 +33,11 @@ def verify_signature(payload_body, secret_token, signature_header):
 
 app = Flask(__name__)
 
+def is_admin():
+    token = request.cookies.get("token")
+    verified = verify_jwt_token(token)
+    return verified
+
 @app.post("/api/webhook")
 def github_webhook():
     data = request.get_data()
@@ -46,7 +52,8 @@ def github_webhook():
 def index():
     return render_template("index.html",
                            msg = request.args.get("msg"),
-                           is_dev_version = is_dev_version)
+                           is_dev_version = is_dev_version,
+                           admin = is_admin)
 
 @app.route("/block/<href>")
 def block(href):
@@ -258,5 +265,36 @@ def achievements():
 @app.route("/medals")
 def medals():
     return render_template("medals.html", medals = MEDALS, len = len)
+
+@app.route("/admin")
+def admin():
+    if is_admin():
+        response = make_response(redirect("/?msg=unadmin"))
+        response.set_cookie("token", "", expires = 0)
+        return response
+    return render_template("admin.html",
+                           error = request.args.get("error"))
+
+@app.route("/enableadmin", methods = ["POST"])
+def enable_admin():
+    passhash = request.form.get("passhash")
+    if not isinstance(passhash, str):
+        return redirect("/admin?error=invalid")
+    double_hash = hashlib.sha512(passhash.encode()).hexdigest()
+    if double_hash != "37272436e6d46402d8525b52b65e49ab664af82e97f6ce560d328f006da72071fef9494e95bc168dece19898ca8489c9ce0374c785022e798a4415a1bd8677ec":
+        return redirect("/admin?error=wrong")
+    response = make_response(redirect("/?msg=admin"))
+    response.set_cookie("token",
+                        create_jwt_token({"admin": True}).encode())
+    return response
+
+@app.route("/suggestions")
+def suggestion_list():
+    if not is_admin():
+        return redirect("/?msg=noadmin")
+    with open("suggestions.txt") as f:
+        suggestions = f.read()
+    return render_template("suggestion_list.html",
+                           suggestions = suggestions)
 
 app.run(host = "0.0.0.0", port = 8080)
