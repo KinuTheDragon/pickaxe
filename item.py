@@ -154,6 +154,22 @@ class Item:
     def color(self):
         return RARITY_COLORS.get(self.rarity, "")
 
+    @property
+    def sage_rarity(self):
+        return next_rarity(self.rarity)
+
+    @property
+    def sage_color(self):
+        return RARITY_COLORS.get(self.sage_rarity, "")
+
+    @property
+    def overclocked_rarity(self):
+        return next_rarity(self.sage_rarity)
+
+    @property
+    def overclocked_color(self):
+        return RARITY_COLORS.get(self.overclocked_rarity, "")
+
     def icon(self, url_for):
         return f"""<a href="{self.href}" style="color:{self.color}"><img src="{url_for("static", filename=self.image_href)}" width=50 height=50 />{self.name}</a>"""
 

@@ -35,6 +35,24 @@
             {% endif %}
         </span>
         <br/>
+        Rarity when saged:
+        <span style="font-weight: bold; color: {{ item.sage_color }}">
+            {% if item.rarity %}
+            {{ item.sage_rarity.value }}
+            {% else %}
+            Unknown
+            {% endif %}
+        </span>
+        <br/>
+        Rarity when overclocked:
+        <span style="font-weight: bold; color: {{ item.overclocked_color }}">
+            {% if item.rarity %}
+            {{ item.overclocked_rarity.value }}
+            {% else %}
+            Unknown
+            {% endif %}
+        </span>
+        <br/>
         Custom model data: {{ item.item_data["cmd"] }}
         {% if item.radiation %}
         <br/>

@@ -31,7 +31,7 @@ class Rarity(Enum):
     Exotic = "Exotic"
     Divine = "Divine"
     Surreal = "Surreal"
-    Overclocked = "Overclocked"
+    Exalted = "Exalted"
 
 RARITY_COLORS = {
     Rarity.Mundane: "#aaa",
@@ -45,8 +45,12 @@ RARITY_COLORS = {
     Rarity.Exotic: "#ccb18f",
     Rarity.Divine: "#007acc",
     Rarity.Surreal: "#555",
-    Rarity.Overclocked: "#f55"
+    Rarity.Exalted: "#f55"
 }
+
+def next_rarity(rarity):
+    rarities = list(RARITY_COLORS.keys())
+    return rarities[rarities.index(rarity) + 1]
 
 class Layer(Enum):
     Dirt = "Dirt", True, 0, 9
