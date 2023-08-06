@@ -10,6 +10,9 @@
         <a href="/">Home</a><br/>
         <a href="/artifacts">All artifacts</a>
         <h1 style="color:{{ artifact.color }}">{{ artifact.name }}</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         <img src="{{ url_for('static', filename=artifact.image_href) }}"
             width=300 height=300 /><br/>
         <span style="font-style:italic">
@@ -27,5 +30,6 @@ playScaleButton.onclick = function() {
 }
         </script>
         {% endif %}
+        <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
     </body>
 </html>

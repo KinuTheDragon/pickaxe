@@ -10,6 +10,9 @@
         <a href="/">Home</a><br/>
         <a href="/blocks">All blocks</a>
         <h1>{{ block.name }}</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         <img src="{{ url_for('static', filename=block.image_href) }}"
             width=300 height=300 /><br/>
         {% if block.dew_to %}
@@ -54,4 +57,5 @@
         </ul>
         {% endif %}
     </body>
+    <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
 </html>

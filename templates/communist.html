@@ -9,6 +9,9 @@
     <body>
         <a href="/">Home</a>
         <h1>Pickaxe Wiki: Communist Items</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         <ul>
             {% for item, gives_slot in items %}
             <li>{{ item.icon(url_for)|safe }}
@@ -17,5 +20,6 @@
                 {% endif %}</li>
             {% endfor %}
         </ul>
+        <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
     </body>
 </html>

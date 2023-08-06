@@ -13,6 +13,9 @@
         <br/><a href="/museum">Museum</a>
         {% endif %}
         <h1 style="color:{{ item.color }}">{{ item.name }}</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         <img src="{{ url_for('static', filename=item.image_href) }}"
             width=300 height=300 />
         {% if item.lore %}
@@ -31,6 +34,8 @@
             Unknown
             {% endif %}
         </span>
+        <br/>
+        Custom model data: {{ item.item_data["cmd"] }}
         {% if item.radiation %}
         <br/>
         Radiation: {{ item.radiation }} rads
@@ -148,5 +153,6 @@ playScaleButton.onclick = function() {
             <li>{{ get_links(method)|safe }}</li>
             {% endfor %}
         </ul>
+        <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
     </body>
 </html>

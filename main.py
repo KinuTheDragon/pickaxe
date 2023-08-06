@@ -59,7 +59,9 @@ def index():
 def block(href):
     for b in blocks.values():
         if b.href == f"/block/{href}":
-            return render_template("block.html", block = b)
+            return render_template("block.html",
+                                   block = b,
+                                   is_dev_version = is_dev_version)
     return abort(404)
 
 @app.route("/json/block/<href>")
@@ -93,7 +95,8 @@ def item(href):
                                    Item = Item,
                                    reqhat = isinstance(
                                        i.crafting_tier.value, tuple
-                                   ) if i.crafting_tier else None)
+                                   ) if i.crafting_tier else None,
+                                   is_dev_version = is_dev_version)
     return abort(404)
 
 @app.route("/json/item/<href>")
@@ -108,7 +111,8 @@ def enchant(href):
     for e in enchants.values():
         if e.href == f"/enchant/{href}":
             return render_template("enchant.html", enchant = e,
-                                   enumerate = enumerate)
+                                   enumerate = enumerate,
+                                   is_dev_version = is_dev_version)
     return abort(404)
 
 @app.route("/json/enchant/<href>")
@@ -122,7 +126,9 @@ def enchant_json(href):
 def artifact(href):
     for a in artifacts.values():
         if a.href == f"/artifact/{href}":
-            return render_template("artifact.html", artifact = a)
+            return render_template("artifact.html",
+                                   artifact = a,
+                                   is_dev_version = is_dev_version)
     return abort(404)
 
 @app.route("/json/artifact/<href>")
@@ -143,14 +149,16 @@ def blocklist():
     block_list = sorted(list(blocks.values()),
                         key = sort_key)
     return render_template("blocklist.html",
-                           blocks = block_list)
+                           blocks = block_list,
+                           is_dev_version = is_dev_version)
 
 @app.route("/items")
 def itemlist():
     item_list = sorted(list(items.values()),
                         key = sort_key)
     return render_template("itemlist.html",
-                           items = item_list)
+                           items = item_list,
+                           is_dev_version = is_dev_version)
 
 @app.route("/json/items")
 def itemlist_json():
@@ -172,18 +180,22 @@ def enchlist():
     ench_list = sorted(list(enchants.values()),
                         key = sort_key)
     return render_template("enchantlist.html",
-                           enchants = ench_list)
+                           enchants = ench_list,
+                           is_dev_version = is_dev_version)
 
 @app.route("/artifacts")
 def artilist():
     arti_list = sorted(list(artifacts.values()),
                         key = lambda a: a.number)
     return render_template("artifactlist.html",
-                           artifacts = arti_list)
+                           artifacts = arti_list,
+                           is_dev_version = is_dev_version)
 
 @app.route("/communist")
 def communist():
-    return render_template("communist.html", items = communist_items)
+    return render_template("communist.html",
+                           items = communist_items,
+                           is_dev_version = is_dev_version)
 
 @app.route("/museum")
 def museum():
@@ -196,12 +208,14 @@ def museum():
         arrayed[page][row][col] = item
     return render_template("museum.html",
                            items = arrayed,
-                           enumerate = enumerate)
+                           enumerate = enumerate,
+                           is_dev_version = is_dev_version)
 
 @app.route("/settings")
 def settings():
     return render_template("settings.html",
-                           settings = request.cookies)
+                           settings = request.cookies,
+                           is_dev_version = is_dev_version)
 
 @app.route("/updatesettings", methods = ["POST"])
 def update_settings():
@@ -211,7 +225,8 @@ def update_settings():
 
 @app.route("/credits")
 def credits():
-    return render_template("credits.html")
+    return render_template("credits.html",
+                           is_dev_version = is_dev_version)
 
 @app.route("/search")
 def search():
@@ -223,16 +238,19 @@ def search():
         list(artifacts.values())
     }), key = lambda i: sort_key(i[0], False))
     return render_template("search.html",
-                           links = links)
+                           links = links,
+                           is_dev_version = is_dev_version)
 
 @app.route("/sputtrooms")
 def sputtrooms():
-    return render_template("sputtrooms.html")
+    return render_template("sputtrooms.html",
+                           is_dev_version = is_dev_version)
 
 @app.route("/suggest")
 def suggest():
     return render_template("suggest.html",
-                           error = request.args.get("error"))
+                           error = request.args.get("error"),
+                           is_dev_version = is_dev_version)
 
 @app.route("/submitsuggest", methods = ["POST"])
 def submit_suggest():
@@ -248,23 +266,30 @@ def submit_suggest():
 
 @app.route("/progression")
 def progression():
-    return render_template("progression.html", Block = Block, Item = Item)
+    return render_template("progression.html",
+                           Block = Block, Item = Item,
+                           is_dev_version = is_dev_version)
 
 @app.route("/api")
 def api():
-    return render_template("api.html")
+    return render_template("api.html",
+                           is_dev_version = is_dev_version)
 
 @app.route("/calculator")
 def calculator():
-    return render_template("calculator.html")
+    return render_template("calculator.html",
+                           is_dev_version = is_dev_version)
 
 @app.route("/achievements")
 def achievements():
-    return render_template("achievements.html", achievements = ACHIEVEMENTS)
+    return render_template("achievements.html",
+                           achievements = ACHIEVEMENTS,
+                           is_dev_version = is_dev_version)
 
 @app.route("/medals")
 def medals():
-    return render_template("medals.html", medals = MEDALS, len = len)
+    return render_template("medals.html", medals = MEDALS, len = len,
+                           is_dev_version = is_dev_version)
 
 @app.route("/admin")
 def admin():
@@ -273,7 +298,8 @@ def admin():
         response.set_cookie("token", "", expires = 0)
         return response
     return render_template("admin.html",
-                           error = request.args.get("error"))
+                           error = request.args.get("error"),
+                           is_dev_version = is_dev_version)
 
 @app.route("/enableadmin", methods = ["POST"])
 def enable_admin():
@@ -295,7 +321,8 @@ def suggestion_list():
     with open("suggestions.txt") as f:
         suggestions = f.read()
     return render_template("suggestion_list.html",
-                           suggestions = suggestions)
+                           suggestions = suggestions,
+                           is_dev_version = is_dev_version)
 
 @app.route("/updatesuggests", methods = ["POST"])
 def update_suggests():

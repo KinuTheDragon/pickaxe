@@ -15,6 +15,9 @@
     <body>
         <a href="/">Home</a>
         <h1>Suggested Progression</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         Note: This is just my suggestion for ideal progression!
         Do whatever works for you!
         <h2>Just starting off</h2>
@@ -55,5 +58,6 @@
             <li>Now you can craft yourself a {{ item("Hat of Wisdom") }}!</li>
         </ol>
         {# Goals after this: Void Cutter, Void Cutter+, Omega Cutter #}
+        <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
     </body>
 </html>

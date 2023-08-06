@@ -9,6 +9,9 @@
     <body>
         <a href="/">Home</a>
         <h1>Settings</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         <form action="/updatesettings" method="POST">
             <label for="tex">Use Sporefreak's textures</label>
             <input type="checkbox" name="tex" id="tex" value=1
@@ -18,5 +21,6 @@
                 /><br/>
             <input type="submit" value="Update" />
         </form>
+        <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
     </body>
 </html>

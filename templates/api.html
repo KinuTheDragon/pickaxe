@@ -9,6 +9,9 @@
     <body>
         <a href="/">Home</a>
         <h1>API</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.tech">the non-development version</a> instead.</h2>
+        {% endif %}
         Note: "block", "item", and "enchant" types are strings. Simply prepend "/json" to get the new path to request for more information.
         <h2 class="code">/json/block/&lt;block-name&gt;</h2>
         <div class="code nl">{
@@ -81,5 +84,6 @@
     "path": string,
     "lore": string[]
 }
+        <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
     </body>
 </html>
