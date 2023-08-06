@@ -297,4 +297,12 @@ def suggestion_list():
     return render_template("suggestion_list.html",
                            suggestions = suggestions)
 
+@app.route("/updatesuggests", methods = ["POST"])
+def update_suggests():
+    if not is_admin():
+        return redirect("/?msg=noadmin")
+    with open("suggestions.txt", "w") as f:
+        f.write(request.form["suggests"])
+    return redirect("/suggestions")
+
 app.run(host = "0.0.0.0", port = 8080)

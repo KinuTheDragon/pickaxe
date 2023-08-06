@@ -13,6 +13,10 @@
             <h2 class="error">
                 Invalid form response. Stop messing with the code!
             </h2>
+        {% elseif error == "wrong" %}
+            <h2 class="error">
+                Incorrect password.
+            </h2>
         {% endif %}
         <label for="password">Password:</label>
         <input type="password" id="password" onchange="update()"></input>

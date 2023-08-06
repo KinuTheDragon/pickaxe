@@ -9,6 +9,9 @@
     <body>
         <a href="/">Home</a>
         <h1>Suggestion List</h1>
-        <div style="white-space:pre">{{ suggestions }}</div>
+        <form action="/updatesuggests" method="POST">
+            <textarea name="suggests">{{ suggestions }}</textarea>
+            <input type="submit" value="Update"></input>
+        </form>
     </body>
 </html>
