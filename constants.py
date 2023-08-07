@@ -3395,6 +3395,20 @@ ITEMS = {
         }
     },
 
+    "Clock": {
+        "obtain": [
+            "The merchant sells this."
+        ],
+        "use": [
+            "Shows the current time."
+        ],
+        "rarity": Rarity.Common,
+        "item": {
+            "id": "clock",
+            "cmd": 1503
+        }
+    },
+
     "Clover": {
         "forge": "Clover Bag",
         "obtain": [
