@@ -36,6 +36,7 @@ app = Flask(__name__)
 def is_admin():
     token = request.cookies.get("token")
     verified = verify_jwt_token(token)
+    print(verified)
     return verified
 
 @app.post("/api/webhook")
@@ -53,7 +54,7 @@ def index():
     return render_template("index.html",
                            msg = request.args.get("msg"),
                            is_dev_version = is_dev_version,
-                           admin = is_admin)
+                           admin = is_admin())
 
 @app.route("/block/<href>")
 def block(href):
