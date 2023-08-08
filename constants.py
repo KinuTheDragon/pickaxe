@@ -1160,6 +1160,14 @@ ARTIFACTS = {
             "a regular banana, yet its hard shell is",
             "difficult to peel off without proper tools."
         ]
+    },
+    86: {
+        "color": "#5F5",
+        "name": "Saint Plushie",
+        "lore": [
+            "A plushie of a fluffy slugcat.",
+            "Take good care of the scug."
+        ]
     }
 }
 
@@ -2742,6 +2750,28 @@ ITEMS = {
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMThmODJjNTRjOTdlNzFlZGFkZTY5MmQ0NzUzZGY1NjAxMzI5Nzk0ZWM1MGFmMWRmNWZmYmMxMDM0ZWM5YmIyNyJ9fX0=",
             "cmd": 1364
         }
+    },
+
+    "Blessed Armor Padding": {
+        "craft": {
+            "tier": CraftTier.Crafting1,
+            "recipe": [
+                ["Starite", "Wurtzite Boron Nitride", "Starite"],
+                ["Wood", "Steel", "Wood"],
+                ["Starite"] * 3
+            ]
+        },
+        "lore": ["Grants immunity to stabbing."],
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWRhMDMyNTExZDJhYTY0Njc2MTViNWMyZDQzNjRkNzM4ZTFjYmQ0NzVkY2IyMDgwY2VlNjQwMTFlNjVkMzVkZiJ9fX0=",
+            "cmd": 1913
+        },
+        "rarity": Rarity.Uncommon,
+        "accessory": {
+            "use": "Grants immunity to stabbing, knocking the stabber back.",
+            "slots": 1
+        },
     },
 
     "Blessed Gemstone Mixture": {
@@ -5068,6 +5098,9 @@ ITEMS = {
         "obtain": [
             "The nether shop offers this for $30,000."
         ],
+        "use": [
+            "Reveals Tier 1 crafting recipes."
+        ],
         "rarity": Rarity.Epic,
         "item": {
             "id": "leather_helmet",
@@ -5085,6 +5118,9 @@ ITEMS = {
                 ["Gemstone Mixture", "Boron Nitride", "Gemstone Mixture"]
             ]
         },
+        "use": [
+            "Reveals Tier 2 crafting recipes."
+        ],
         "rarity": Rarity.Epic,
         "item": {
             "id": "leather_helmet",
@@ -5102,6 +5138,9 @@ ITEMS = {
                 ["Arkenstone Fragment", "Omega Shard", "Ender Ore"]
             ]
         },
+        "use": [
+            "Reveals Tier 3 crafting recipes."
+        ],
         "rarity": Rarity.Legendary,
         "item": {
             "id": "leather_helmet",
