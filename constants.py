@@ -1974,7 +1974,8 @@ BLOCKS = {
     "Pumpkin": {
         "drops": [
             "Pumpkin",
-            "Pumpkin Seeds"
+            "Pumpkin Seeds",
+            "Exquisite Pumpkin"
         ]
     },
     "Red Glazed Terracotta": {
@@ -5769,7 +5770,14 @@ ITEMS = {
             "subsequent dusts on the same item give less."
         ],
         "use": [
-            "Increases base luck of gear when combined in an anvil"
+            "Increases base luck of gear when combined in an anvil.<br/>"
+            "<table class=\"lopad\"><tr><th>Number of times</th><td>" +
+            "</td><td>".join(str(x) for x in range(1, 7)) +
+            "</td></tr><tr><th>Tool upgrade %</th><td>" +
+            "</td><td>".join(str(x) for x in [10, 6, 4, 3, 4, 3]) +
+            "</td></tr><tr><th>Armor upgrade %</th><td>" +
+            "</td><td>".join(str(x) for x in [5, 3, 2, 2, 2, 1]) +
+            "</td></tr></table>"
         ],
         "item": {
             "id": "player_head",
