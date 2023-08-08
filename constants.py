@@ -3396,6 +3396,7 @@ ITEMS = {
     },
 
     "Clock": {
+        "lore": ["Tells you the time."],
         "obtain": [
             "The merchant sells this."
         ],
@@ -5921,6 +5922,78 @@ ITEMS = {
             "id": "fire_charge",
             "enchanted": True,
             "cmd": 1408
+        }
+    },
+
+    "Merchant's Cap": {
+        "lore": [
+            "Lowers the tax of the Auto Seller.",
+            "Gives you +2 Stonks enchant levels,",
+            "giving you coins when you break blocks."
+        ],
+        "use": [
+            "Lowers the [Auto Seller]'s tax",
+            "Gives +2 [Stonks] levels"
+        ],
+        "obtain": ["The merchant sells this."],
+        "rarity": Rarity.Epic,
+        "item": {
+            "id": "leather_helmet",
+            "color": "AA00FF",
+            "cmd": 1515
+        }
+    },
+    "Merchant's Tunic": {
+        "lore": [
+            "Lowers the tax of the Auto Seller.",
+            "+1 additional item purchase from",
+            "the wandering merchant before restock."
+        ],
+        "use": [
+            "Lowers the [Auto Seller]'s tax",
+            "Gives +1 merchant item purchase"
+        ],
+        "obtain": ["The merchant sells this."],
+        "rarity": Rarity.Epic,
+        "item": {
+            "id": "leather_chestplate",
+            "color": "8200F0",
+            "cmd": 1511
+        }
+    },
+    "Merchant's Leggings": {
+        "lore": [
+            "Lowers the tax of the Auto Seller.",
+            "Adds +1 Drill enchantment level when you mine",
+            "(chance to multi-break blocks)"
+        ],
+        "use": [
+            "Lowers the [Auto Seller]'s tax",
+            "Gives +1 [Drill] level"
+        ],
+        "obtain": ["The merchant sells this."],
+        "rarity": Rarity.Epic,
+        "item": {
+            "id": "leather_leggings",
+            "color": "6400B4",
+            "cmd": 1500
+        }
+    },
+    "Merchant's Boots": {
+        "lore": [
+            "Lowers the tax of the Auto Seller.",
+            "+20% movement speed."
+        ],
+        "use": [
+            "Lowers the [Auto Seller]'s tax",
+            "Gives +20% movement speed"
+        ],
+        "obtain": ["The merchant sells this."],
+        "rarity": Rarity.Epic,
+        "item": {
+            "id": "leather_boots",
+            "color": "46008C",
+            "cmd": 1496
         }
     },
 

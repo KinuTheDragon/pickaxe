@@ -36,7 +36,6 @@ app = Flask(__name__)
 def is_admin():
     token = request.cookies.get("token")
     verified = verify_jwt_token(token)
-    print(verified)
     return verified
 
 @app.post("/api/webhook")
