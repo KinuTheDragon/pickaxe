@@ -96,10 +96,6 @@ for e in enchants.values(): e.requirements # Load items
 
 communist_items = [(items[i], g) for i, g in COMMUNIST]
 
-# for x in list(blocks.values()):
-#     if x.required_breaking_power is None:
-#         print(x.name)
-
 GENERATE_REPORT = False
 
 if GENERATE_REPORT:

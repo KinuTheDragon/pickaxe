@@ -1168,6 +1168,16 @@ ARTIFACTS = {
             "A plushie of a fluffy slugcat.",
             "Take good care of the scug."
         ]
+    },
+    97: {
+        "color": "#FF5",
+        "name": "Celestial Bell Replica",
+        "lore": [
+            "Can be played!",
+            "Left-click to play, change pitch by",
+            "moving your head up and down."
+        ],
+        "audio": "bell"
     }
 }
 
@@ -2723,6 +2733,161 @@ ITEMS = {
         }
     },
 
+    "Bean Potion": {
+        "craft": {
+            "tier": CraftTier.Brewing,
+            "recipe": [
+                ["Water Bottle", "Baked Beans", None],
+                [None] * 3,
+                [None] * 3
+            ]
+        },
+        "rarity": Rarity.Epic,
+        "lore": ["Gives a 2% chance for Autoforge to trigger twice."],
+        "item": {
+            "id": "potion",
+            "color": "875132",
+            "cmd": 1880
+        },
+        "use": [
+            "Gives a 2% chance for [Autoforge] to trigger twice for 10 minutes."
+        ]
+    },
+    "Beans Potion II": {
+        "craft": {
+            "tier": CraftTier.Brewing,
+            "recipe": [
+                ["Water Bottle", "Can of Baked Beans", None],
+                [None] * 3,
+                [None] * 3
+            ]
+        },
+        "rarity": Rarity.Epic,
+        "lore": ["Gives a 4% chance for Autoforge to trigger twice."],
+        "item": {
+            "id": "potion",
+            "color": "A84C25",
+            "cmd": 1881
+        },
+        "use": [
+            "Gives a 4% chance for [Autoforge] to trigger twice for 14 minutes."
+        ]
+    },
+    "Beans Potion III": {
+        "craft": {
+            "tier": CraftTier.Brewing,
+            "recipe": [
+                ["Water Bottle", "Deluxe Can of Baked Beans", None],
+                [None] * 3,
+                [None] * 3
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "lore": ["Gives a 8% chance for Autoforge to trigger twice."],
+        "item": {
+            "id": "potion",
+            "color": "B54E22",
+            "cmd": 1882
+        },
+        "use": [
+            "Gives a 8% chance for [Autoforge] to trigger twice for 15 minutes."
+        ]
+    },
+    "Beans Potion IV": {
+        "craft": {
+            "tier": CraftTier.Brewing,
+            "recipe": [
+                ["Water Bottle", "Can of Bob's Secret Baked Beans", None],
+                [None] * 3,
+                [None] * 3
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "lore": ["Gives a 14% chance for Autoforge to trigger twice."],
+        "item": {
+            "id": "potion",
+            "color": "D65720",
+            "cmd": 1883
+        },
+        "use": [
+            "Gives a 14% chance for [Autoforge] to trigger twice for 18 minutes."
+        ]
+    },
+    "Beans Potion V": {
+        "craft": {
+            "tier": CraftTier.Brewing,
+            "recipe": [
+                ["Water Bottle", "Bob's Spicy Inferno Bean", None],
+                [None] * 3,
+                [None] * 3
+            ]
+        },
+        "rarity": Rarity.Mythic,
+        "lore": ["Gives a 36% chance for Autoforge to trigger twice."],
+        "item": {
+            "id": "potion",
+            "color": "E34E0E",
+            "cmd": 1884
+        },
+        "use": [
+            "Gives a 36% chance for [Autoforge] to trigger twice for 36 minutes."
+        ]
+    },
+
+    "Bean Liquid Potion": {
+        "craft": {
+            "tier": CraftTier.Brewing,
+            "recipe": [
+                ["Water Bottle", "Bucket of Bean Liquid", "Bucket of Bean Liquid"],
+                [None] * 3,
+                [None] * 3
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "lore": [
+            "Yum yum yum. Takes about 23 seconds",
+            "for the human body to digest. Gives an",
+            "8% chance for Autoforge to trigger twice."
+        ],
+        "item": {
+            "id": "potion",
+            "color": "DDF002",
+            "cmd": 1895
+        },
+        "use": [
+            "Gives a 8% chance for [Autoforge] to trigger twice for 1 minute."
+        ]
+    },
+
+    "bean trotters": {
+        "craft": {
+            "tier": CraftTier.Tech1,
+            "recipe": [
+                ["Baked Beans"] * 3,
+                ["Baked Beans", "Boots of Growth", "Baked Beans"],
+                ["Baked Beans"] * 3
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "lore": [
+            "Causes blocks you walk on to become beans.",
+            "Truly a miracle. Metabeanmorphosis."
+        ],
+        "item": {
+            "id": "golden_boots",
+            "trim": {
+                "material": "copper",
+                "pattern": "silence"
+            },
+            "cmd": 1878
+        },
+        "use": [
+            "Gives +3.5% mining speed",
+            "Gives +20% luck",
+            "Turns blocks you walk on into [Block of Raw Copper]"
+        ]
+    },
+
     "Bedrock Piece": {
         "sell": 400000,
         "museum": (4, 3, 9),
@@ -3428,6 +3593,14 @@ ITEMS = {
 
     "Clock": {
         "lore": ["Tells you the time."],
+        "craft": {
+            "tier": CraftTier.Tech0,
+            "recipe": [
+                ["Gold Ingot", "Gold Block", "Gold Ingot"],
+                ["Starite", "Processing Unit", "Starite"],
+                ["Gold Ingot", "Gold Block", "Gold Ingot"]
+            ]
+        },
         "obtain": [
             "The merchant sells this."
         ],
@@ -6968,7 +7141,8 @@ ITEMS = {
 
     "Overclocker": {
         "obtain": [
-            "If the [Strange Construct] accessory is equipped, there is a 1/3 chance for a [Sage Crystal] drop to change into this."
+            "If the [Strange Construct] accessory is equipped, there is a 1/3 chance for a [Sage Crystal] drop to change into this.",
+            "Can be created from an [Overclocker Growth Kit]."
         ],
         "rarity": Rarity.Godly,
         "item": {
@@ -6976,6 +7150,29 @@ ITEMS = {
             "enchanted": True,
             "cmd": 1862
         }
+    },
+
+    "Overclocker Growth Kit": {
+        "craft": {
+            "tier": CraftTier.Crafting3,
+            "recipe": [
+                ["Starite", "Adamantium", "Astral Ore"],
+                ["Sage Crystal", "Clock", "Sage Crystal"],
+                ["Astral Ore", "Sage Crystal", "Starite"]
+            ]
+        },
+        "rarity": Rarity.Mythic,
+        "item": {
+            "id": "music_disc_5",
+            "cmd": 1906
+        },
+        "lore": [
+            "Can be placed in the Overclocking Podium to slowly",
+            "be converted into an Overclocker over time."
+        ],
+        "use": [
+            "Can be converted into an [Overclocker] at the Overclocking Podium past the [Overclocked] enchantment table in the mountain mine."
+        ]
     },
 
     "Oxycoral": {
@@ -7755,6 +7952,125 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNhYWQ4NmM3MDhlYjI3NzczYTY0ZjkzNDc5ZTM5ZjA0NDJhNWNlMDg2YjYzMjk2YzdiN2QxY2Y1MTE2MDk1NiJ9fX0=",
             "cmd": 1499
+        }
+    },
+
+    "Prime Amethyst": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Astral Ore", "Perfect Amethyst", "Astral Ore"],
+                ["Astral Ore"] * 3,
+                ["Perfect Amethyst", "Astral Ore", "Perfect Amethyst"]
+            ]
+        },
+        "rarity": Rarity.Exotic,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjE0MThlOTA5NjFlZWNkZTg3ZmFmOTQ3YTVhMDFjZmJmNWU5Njg0Y2M5ODJhMjUzNGMxMjBiYTJhYzRmYTA2YyJ9fX0=",
+            "cmd": 1888
+        }
+    },
+
+    "Prime Diamond": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Perfect Diamond", "Astral Ore", "Perfect Diamond"],
+                ["Astral Ore"] * 3,
+                ["Perfect Diamond", "Astral Ore", "Perfect Diamond"]
+            ]
+        },
+        "rarity": Rarity.Exotic,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTY0ZjI1Y2ZmZjc1NGYyODdhOTgzOGQ4ZWZlMDM5OTgwNzNjMjJkZjdhOWQzMDI1YzQyNWUzZWQ3ZmY1MmMyMCJ9fX0=",
+            "cmd": 1885
+        }
+    },
+
+    "Prime Hematite": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Perfect Hematite", "Astral Ore", "Hematite"],
+                ["Astral Ore", "Prime Orichalcum", "Astral Ore"],
+                ["Hematite", "Astral Ore", "Perfect Hematite"]
+            ]
+        },
+        "rarity": Rarity.Exotic,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTdjNDAzNmY4MGJmMzYwOTE4MGM3YzRhOTU2ODg1M2ZkODE1ZjE1NGFkODQzOGI5MmYzODUxMDE5ODM1YjA3MCJ9fX0=",
+            "cmd": 1890
+        }
+    },
+
+    "Prime Onyx": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Astral Ore", "Perfect Onyx", "Astral Ore"],
+                ["Astral Ore"] * 3,
+                ["Perfect Onyx", "Astral Ore", "Perfect Onyx"]
+            ]
+        },
+        "rarity": Rarity.Exotic,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE5MjZiZmE5Y2FmOGJjYTkwNjkyNzgwOTc4YjVjNzRkNzEzZTg2NWY1YmRkMzc5MjA5N2IxODc5OTk3ZTU1NyJ9fX0=",
+            "cmd": 1889
+        }
+    },
+
+    "Prime Orichalcum": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Orichalcum Ingots"] * 3,
+                ["Orichalcum Ingots", "Astral Ore", "Orichalcum Ingots"],
+                ["Orichalcum Ingots"] * 3
+            ]
+        },
+        "rarity": Rarity.Exotic,
+        "rads": 20,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTFhMThiZGY4ZDdjMjkxOGY0MGUwOTQ0MDYyYmU3YTYwZjMyNjhkZGI5OGQ5MTY3ZTdmZmRkNGVkNzAwZDc5MCJ9fX0=",
+            "cmd": 1891
+        }
+    },
+    
+    "Prime Ruby": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Perfect Ruby", "Astral Ore", "Perfect Ruby"]
+                for _ in range(3)
+            ]
+        },
+        "rarity": Rarity.Exotic,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2YwNTI5ZDAzM2Y5MzdkNGU0ZDM0ZDg5OTRmYzQ0NjU4MGQ3MDc4YWVjZWIyYzc5N2NlNGIwMWI2MDQ0ZjAzMiJ9fX0=",
+            "cmd": 1886
+        }
+    },
+
+    "Prime Topaz": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Perfect Topaz"] * 3,
+                ["Perfect Topaz", "Astral Ore", "Perfect Topaz"],
+                ["Perfect Topaz"] * 3
+            ]
+        },
+        "rarity": Rarity.Exotic,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTg5ZTc4NWZjY2ZiODZjMGM4MmIzOTc2OWMxYjFhZTVkMGQwMWFjMjY4YzgyYWY3ZjU0OGNjNTQ3MzZiMGJiMSJ9fX0=",
+            "cmd": 1887
         }
     },
 
@@ -9214,7 +9530,8 @@ ITEMS = {
         ],
         "use": [
             "Gives -20% mining speed",
-            "Gives +25% luck"
+            "Gives +25% luck",
+            "Gives +10% multiplicative chest find rate"
         ],
         "item": {
             "id": "iron_armor",
@@ -9224,6 +9541,59 @@ ITEMS = {
             },
             "cmd": 1896
         }
+    },
+    "Treasure Seeker Greaves": {
+        "craft": {
+            "tier": CraftTier.Tech0,
+            "recipe": [
+                [None, "Sage Crystal", None],
+                ["Gold Block", None, "Gold Block"],
+                ["Refined Topaz", "Lead Plate", "Refined Topaz"]
+            ]
+        },
+        "rarity": Rarity.Epic,
+        "lore": [
+            "Increases chest find rate by 10%",
+            "per armor piece (multiplicatively)."
+        ],
+        "use": [
+            "Gives -20% mining speed",
+            "Gives +25% luck",
+            "Gives +10% multiplicative chest find rate"
+        ],
+        "item": {
+            "id": "iron_armor",
+            "trim": {
+                "material": "emerald",
+                "pattern": "vex"
+            },
+            "cmd": 1899
+        }
+    },
+
+    "Treasured Treasure": {
+        "craft": {
+            "tier": CraftTier.Crafting2,
+            "recipe": [
+                ["Gold Ingot", "Gold Block", "Gold Ingot"],
+                ["Gold Block", "Treasured Stone", "Gold Block"],
+                ["Gold Ingot", "Gold Block", "Gold Ingot"]
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWVhNWU4MDQxMzQ1YmEyNGJmYzg5NTQ2ZjRjODJiZThjZjlmOWJhNWE4ZTU1MzY1NDUzNDNhZTU5YjkzN2U5MiJ9fX0=",
+            "cmd": 1915
+        },
+        "accessory": {
+            "use": "Increases item drops in chests",
+            "slots": 2
+        },
+        "lore": [
+            "Dramatically increases the amount of",
+            "item drops you get inside chests."
+        ]
     },
 
     "Uranium Cookie": {
