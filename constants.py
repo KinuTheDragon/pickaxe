@@ -9198,6 +9198,34 @@ ITEMS = {
         }
     },
 
+    "Treasure Seeker Helmet": {
+        "craft": {
+            "tier": CraftTier.Crafting1,
+            "recipe": [
+                ["Gold Ingot", "Synthetic Diamond", "Gold Ingot"],
+                ["Gold Ingot", "Aureate Grapes", "Gold Ingot"],
+                [None] * 3
+            ]
+        },
+        "rarity": Rarity.Epic,
+        "lore": [
+            "Increases chest find rate by 10%",
+            "per armor piece (multiplicatively)."
+        ],
+        "use": [
+            "Gives -20% mining speed",
+            "Gives +25% luck"
+        ],
+        "item": {
+            "id": "iron_armor",
+            "trim": {
+                "material": "emerald",
+                "pattern": "silence"
+            },
+            "cmd": 1896
+        }
+    },
+
     "Uranium Cookie": {
         "craft": {
             "tier": CraftTier.Crafting1,
