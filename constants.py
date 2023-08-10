@@ -383,6 +383,22 @@ ACHIEVEMENTS = [
             "hidden in the mountains. Quite a sight to behold."
         ],
         "icon": "pumpkin-grove.png"
+    }, {
+        "name": "Autoforge",
+        "color": "#CFCFCF",
+        "description": "Get an autoforged drop.",
+        "lore": [
+            "Get an autoforged drop thanks",
+            "to an enchant or potion effect."
+        ],
+        "icon": "autoforge.png"
+    }, {
+        "name": "Double Autoforge",
+        "color": "#FF4D00",
+        "description": "Get a double autoforge.",
+        "lore": ["Get the elusive double autoforge."],
+        "icon": "double-autoforge.png",
+        "hidden": True
     }
 ]
 
@@ -1161,6 +1177,14 @@ ARTIFACTS = {
             "difficult to peel off without proper tools."
         ]
     },
+    78: {
+        "color": "#FFF",
+        "name": "Puppy",
+        "lore": [
+            "What!! somebody put a puppy in a chest",
+            "then proceeded to bury it underground"
+        ]
+    },
     86: {
         "color": "#5F5",
         "name": "Saint Plushie",
@@ -1550,7 +1574,10 @@ BLOCKS = {
     },
     "Block of Raw Copper": {
         "id": "raw_copper_block",
-        "drops": None
+        "drops": [
+            "Beans",
+            "Baked Beans"
+        ]
     },
     "Blue Ice": {
         "drops": [
@@ -2859,6 +2886,25 @@ ITEMS = {
         ]
     },
 
+    "Bean Skin": {
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTlmYmE4ZDdiMWJjMjkwMWFlMTkzMzc2MzI5OTQxODI0NzQ5ZGM5ZDFkMzEyZTg4MjgwMmNjNTVmZjkyNGRlMSJ9fX0=",
+            "cmd": 1879
+        },
+        "craft": {
+            "tier": CraftTier.Skin,
+            "recipe": [
+                ["Deluxe Can of Beans", "Baked Beans", "Deluxe Can of Beans"],
+                ["Baked Beans", "Skin Core", "Baked Beans"],
+                ["Deluxe Can of Beans", "Baked Beans", "Deluxe Can of Beans"]
+            ]
+        },
+        "lore": ["The best skin."],
+        "museum": (9, 1, 7),
+        "rarity": Rarity.Legendary
+    },
+
     "bean trotters": {
         "craft": {
             "tier": CraftTier.Tech1,
@@ -2888,6 +2934,41 @@ ITEMS = {
         ]
     },
 
+    "Beans": {
+        "sell": 699,
+        "museum": (9, 1, 8),
+        "rarity": Rarity.Rare,
+        "lore": ["it's beans time"],
+        "item": {
+            "id": "cocoa_beans",
+            "cmd": 1872
+        },
+        "forge": "Baked Beans"
+    },
+    "Baked Beans": {
+        "sell": 3999,
+        "museum": (9, 1, 9),
+        "rarity": Rarity.Rare,
+        "lore": ["it's baked beans time"],
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTlmYmE4ZDdiMWJjMjkwMWFlMTkzMzc2MzI5OTQxODI0NzQ5ZGM5ZDFkMzEyZTg4MjgwMmNjNTVmZjkyNGRlMSJ9fX0=",
+            "cmd": 1873
+        },
+        "forge": "Can of Baked Beans"
+    },
+    "Can of Baked Beans": {
+        "sell": 19999,
+        "museum": (9, 2, 1),
+        "rarity": Rarity.Epic,
+        "lore": ["in tomato sauce"],
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNlZTBjNzk0MzcxNjUwYjljOWRjZWRiYjM0MGIwNjcwYWQ1M2QyYTE2ZTg4ZWEyYzlhZjRjYTZhYjMyMDJkMyJ9fX0=",
+            "cmd": 1874
+        }
+    },
+
     "Bedrock Piece": {
         "sell": 400000,
         "museum": (4, 3, 9),
@@ -2898,6 +2979,27 @@ ITEMS = {
         "item": {
             "id": "blackstone_button",
             "cmd": 1546
+        }
+    },
+
+    "Blackened Mask": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Adamantium"] * 3,
+                ["Adamantium", "Blood", "Adamantium"],
+                ["Astral Ore"] * 3
+            ]
+        },
+        "rarity": Rarity.Epic,
+        "use": [
+            "Gives +2.5% mining speed",
+            "Gives +10% luck"
+        ],
+        "lore": ["Ritualistic vessel."],
+        "item": {
+            "id": "netherite_helmet",
+            "cmd": 1911
         }
     },
 
@@ -3000,6 +3102,34 @@ ITEMS = {
             "Slightly increases speed."
         ],
         "rarity": Rarity.Legendary
+    },
+
+    "Bob's Oil Pump": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Bobbo Nuggies", "Bob Pickaxe", "Bobbo Nuggies"],
+                ["Bob Macaroni", "Oil Pump", "Bob Macaroni"],
+                ["Bob's Big Bad Body Building Burrito", "Bob's Hot n' Spicy Outfit", "Bob's Big Bad Body Building Burrito"]
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "hopper",
+            "enchanted": True,
+            "cmd": 1892
+        },
+        "mining speed": 0.1,
+        "breaking power": 9,
+        "use": [
+            "Gives +0.1% luck",
+            "Can pump oil like the [Oil Pump]"
+        ],
+        "lore": [
+            "Strike it rich!",
+            "Has a 50% chance to find oil every block.",
+            "Can also pump... other blocks?"
+        ]
     },
     
     "Bobbo Nuggies": {
@@ -4197,6 +4327,27 @@ ITEMS = {
         }
     },
 
+    "Decoagulation Agent": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Oil Bucket", "Bucket of Suspicious-Looking Liquid", "Oil Bucket"],
+                ["Milk Bucket", "Plutonium-239", "Milk Bucket"],
+                ["Bucket of Bean Liquid", "Bucket of Suspicious-Looking Liquid", "Bucket of Bean Liquid"]
+            ]
+        },
+        "rarity": Rarity.Epic
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWMzMzI5M2U3MzFjZDUzYzkxMGNiODg3NjRlYjEwZjE1OTc4ZGYxZmJkZmQ1NDdkM2M3MjY2NzBjNDEyNDVlNSJ9fX0=",
+            "cmd": 1914
+        },
+        "accessory": {
+            "use": "Causes you to bleed for longer",
+            "slots": 2
+        }
+    },
+
     "Deluxe Bag Skin": {
         "craft": {
             "tier": CraftTier.Skin,
@@ -4856,6 +5007,21 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjE1N2RiZTRmNGQ2ODFkNDhmOTIzOGFkYTM0NDBiZWUxMWJkZjI5MDIxZWYyNGE1NWFkMDEzMTI3MTdlODE0NiJ9fX0=",
             "cmd": 1566
+        }
+    },
+
+    "Game Rupture": {
+        "obtain": [
+            "Report a severe bug to Sputt."
+        ],
+        "rarity": Rarity.Legendary,
+        "lore": [
+            "Awarded to those who have reported a severe, exploitable",
+            "and/or economy-wise harmful bug to the creator of the game."
+        ],
+        "item": {
+            "id": "miner_pottery_sherd",
+            "cmd": 1905
         }
     },
 
@@ -8518,20 +8684,24 @@ ITEMS = {
         }
     },
 
-    "'Stache Orb": {
-        "rarity": Rarity.Epic,
-        "obtain": [
-            "The @waluigi shop offers this for 35 Waluigi Tokens."
-        ],
-        "accessory": {
-            "use": "+6% luck",
-            "slots": 1
+    "Sacrificial Knife": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Blood", "Steel Plate", "Blood"],
+                ["Blood", "Steel Plate", "Blood"],
+                ["Blood", "Gold Rod", "Blood"]
+            ]
         },
+        "rarity": Rarity.Epic,
         "item": {
-            "id": "player_head",
-            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzYzNmYyNzI0YWE2YWE0ZGU3YWM0NmMxOWYzYzg0NWZiMTQ4NDdhNTE4YzhmN2UwM2Q3OTJjODJlZmZiMSJ9fX0=",
-            "cmd": 1774
-        }
+            "id": "iron_sword",
+            "cmd": 1909
+        },
+        "lore": [
+            "Right click to stab yourself, causing you",
+            "to bleed heavily for a brief period of time."
+        ]
     },
 
     "Sage Crystal": {
@@ -9135,6 +9305,22 @@ ITEMS = {
         }
     },
 
+    "'Stache Orb": {
+        "rarity": Rarity.Epic,
+        "obtain": [
+            "The @waluigi shop offers this for 35 Waluigi Tokens."
+        ],
+        "accessory": {
+            "use": "+6% luck",
+            "slots": 1
+        },
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzYzNmYyNzI0YWE2YWE0ZGU3YWM0NmMxOWYzYzg0NWZiMTQ4NDdhNTE4YzhmN2UwM2Q3OTJjODJlZmZiMSJ9fX0=",
+            "cmd": 1774
+        }
+    },
+
     "Stalinium": {
         "craft": {
             "tier": CraftTier.Crafting2,
@@ -9534,12 +9720,40 @@ ITEMS = {
             "Gives +10% multiplicative chest find rate"
         ],
         "item": {
-            "id": "iron_armor",
+            "id": "iron_helmet",
             "trim": {
                 "material": "emerald",
                 "pattern": "silence"
             },
             "cmd": 1896
+        }
+    },
+    "Treasure Seeker Chestplate": {
+        "craft": {
+            "tier": CraftTier.Walgo,
+            "recipe": [
+                ["Perfect Topaz", None, "Perfect Topaz"],
+                ["Aureate Grapes", "Overclocker", "Aureate Grapes"],
+                ["Aureate Grapes", "Gold Block", "Aureate Grapes"]
+            ]
+        },
+        "rarity": Rarity.Epic,
+        "lore": [
+            "Increases chest find rate by 10%",
+            "per armor piece (multiplicatively)."
+        ],
+        "use": [
+            "Gives -20% mining speed",
+            "Gives +25% luck",
+            "Gives +10% multiplicative chest find rate"
+        ],
+        "item": {
+            "id": "iron_chestplate",
+            "trim": {
+                "material": "emerald",
+                "pattern": "eye"
+            },
+            "cmd": 1897
         }
     },
     "Treasure Seeker Greaves": {
@@ -9562,7 +9776,7 @@ ITEMS = {
             "Gives +10% multiplicative chest find rate"
         ],
         "item": {
-            "id": "iron_armor",
+            "id": "iron_boots",
             "trim": {
                 "material": "emerald",
                 "pattern": "vex"
