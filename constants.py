@@ -1268,7 +1268,12 @@ ENCHANTMENTS = {
             ["Magma Core", "Refined Onyx", "Sage Crystal", "Steel Plate"],
             ["Gold Block", "Perfect Amethyst", "Sage Crystal", "Steel Plate"],
             ["Antimatter", "Perfect Amber", "Sage Crystal", "Wurtzite Boron Nitride Compound Plate"],
-            ["Perfect Topaz", "Potassium Ingot", "Sage Crystal", "Sand Pearl"]
+            ["Perfect Topaz", "Potassium Ingot", "Sage Crystal", "Sand Pearl"],
+            ["Overclocker", "Can of Bob's Secret Baked Beans", "Prime Diamond"],
+            ["Overclocker", "Prime Ruby", "Prime Topaz"],
+            ["Overclocker", "Overclocker", "Bob's Spicy Inferno Bean", "Prime Onyx"],
+            ["Prime Ruby", "Prime Orichalcum", "Wurtzite Boron Nitride Compound Plate", "unknown"],
+            ["Prime Hematite", "Prime Orichalcum", "Prime Orichalcum", "Diamond Pumpkin"]
         ]
     },
     "Drill": {
@@ -1373,7 +1378,7 @@ ENCHANTMENTS = {
     },
     "Pristine": {
         "effect": "When mining, small chance to drop amethysts",
-        "location": "Blackstone layer facing moon door (chunk-relative: 11 ~ 15 on right side of mine)",
+        "location": "Blackstone layer facing moon door (press F3 and get chunk-relative to 11 [something] 15 on right side of mine)",
         "requirements": [
             ["Onyx", "Refined Amber", "Refined Ruby", "Synthetic Diamond"],
             ["Amethyst", "Starite", "Starite"],
