@@ -1273,7 +1273,7 @@ ENCHANTMENTS = {
             ["Overclocker", "Prime Ruby", "Prime Topaz"],
             ["Overclocker", "Overclocker", "Bob's Spicy Inferno Bean", "Prime Onyx"],
             ["Prime Ruby", "Prime Orichalcum", "Wurtzite Boron Nitride Compound Plate", "unknown"],
-            ["Prime Hematite", "Prime Orichalcum", "Prime Orichalcum", "Diamond Pumpkin"]
+            ["Prime Hematite", "Prime Orichalcum", "Prime Orichalcum", "Diamond Jack O'Lantern"]
         ]
     },
     "Drill": {
