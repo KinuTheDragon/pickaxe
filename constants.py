@@ -9759,6 +9759,34 @@ ITEMS = {
             "cmd": 1897
         }
     },
+    "Treasure Seeker Leggings": {
+        "craft": {
+            "tier": CraftTier.Water,
+            "recipe": [
+                ["Orichalcum Ingots", "Skin Core", "Orichalcum Ingots"],
+                ["Gold Block", None, "Gold Block"],
+                ["Gold Block", None, "Gold Block"]
+            ]
+        },
+        "rarity": Rarity.Epic,
+        "lore": [
+            "Increases chest find rate by 10%",
+            "per armor piece (multiplicatively)."
+        ],
+        "use": [
+            "Gives -20% mining speed",
+            "Gives +25% luck",
+            "Gives +10% multiplicative chest find rate"
+        ],
+        "item": {
+            "id": "iron_leggings",
+            "trim": {
+                "material": "emerald",
+                "pattern": "silence"
+            },
+            "cmd": 1898
+        }
+    },
     "Treasure Seeker Greaves": {
         "craft": {
             "tier": CraftTier.Tech0,
