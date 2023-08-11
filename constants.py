@@ -876,7 +876,8 @@ ARTIFACTS = {
             "Can be played!",
             "Left-click to play, change pitch by",
             "moving your head up and down."
-        ]
+        ],
+        "audio": "guitar"
     },
     44: {
         "color": "#FFF",
@@ -895,7 +896,8 @@ ARTIFACTS = {
             "Can be played!",
             "Left-click to play, change pitch by",
             "moving your head up and down."
-        ]
+        ],
+        "audio": "bass-drum"
     },
     46: {
         "color": "#FA0",
@@ -904,7 +906,8 @@ ARTIFACTS = {
             "Can be played!",
             "Left-click to play, change pitch by",
             "moving your head up and down."
-        ]
+        ],
+        "audio": "donkey"
     },
     47: {
         "color": "#FA0",
@@ -4336,7 +4339,7 @@ ITEMS = {
                 ["Bucket of Bean Liquid", "Bucket of Suspicious-Looking Liquid", "Bucket of Bean Liquid"]
             ]
         },
-        "rarity": Rarity.Epic, 
+        "rarity": Rarity.Epic,
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWMzMzI5M2U3MzFjZDUzYzkxMGNiODg3NjRlYjEwZjE1OTc4ZGYxZmJkZmQ1NDdkM2M3MjY2NzBjNDEyNDVlNSJ9fX0=",
