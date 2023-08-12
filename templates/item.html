@@ -53,7 +53,9 @@
             {% endif %}
         </span>
         <br/>
-        Custom model data: {{ item.item_data["cmd"] }}
+        {% if item.item_data["cmd"] %}
+            Custom model data: {{ item.item_data["cmd"] }}
+        {% endif %}
         {% if item.radiation %}
         <br/>
         Radiation: {{ item.radiation }} rads

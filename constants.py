@@ -2974,6 +2974,44 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNlZTBjNzk0MzcxNjUwYjljOWRjZWRiYjM0MGIwNjcwYWQ1M2QyYTE2ZTg4ZWEyYzlhZjRjYTZhYjMyMDJkMyJ9fX0=",
             "cmd": 1874
+        },
+        "forge": "Deluxe Can of Baked Beans"
+    },
+    "Deluxe Can of Baked Beans": {
+        "sell": 125000,
+        "museum": (9, 2, 2),
+        "rarity": Rarity.Legendary,
+        "lore": ["in deluxe tomato sauce"],
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzVlMTkyNTllNWYyN2M5NDlhZWE1MjdlOWFlZGZlMzY4NmVlNWNiZDg4ZGIwYTJlNzExY2QyZjI5NTM1MmYzMyJ9fX0=",
+            "cmd": 1875
+        },
+        "forge": "Can of Bob's Secret Baked Beans"
+    },
+    "Can of Bob's Secret Baked Beans": {
+        "museum": (9, 2, 3),
+        "rarity": Rarity.Mythic,
+        "lore": ["Family recipe, forged using souls of dead beans"],
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2IyNDliNzc5NTM1ZDVmMjAyNGZkZjg4ZDUzZWI2Mjc5NWY1NzgwOWU1YWY0ZGI2NjhmNzVlMDZjZTNjMyJ9fX0=",
+            "cmd": 1876
+        },
+        "forge": "Bob's Spicy Inferno Bean"
+    },
+    "Bob's Spicy Inferno Bean": {
+        "museum": (9, 2, 4),
+        "rarity": Rarity.Godly,
+        "lore": [
+            "Forged in the depths of the Layer 2 Sputtrooms, this",
+            "bean is truly the One Bean to rule over All Other Beans*",
+            "(*with exceptions, read the terms of service before use)"
+        ],
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzcyMDExMjgwYjViOWFiMThjNTU3MDM5NDNlN2YxMWExOTcxNzk3NGJiOTU0MWNhNGIyNzIzZjdhNWZhYjIzNiJ9fX0=",
+            "cmd": 1877
         }
     },
 
@@ -7639,6 +7677,27 @@ ITEMS = {
         }
     },
 
+    "Player Head": {
+        "obtain": [
+            "Hit a player with the last durability of your [Child Smacker]."
+        ],
+        "museum": (9, 3, 4),
+        "forge": "Meatloaf",
+        "rarity": Rarity.Epic,
+        "item": {
+            "id": "player_head"
+        }
+    },
+    "Meatloaf": {
+        "museum": (9, 3, 5),
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWM3ZDljYjI0OTVhMzI4NzEwY2QyMTNlMWVlNWJiYTc3YWY2NzRiODk2ZTNiY2JjMzg3ODljYTZiODEyZWUxIn19fQ==",
+            "cmd": "Unknown"
+        }
+    },
+
     "Plutonium Ore": {
         "forge": "Plutonium",
         "sell": 5000,
@@ -8130,6 +8189,7 @@ ITEMS = {
     },
 
     "Prime Amethyst": {
+        "museum": (9, 2, 8),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8147,6 +8207,7 @@ ITEMS = {
     },
 
     "Prime Diamond": {
+        "museum": (9, 2, 5),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8164,6 +8225,7 @@ ITEMS = {
     },
 
     "Prime Hematite": {
+        "museum": (9, 3, 1),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8181,6 +8243,7 @@ ITEMS = {
     },
 
     "Prime Onyx": {
+        "museum": (9, 2, 9),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8198,6 +8261,7 @@ ITEMS = {
     },
 
     "Prime Orichalcum": {
+        "museum": (9, 3, 2),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8216,6 +8280,7 @@ ITEMS = {
     },
     
     "Prime Ruby": {
+        "museum": (9, 2, 6),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8232,6 +8297,7 @@ ITEMS = {
     },
 
     "Prime Topaz": {
+        "museum": (9, 2, 7),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -9818,6 +9884,23 @@ ITEMS = {
                 "pattern": "vex"
             },
             "cmd": 1899
+        }
+    },
+
+    "Treasured Stone": {
+        "museum": (9, 3, 3),
+        "rarity": Rarity.Mythic,
+        "lore": [
+            "Can be used in an anvil to upgrade",
+            "the Treasure Seeker armor."
+        ],
+        "sell": 50000,
+        "obtain": [
+            "Obtained from treasure chests."
+        ],
+        "item": {
+            "id": "sniffer_egg",
+            "cmd": 1904
         }
     },
 
