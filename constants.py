@@ -1188,12 +1188,27 @@ ARTIFACTS = {
             "then proceeded to bury it underground"
         ]
     },
+    79: {
+        "color": "#FA0",
+        "name": "Pumpkin Spirit",
+        "lore": [
+            "Ya ha ha! You found me!"
+        ]
+    },
     86: {
         "color": "#5F5",
         "name": "Saint Plushie",
         "lore": [
             "A plushie of a fluffy slugcat.",
             "Take good care of the scug."
+        ]
+    },
+    90: {
+        "color": "#FA0",
+        "name": "Weird Gauntlet",
+        "lore": [
+            "A pickaxe from an alternate universe.",
+            "It's unclear how it got here, or how it was meant to be used."
         ]
     },
     97: {
