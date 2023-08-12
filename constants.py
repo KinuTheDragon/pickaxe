@@ -1966,6 +1966,11 @@ BLOCKS = {
         "dew": "Blue Ice",
         "layers": [Layer.Ice]
     },
+    "Pearlescent Froglight": {
+        "drops": [
+            "Sage Shard"
+        ]
+    },
     "Polished Andesite": {
         "drops": [
             "Andesite Chunk",
@@ -8775,9 +8780,38 @@ ITEMS = {
         "lore": [
             "Right click to stab yourself, causing you",
             "to bleed heavily for a brief period of time."
+        ],
+        "use": [
+            "Making the [Cult Dagger]"
+        ]
+    },
+    "Cult Dagger": {
+        "obtain": [
+            "Stab yourself with the [Sacrifical Knife] and walk over the redstone dust on the floor of the Walgo area, then give a [Player Head] as a sacrifice."
+        ],
+        "item": {
+            "id": "netherite_sword",
+            "cmd": "Unknown"
+        },
+        "rarity": Rarity.Godly,
+        "lore": [
+            "Right click to stab yourself, causing you",
+            "to bleed heavily for a brief period of time,",
+            "or left click to stab another player."
         ]
     },
 
+    "Sage Shard": {
+        "item": {
+            "id": "amethyst_shard",
+            "cmd": 1916
+        },
+        "rarity": Rarity.Legendary,
+        "lore": [
+            "Fragment of a fallen sage star."
+        ],
+        "forge": "Sage Crystal"
+    },
     "Sage Crystal": {
         "obtain": [
             "The @waluigi shop offers this for 30 Waluigi Tokens."
