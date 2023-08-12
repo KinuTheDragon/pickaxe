@@ -101,11 +101,7 @@ class Block:
     def json(self):
         return {
             "name": self.name,
-            "drops": [
-                (item[0].href, item[1]) if isinstance(item, tuple)
-                else (item.href, None)
-                for item in self.drops
-            ],
+            "drops": self.drops,
             "dew_to":
                 self.dew_to.href if self.dew_to else None,
             "dewed_from": [

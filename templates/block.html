@@ -47,10 +47,10 @@
         {% else %}
         Drops:
         <ul>
-            {% for drop, chance in block.drops %}
+            {% for drop, chance, chance2 in block.drops %}
             <li>{{ drop.icon(url_for)|safe }} (
-                {%- if chance is not none -%}
-                    1 in {{ "{:,}".format(chance) }} chance
+                {%- if chance -%}
+                    {{ "{:,}".format(chance2) }} in {{ "{:,}".format(chance) }} chance
                 {%- else -%}unknown chance
                 {%- endif -%})</li>
             {% endfor %}

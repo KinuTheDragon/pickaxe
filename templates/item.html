@@ -140,9 +140,9 @@ playScaleButton.onclick = function() {
             {% if item.forged_from %}
             <li>Forged from {{ item.forged_from.icon(url_for)|safe }}</li>
             {% endif %}
-            {% for block, chance in item.dropped_from %}
+            {% for block, chance, chance2 in item.dropped_from %}
             <li>Dropped from {{ block.icon(url_for)|safe }} with
-                {% if chance %}a 1 in {{ "{:,}".format(chance) }} chance
+                {% if chance %}a {{ "{:,}".format(chance2) }} in {{ "{:,}".format(chance) }} chance
                 {% else %}a currently unknown chance{% endif %}</li>
             {% endfor %}
             {% if item.crafting_tier %}

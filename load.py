@@ -23,10 +23,11 @@ artifacts = {a: Artifact.new(a) for a in ARTIFACTS.keys()}
 for b, block in list(blocks.items()):
     block_data = BLOCKS[b]
     for drop in block_data["drops"] or []:
+        if len(drop) == 2: drop += (1,)
         if isinstance(drop, tuple):
-            block.add_drop((items[drop[0]], drop[1]))
+            block.add_drop((items[drop[0]], drop[1], drop[2]))
         else:
-            block.add_drop((items[drop], None))
+            block.add_drop((items[drop], None, None))
     if block_data["drops"] is None: block.set_no_drops()
     if "dew" in block_data.keys():
         block.dew_to = block_data["dew"]

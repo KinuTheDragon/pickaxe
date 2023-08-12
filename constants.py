@@ -1272,7 +1272,7 @@ ENCHANTMENTS = {
             ["Overclocker", "Can of Bob's Secret Baked Beans", "Prime Diamond"],
             ["Overclocker", "Prime Ruby", "Prime Topaz"],
             ["Overclocker", "Overclocker", "Bob's Spicy Inferno Bean", "Prime Onyx"],
-            ["Prime Ruby", "Prime Orichalcum", "Wurtzite Boron Nitride Compound Plate", "unknown"],
+            ["Prime Ruby", "Prime Orichalcum", "Wurtzite Boron Nitride Compound Plate", "Potassium Ingot"],
             ["Prime Hematite", "Prime Orichalcum", "Prime Orichalcum", "Diamond Jack O'Lantern"]
         ]
     },
@@ -1837,7 +1837,7 @@ BLOCKS = {
     },
     "Horn Coral Block": {
         "drops": [
-            "Omega Shard"
+            ("Omega Shard", 1)
         ]
     },
     "Ice": {
@@ -1931,7 +1931,7 @@ BLOCKS = {
     },
     "Oak Wood": {
         "drops": [
-            "Wood"
+            ("Wood", 1)
         ],
         "layers": [Layer.Dirt]
     },
@@ -1968,7 +1968,8 @@ BLOCKS = {
     },
     "Pearlescent Froglight": {
         "drops": [
-            ("Sage Shard", 1)
+            ("Sage Shard", 50, 49),
+            ("Sage Crystal", 50)
         ]
     },
     "Polished Andesite": {

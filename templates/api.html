@@ -16,7 +16,7 @@
         <h2 class="code">/json/block/&lt;block-name&gt;</h2>
         <div class="code nl">{
     "name": string,
-    "drops": {item, int?}[], // The int is the drop chance as a "1 in" value
+    "drops": {item, int?, int?}[], // The ints are the drop chance as a "1 in" value, formatted as (second value) in (first value). e.g. 1000, 1 would be 1 in 1000
     "dew_to": block?,
     "dewed_from": block[],
     "hardness": int?,
@@ -60,7 +60,7 @@
             "trim": string // The pattern name
         }
     },
-    "dropped_from": {block, int?}, // The int is the drop chance as a "1 in" value
+    "dropped_from": {block, int? ,int?}, // See block drops for more information
     "crafting_uses": item[],
     "enchantment_uses": {enchant, int}[] // The int is the level
 }</div>

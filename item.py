@@ -78,7 +78,7 @@ class Item:
             if block.drops:
                 for drop in block.drops:
                     if drop[0] == self:
-                        dropped_from.append((block, drop[1]))
+                        dropped_from.append((block, drop[1], drop[2]))
         return dropped_from
 
     def set_crafting_recipe(self, tier, recipe):
