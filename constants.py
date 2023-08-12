@@ -1968,7 +1968,7 @@ BLOCKS = {
     },
     "Pearlescent Froglight": {
         "drops": [
-            "Sage Shard"
+            ("Sage Shard", 1)
         ]
     },
     "Polished Andesite": {
@@ -2908,9 +2908,9 @@ ITEMS = {
         "craft": {
             "tier": CraftTier.Skin,
             "recipe": [
-                ["Deluxe Can of Beans", "Baked Beans", "Deluxe Can of Beans"],
+                ["Deluxe Can of Baked Beans", "Baked Beans", "Deluxe Can of Baked Beans"],
                 ["Baked Beans", "Skin Core", "Baked Beans"],
-                ["Deluxe Can of Beans", "Baked Beans", "Deluxe Can of Beans"]
+                ["Deluxe Can of Baked Beans", "Baked Beans", "Deluxe Can of Baked Beans"]
             ]
         },
         "lore": ["The best skin."],
@@ -3174,7 +3174,8 @@ ITEMS = {
         "breaking power": 9,
         "use": [
             "Gives +0.1% luck",
-            "Can pump oil like the [Oil Pump]"
+            "Can pump like the [Oil Pump]",
+            "Pumping any block that is not pumpable by the [Oil Pump] gives [Bucket of Suspicious-Looking Liquid]"
         ],
         "lore": [
             "Strike it rich!",
@@ -3472,13 +3473,39 @@ ITEMS = {
             ]
         },
         "use": [
-            "Used to make [Oil Bucket]s or [Milk Bucket]s."
+            "Used to make [Oil Bucket]s, [Milk Bucket]s, [Bucket of Bean Liquid], or [Bucket of Suspicious-Looking Liquid]."
         ],
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTE3ZDg2ZTNmODFjYzE4MzdjNzBmMTBiZTQ4ODk4MzRjMDRmNTdhN2U5OGUwZGQwYjRiMjIzYjUwYzdhOGY5MCJ9fX0=",
             "cmd": 1614
+        }
+    },
+
+    "Bucket of Bean Liquid": {
+        "obtain": [
+            "Mine [Block of Raw Copper] with an [Oil Pump] or [Turbo Oil Pump] with a [Bucket] in your hotbar."
+        ],
+        "lore": ["Key ingredient in natto."],
+        "rarity": Rarity.Rare,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTdjNDA3YWE3YjMzNjIyNTMwOWQ1MzUwZTNmNDUyYmZjZjM1NTY5MmU5ODFkODFkZGZlMzIwOGJjZjZlZDI2YyJ9fX0=",
+            "cmd": 1893
+        }
+    },
+
+    "Bucket of Suspicious-Looking Liquid": {
+        "obtain": [
+            "Mine any block that doesn't give a drop from an [Oil Pump] using the [Bob's Oil Pump] with a [Bucket] in your hotbar."
+        ],
+        "lore": ["Smells a bit like a funky mustachioed man."],
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzlkM2VjMjE4ZjQzNTM4MjU1ZGUyYWZlMWJiM2MyODBmODg0YmQyNjFhNmRmMDAwMzNmODgxMGYyMjg5M2Q4MCJ9fX0=",
+            "cmd": 1894
         }
     },
 
@@ -6969,7 +6996,10 @@ ITEMS = {
         "item": {
             "id": "hopper",
             "cmd": 1617
-        }
+        },
+        "use": [
+            "Used to obtain [Oil Bucket], [Milk Bucket], or [Bucket of Bean Liquid]."
+        ]
     },
     "Turbo Oil Pump": {
         "craft": {
@@ -6986,7 +7016,10 @@ ITEMS = {
             "id": "hopper",
             "enchanted": True,
             "cmd": 1618
-        }
+        },
+        "use": [
+            "Used to obtain [Oil Bucket], [Milk Bucket], or [Bucket of Bean Liquid]."
+        ]
     },
 
     "Oinx": {

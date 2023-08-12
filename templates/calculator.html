@@ -153,13 +153,13 @@ assignValueFunctions("luck", {
 });
 
 assignValueFunctions("pristine", {
-    "pristine-chance": (pristineLevel) => (pristineLevel * 0.75 + 0.25) / 15,
-    "pristine-level": (pristineChance) => (15 * pristineChance - 0.25) / 0.75
+    "pristine-chance": (pristineLevel) => (pristineLevel * 0.75 + 0.25) / 20,
+    "pristine-level": (pristineChance) => (20 * pristineChance - 0.25) / 0.75
 });
 
 assignValueFunctions("festive", {
-    "festive-chance": (festiveLevel) => (festiveLevel * 0.75 + 0.25) / 50,
-    "festive-level": (festiveChance) => (50 * festiveChance - 0.25) / 0.75
+    "festive-chance": (festiveLevel) => (festiveLevel + 1) / 100,
+    "festive-level": (festiveChance) => 100 * festiveChance - 1
 });
 
 function updateWalgoPassword() {

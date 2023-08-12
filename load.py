@@ -96,6 +96,10 @@ for e in enchants.values(): e.requirements # Load items
 
 communist_items = [(items[i], g) for i, g in COMMUNIST]
 
+# for item in Item.all_items:
+#     if item.default_image_href.endswith("unknown.png"):
+#         print(item.name)
+
 GENERATE_REPORT = False
 
 if GENERATE_REPORT:
