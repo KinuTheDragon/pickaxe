@@ -1220,6 +1220,16 @@ ARTIFACTS = {
             "moving your head up and down."
         ],
         "audio": "bell"
+    },
+    98: {
+        "color": "#0A0",
+        "name": "Electronic Creeper",
+        "lore": [
+            "Can be played!",
+            "Left-click to play, change pitch by",
+            "moving your head up and down."
+        ],
+        "audio": "creeper"
     }
 }
 
