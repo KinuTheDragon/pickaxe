@@ -332,4 +332,14 @@ def update_suggests():
         f.write(request.form["suggests"])
     return redirect("/suggestions")
 
+@app.route("/forceupdate")
+def force_update():
+    if not is_admin():
+        return redirect("/?msg=noadmin")
+    if is_dev_version:
+        return redirect("/")
+    os.system("git reset --hard && git pull")
+    os._exit(0)
+    return redirect("/")
+
 app.run(host = "0.0.0.0", port = 8080)
