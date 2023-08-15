@@ -1195,6 +1195,15 @@ ARTIFACTS = {
             "Ya ha ha! You found me!"
         ]
     },
+    80: {
+        "color": "#5F5",
+        "name": "Unknown Rune",
+        "lore": [
+            "Once belonged to an ancient civilization",
+            "of people who lived in the sky and built",
+            "torture machines to torture plants."
+        ]
+    },
     86: {
         "color": "#5F5",
         "name": "Saint Plushie",
@@ -1209,6 +1218,32 @@ ARTIFACTS = {
         "lore": [
             "A pickaxe from an alternate universe.",
             "It's unclear how it got here, or how it was meant to be used."
+        ]
+    },
+    91: {
+        "color": "#FA0",
+        "name": "Unlimited Air Diving Helmet",
+        "lore": [
+            "An incredibly high-tech helmet that recycles oxygen.",
+            "Unfortunately, it never got to see real use.",
+            "WARNING! DO NOT SUBMERGE, BREAKS UNDERWATER"
+        ]
+    },
+    94: {
+        "color": "#F55",
+        "name": "Wayward Compass",
+        "lore": [
+            "Points towards the nearest person when held.",
+            "Not very useful, as the holder is often the nearest."
+        ]
+    },
+    96: {
+        "color": "#FFF",
+        "name": "gwa",
+        "lore": [
+            "An entity resembling a white cat that calls itself \"gwa\".",
+            "It doesn't require sustenance and can't feel boredom.",
+            "Origins are unclear, and it refuses to communicate further."
         ]
     },
     97: {
