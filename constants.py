@@ -8941,7 +8941,10 @@ ITEMS = {
         "lore": [
             "Fragment of a fallen sage star."
         ],
-        "forge": "Sage Crystal"
+        "forge": "Sage Crystal",
+        "obtain": [
+            "There is a hidden variable on the plot that dictates sage star spawning. Each time the bell behind the moon door is rung, it decreases by one. When it hits zero, a sage star spawns and the variable is reset to a random number between 1 and 10, including both endpoints."
+        ]
     },
     "Sage Crystal": {
         "obtain": [
