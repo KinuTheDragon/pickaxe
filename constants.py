@@ -2112,7 +2112,8 @@ BLOCKS = {
             "Impure Copper",
             "Copper Ingot"
         ],
-        "dew": "Block of Copper"
+        "dew": "Block of Copper",
+        "rbp": 6
     },
     "Prismarine": {
         "drops": [
