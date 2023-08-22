@@ -1255,6 +1255,14 @@ ARTIFACTS = {
             "Not very useful, as the holder is often the nearest."
         ]
     },
+    95: {
+        "color": "#FF5",
+        "name": "Lucky Block",
+        "lore": [
+            "This brick comes from an alternate universe.",
+            "There's something inside it, but it's unopenable."
+        ]
+    },
     96: {
         "color": "#FFF",
         "name": "gwa",
