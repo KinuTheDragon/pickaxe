@@ -145,9 +145,9 @@ assignValueFunctions("block-mining", {
 });
 
 assignValueFunctions("luck", {
-    "luck-percentage": (luckChance, baseChance) => 100 * luckChance / baseChance,
     "luck-chance": (luckPercentage, baseChance) =>
         100 * baseChance / luckPercentage,
+    "luck-percentage": (luckChance, baseChance) => 100 * luckChance / baseChance,
     "base-chance": (luckChance, luckPercentage) =>
         luckPercentage / 100 * luckChance
 });

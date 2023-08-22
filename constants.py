@@ -66,6 +66,24 @@ class Layer(Enum):
     Ice = "Ice", False, 70, 119
     Cake = "Cake", False, 120, 180
 
+HERMIT_TAGS = [
+    # more?
+    ["&8[&5⏺&8]", 15], # speculative
+    ["&8[&d◎&8]", 40],
+    # more?
+    ["&8[&d⌘&8]", 50], # speculative
+    ["&8[&5|&d⌘&5|&8]", 70],
+    # more
+    ["&c⏸&5[&6⭐&e⌘&a⭐&5]&b⏸", 350], # speculative
+    ["&c♮&5[&6⭐&e⌘&a⭐&5]&b♮", 400],
+    ["&c⁑&5[&6⭐&e⌘&a⭐&5]&b⁑", 450],
+    ["&cᛝ&5[&6⭐&e⌘&a⭐&5]&bᛝ", 500],
+    ["&cᚸ&5[&6⭐&e⌘&a⭐&5]&bᚸ", 550],
+    # more
+    ["&cᛞ&5[&6⭐&e⌘&a⭐&5]&bᛞ", 700]
+    # more?
+]
+
 MEDALS = [
     {
         "name": "Faster Forging",
@@ -1265,6 +1283,17 @@ ARTIFACTS = {
             "moving your head up and down."
         ],
         "audio": "creeper"
+    },
+    99: {
+        "color": "#55F",
+        "name": "Lapis Apple",
+        "lore": [
+            "Also known as a 'Lapple', this unusual blue-hued",
+            "apple is the result of an experiment to discover",
+            "what happens when something other than gold is",
+            "is put into an apple.",
+            "Unsurprisingly, it's completely inedible."
+        ]
     }
 }
 
@@ -2060,7 +2089,8 @@ BLOCKS = {
             "Impure Lead",
             "Lead Ingot"
         ],
-        "dew": "Chiseled Polished Blackstone"
+        "dew": "Chiseled Polished Blackstone",
+        "rbp": 6
     },
     "Polished Blackstone Bricks": {
         "drops": [
@@ -2094,7 +2124,7 @@ BLOCKS = {
         "drops": [
             "Pumpkin",
             "Pumpkin Seeds",
-            "Exquisite Pumpkin"
+            ("Exquisite Pumpkin", 100)
         ]
     },
     "Red Glazed Terracotta": {
@@ -7454,6 +7484,13 @@ ITEMS = {
         "obtain": [
             "If the [Strange Construct] accessory is equipped, there is a 1/3 chance for a [Sage Crystal] drop to change into this.",
             "Can be created from an [Overclocker Growth Kit]."
+        ],
+        "lore": [
+            "Can be applied onto a saged item in the anvil",
+            "to increase its rarity by another tier, once.",
+            "If applied to gear, it gains additional mining speed.",
+            "Power is reached only through",
+            "surpassing the natural order"
         ],
         "rarity": Rarity.Godly,
         "item": {
