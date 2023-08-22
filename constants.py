@@ -3006,7 +3006,8 @@ ITEMS = {
         },
         "lore": ["The best skin."],
         "museum": (9, 1, 7),
-        "rarity": Rarity.Legendary
+        "rarity": Rarity.Legendary,
+        "use": ["Can be applied to the [Small Backpack] and the [Magical Snowball]"]
     },
 
     "bean trotters": {
@@ -3867,7 +3868,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmVmMWE1YWZhM2E1MTQxMzg4MGFlN2IyYWM5OWExMjg3NzU3M2RjNDA0NjQ2OTQyYmVmMmQ5MzJhMzg0NTk3NCJ9fX0=",
             "cmd": 1849
-        }
+        },
+        "use": ["Can be applied to the [Omega Helmet]"]
     },
 
     "Clay": {
@@ -4398,7 +4400,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjg5YmNlNzM2YTRmZDc5M2VlMmEzODI3NTZhMjUzZjkyY2E3ZDdlYWMwMzFlNDViYTk3YWQwNmNlODYzZGQ0YiJ9fX0=",
             "cmd": 1852
-        }
+        },
+        "use": ["Can be applied to the [Power Helmet MK2]"]
     },
 
     "Crimson Sod": {
@@ -4475,7 +4478,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTdhNDg3NDM1MmY4NzVjNzVlOTM2ZWI2ZGMyYTJlZjc3ZjU0ODlmODQyZWE3ZjAwYTRhNWM2YzI3Mzg3YWE3OSJ9fX0=",
             "cmd": 1851
-        }
+        },
+        "use": ["Can be applied to the [Power Helmet MK2]"]
     },
 
     "Dark Crewmate Skin": {
@@ -4493,7 +4497,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmZjYWQ3Mjc2NmYzODQ0NzhjZmU2MzlmMDIyMjZmYmU4MzYwMDNiMGRlOWFhNjUwZmJiNDljNzA1NDI5YjJhYyJ9fX0=",
             "cmd": 1856
-        }
+        },
+        "use": ["Can be applied to the [Power Helmet MK2] and the [Amogus]"]
     },
 
     "Decoagulation Agent": {
@@ -4532,7 +4537,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzk0Yjc1OGNhNzU2NWFhYWVhMjcyZjkyNjExZjY0ODlmYzk3OGVhMTBlYzNhZTRkNmJlMjk4NWMxZjdjYTE3OCJ9fX0=",
             "cmd": 1854
-        }
+        },
+        "use": ["Can be applied to the [Accessory Bag]"]
     },
 
     "Depth Talisman": {
@@ -5501,9 +5507,7 @@ ITEMS = {
                 ["Orichalcum", "Lead Ingot", "Orichalcum"]
             ]
         },
-        "use": [
-            "A skin that can be applied to a [Power Helmet MK2] or [Heavy-Duty Diving Helmet]."
-        ],
+        "use": ["Can be applied to the [Power Helmet MK2] and the [Heavy-Duty Diving Helmet]"],
         "rarity": Rarity.Legendary,
         "item": {
             "id": "player_head",
@@ -5733,7 +5737,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmI2Yzc0ODNkMjQ1YjRkY2QzMTllYzRlOTIxZWRkNWJlYmFjNmYzZjQ2YWYzNzRlZjZiMzQzZjc4NmI5Y2RhIn19fQ==",
             "cmd": 1850
-        }
+        },
+        "use": ["Can be applied to the [Modular Helmet], [Power Helmet], and [Power Helmet MK2]"]
     },
 
     "Holy Book of Wah": {
@@ -5962,7 +5967,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjU1MWMyZmMxNzRkMTAxOGJkYWE5YmMyMGQ5Y2ZhZTAyM2U1MjMxNTdhNjA2ZjJiYTlmM2U2OTE3MTNiMjgwNiJ9fX0=",
             "cmd": 1857
-        }
+        },
+        "use": ["Can be applied to the [Meteorite Helmet] and the [Power Helmet MK2]"]
     },
 
     "Kawaii Amogus": {
@@ -6242,7 +6248,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWJmM2Q5M2NmZjdmMWY0ZTVjNjE3NDA1NmNhZmNhYjMwNmExMDhiNjUzYzY3MGZmZWVkYmZmYWIyOTkyNmNhMCJ9fX0=",
             "cmd": 1853
-        }
+        },
+        "use": ["Can be applied to the [Waluigi Ceremonial Mask]"]
     },
 
     "Lift Fuel Core": {
@@ -7146,7 +7153,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTgzMmRiN2Q3YTg4ZmY2ODc0N2JjYjU1ZDcyZDNjMWZhY2QzZDM4OWMxNDRmNDI2NGJmZTg5OTMwNDhkMDA2ZiJ9fX0=",
             "cmd": 1859
-        }
+        },
+        "use": ["Can be applied to the [Lantern]"]
     },
 
     "Omega Alloy": {
@@ -8891,7 +8899,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhjMWUxYzYyZGM2OTVlYjkwZmExOTJkYTZhY2E0OWFiNGY5ZGZmYjZhZGI1ZDI2MjllYmZjOWIyNzg4ZmEyIn19fQ==",
             "cmd": 1855
-        }
+        },
+        "use": ["Can be applied to the [Large Backpack] and the [Huge Backpack]"]
     },
 
     "Sacrificial Knife": {
@@ -9793,7 +9802,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWZkNTc2ZTQyZDlkZmU1NjkzMTE1MGU2N2ZhYWZmNGViNmIzZjkwNGI1YmUwZWY2YTg3ZTBjMjM5ODE0YjEwYiJ9fX0=",
             "cmd": 1848
-        }
+        },
+        "use": ["Can be applied to the [Voidwalker Helmet]"]
     },
 
     "Sulfur": {
@@ -10307,7 +10317,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRjZjNjNWYyNGM5YmY4YjkwMzFlOGFlZDUzMzdiNmEwN2Y4MTljZGU4YzYyMjA4NTU0NTE2MmY4YTY5MzA2MCJ9fX0=",
             "cmd": 1847
-        }
+        },
+        "use": ["Can be applied to the [Voidwalker Helmet] and the [Omega Helmet]"]
     },
 
     "Voidwalker Helmet": {
