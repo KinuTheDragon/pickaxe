@@ -1935,7 +1935,8 @@ BLOCKS = {
     "Horn Coral Block": {
         "drops": [
             ("Omega Shard", 1)
-        ]
+        ],
+        "rbp": 8
     },
     "Ice": {
         "drops": [
@@ -2621,6 +2622,18 @@ ITEMS = {
             "id": "black_dye",
             "enchanted": True,
             "cmd": 1755
+        },
+        "forge": "Astral Bar"
+    },
+    "Astral Bar": {
+        "lore": [
+            "An ancient stellar ingot made from astral ore."
+        ],
+        "rarity": Rarity.Godly,
+        "item": {
+            "id": "nether_brick",
+            "enchanted": True,
+            "cmd": 1756
         }
     },
 
@@ -4898,6 +4911,24 @@ ITEMS = {
         }
     },
 
+    "Ebony Skin": {
+        "craft": {
+            "tier": CraftTier.Skin,
+            "recipe": [
+                ["Lead Plate", "Processing Unit", "Lead Plate"],
+                ["Steel Plate", "Skin Core", "Steel Plate"],
+                ["Lead Plate", "Astral Bar", "Lead Plate"]
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc5ZGU0M2Y5NTE3OWM1YTJkODk2MmIzZmE3ZDBhZGRlZjUxZWJkZDE1OGYwYjBkMDI1YzhjNzMxNmJiN2E5In19fQ==",
+            "cmd": 1919
+        },
+        "use": ["Can be applied to the [Power Helmet MK2]."]
+    },
+
     "Efficiency Module": {
         "craft": {
             "tier": CraftTier.Tech0,
@@ -5132,6 +5163,24 @@ ITEMS = {
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzRkNDJmOWM0NjFjZWUxOTk3YjY3YmYzNjEwYzY0MTFiZjg1MmI5ZTVkYjYwN2JiZjYyNjUyN2NmYjQyOTEyYyJ9fX0=",
             "cmd": 1776
         }
+    },
+
+    "Fish Skin": {
+        "craft": {
+            "tier": CraftTier.Skin,
+            "recipe": [
+                ["Water Core", "Sandfish", "Water Core"],
+                ["Glass", "Skin Core", "Glass"],
+                ["Water Core", "Oxygen Tank Module MK2", "Water Core"]
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmRlOTE2MmY2MzBlZWMzZWMyZDVjMWE2OWY5YTc5YzFhNTExYjI3YTM2ZWZhOTg2NmMyYzBiOGFiNmJhZmExMyJ9fX0=",
+            "cmd": 1918
+        },
+        "use": ["Can be applied to the [Heavy-Duty Diving Helmet]."]
     },
 
     "Flawless Gemstone Mesh Orb": {
@@ -5615,6 +5664,24 @@ ITEMS = {
         }
     },
 
+    "Hardened Backpack Skin": {
+        "craft": {
+            "tier": CraftTier.Skin,
+            "recipe": [
+                ["Steel", "Refined Onyx", "Steel"],
+                ["Synthetic Diamond", "Skin Core", "Synthetic Diamond"],
+                ["Steel", "Void Orb", "Steel"]
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjYyNGM5MjdjZmVhMzEzNTU0Mjc5OTNkOGI3OTcxMmU4NmY5NGQ1OTUzNDMzZjg0ODg0OWEzOWE2ODc5In19fQ==",
+            "cmd": 1922
+        },
+        "use": ["Can be applied to the [Medium Backpack] and the [Large Backpack]."]
+    },
+
     "Hat of Knowledge": {
         "obtain": [
             "The nether shop offers this for $30,000."
@@ -5959,6 +6026,24 @@ ITEMS = {
             "id": "iron_pickaxe",
             "cmd": 1360
         }
+    },
+
+    "Ivory Skin": {
+        "craft": {
+            "tier": CraftTier.Skin,
+            "recipe": [
+                ["Celestial Artefact", "Processing Unit", "Celestial Artefact"],
+                ["Wurtzite Boron Nitride Compound Plate", "Skin Core", "Wurtzite Boron Nitride Compound Plate"],
+                ["Celestial Artefact", "Plutonium-239", "Celestial Artefact"]
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM5YzJlODViNDU4NGQ4NGZlMjBiMWQ0MTBlZmVhYjFkYzk0NzEzMWY3ZjdiNzkzZDJiM2YyZWFhYzc0MzM2ZSJ9fX0=",
+            "cmd": 1920
+        },
+        "use": ["Can be applied to the [Power Helmet MK2]."]
     },
 
     "Jonathan Skin": {
@@ -8482,6 +8567,24 @@ ITEMS = {
             "color": "0000B4",
             "cmd": 1613
         }
+    },
+
+    "Pouch Backpack Skin": {
+        "craft": {
+            "tier": CraftTier.Skin,
+            "recipe": [
+                ["Fabric", "Refined Amber", "Fabric"],
+                ["Fabric", "Skin Core", "Fabric"],
+                ["Fabric", "Refined Amber", "Fabric"]
+            ]
+        },
+        "rarity": Rarity.Legendary,
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTVmMWFkYjU4ZGI2ZTJlNTRhODQ3MzliMmM3OWRkZDQwMTRiODVmNzY1MTFkZjQxYTkyNzhkNzE1MWY2Y2RiZiJ9fX0=",
+            "cmd": 1921
+        },
+        "use": ["Can be applied to the [Small Backpack] and the [Medium Backpack]."]
     },
 
     "Pumpkin": {
