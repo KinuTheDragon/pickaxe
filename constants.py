@@ -8046,7 +8046,7 @@ ITEMS = {
             "tier": CraftTier.Brewing,
             "recipe": [
                 [None, "Magnesium Ingot", None],
-                ["Wurtzite Boron Nitride", "Adamantium Scraps", "Wurtzite Boron Nitride"],
+                ["Wurtzite Boron Nitride", "Adamantium Scraps", "Synthetic Diamond"],
                 [None, "Honey", None]
             ]
         },
