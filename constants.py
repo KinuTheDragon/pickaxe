@@ -1222,6 +1222,15 @@ ARTIFACTS = {
             "torture machines to torture plants."
         ]
     },
+    81: {
+        "color": "#F55",
+        "name": "Literaly TNT",
+        "lore": [
+            "Somebody cut the blue wire and it has been defused.",
+            "It's standard practice to bury defused bombs underground",
+            "to make sure they cause no further damage."
+        ]
+    },
     86: {
         "color": "#5F5",
         "name": "Saint Plushie",
