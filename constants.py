@@ -5942,7 +5942,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2Y5MjYwNWVlYTQ2ZWE4NDg4ZWZjMjZiM2Y5ZmM5OTU1MTcwNWU5YzBiNWViYjJmZjg5ODQ2OGYyNzc1OTVhNiJ9fX0=",
             "cmd": 1657
-        }
+        },
+        "sell": 100000
     },
     "Perfect Aquamarine": {
         "sell": 500000,
