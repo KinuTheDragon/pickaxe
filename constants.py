@@ -2588,7 +2588,7 @@ ITEMS = {
     },
 
     "Arctic Amogus": {
-        "museum": (7, 4, 5),
+        "museum": (4, 2, 1),
         "rarity": Rarity.Godly,
         "item": {
             "id": "player_head",
@@ -2638,6 +2638,7 @@ ITEMS = {
         "lore": [
             "An ancient stellar ingot made from astral ore."
         ],
+        "museum": (7, 4, 8),
         "rarity": Rarity.Godly,
         "item": {
             "id": "nether_brick",
@@ -3072,7 +3073,7 @@ ITEMS = {
 
     "Beans": {
         "sell": 699,
-        "museum": (9, 1, 8),
+        "museum": (9, 2, 5),
         "rarity": Rarity.Rare,
         "lore": ["it's beans time"],
         "item": {
@@ -3083,7 +3084,7 @@ ITEMS = {
     },
     "Baked Beans": {
         "sell": 3999,
-        "museum": (9, 1, 9),
+        "museum": (9, 2, 6),
         "rarity": Rarity.Rare,
         "lore": ["it's baked beans time"],
         "item": {
@@ -3095,7 +3096,7 @@ ITEMS = {
     },
     "Can of Baked Beans": {
         "sell": 19999,
-        "museum": (9, 2, 1),
+        "museum": (9, 2, 7),
         "rarity": Rarity.Epic,
         "lore": ["in tomato sauce"],
         "item": {
@@ -3107,7 +3108,7 @@ ITEMS = {
     },
     "Deluxe Can of Baked Beans": {
         "sell": 125000,
-        "museum": (9, 2, 2),
+        "museum": (9, 2, 8),
         "rarity": Rarity.Legendary,
         "lore": ["in deluxe tomato sauce"],
         "item": {
@@ -3118,7 +3119,7 @@ ITEMS = {
         "forge": "Can of Bob's Secret Baked Beans"
     },
     "Can of Bob's Secret Baked Beans": {
-        "museum": (9, 2, 3),
+        "museum": (9, 2, 9),
         "rarity": Rarity.Mythic,
         "lore": ["Family recipe, forged using souls of dead beans"],
         "item": {
@@ -3129,7 +3130,7 @@ ITEMS = {
         "forge": "Bob's Spicy Inferno Bean"
     },
     "Bob's Spicy Inferno Bean": {
-        "museum": (9, 2, 4),
+        "museum": (9, 3, 1),
         "rarity": Rarity.Godly,
         "lore": [
             "Forged in the depths of the Layer 2 Sputtrooms, this",
@@ -4673,7 +4674,7 @@ ITEMS = {
         "use": [
             "Spawns [Smooth Sandstone] when used."
         ],
-        "museum": (4, 2, 6),
+        "museum": (4, 2, 7),
         "rarity": Rarity.Legendary,
         "item": {
             "id": "player_head",
@@ -4935,7 +4936,8 @@ ITEMS = {
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc5ZGU0M2Y5NTE3OWM1YTJkODk2MmIzZmE3ZDBhZGRlZjUxZWJkZDE1OGYwYjBkMDI1YzhjNzMxNmJiN2E5In19fQ==",
             "cmd": 1919
         },
-        "use": ["Can be applied to the [Power Helmet MK2]."]
+        "use": ["Can be applied to the [Power Helmet MK2]."],
+        "museum": (9, 2, 1)
     },
 
     "Efficiency Module": {
@@ -4974,7 +4976,7 @@ ITEMS = {
     },
 
     "Egg": {
-        "museum": (4, 2, 7),
+        "museum": (4, 2, 8),
         "rarity": Rarity.Common,
         "item": {
             "id": "egg",
@@ -5189,7 +5191,8 @@ ITEMS = {
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmRlOTE2MmY2MzBlZWMzZWMyZDVjMWE2OWY5YTc5YzFhNTExYjI3YTM2ZWZhOTg2NmMyYzBiOGFiNmJhZmExMyJ9fX0=",
             "cmd": 1918
         },
-        "use": ["Can be applied to the [Heavy-Duty Diving Helmet]."]
+        "use": ["Can be applied to the [Heavy-Duty Diving Helmet]."],
+        "museum": (9, 1, 9)
     },
 
     "Flawless Gemstone Mesh Orb": {
@@ -5271,7 +5274,7 @@ ITEMS = {
         "obtain": [
             "The nether shop offers this for $8,000."
         ],
-        "museum": (4, 2, 8),
+        "museum": (9, 2, 3),
         "rarity": Rarity.Epic,
         "item": {
             "id": "player_head",
@@ -5549,7 +5552,7 @@ ITEMS = {
     "Plant Fibre": {
         "forge": "Fabric",
         "sell": 40,
-        "museum": (4, 2, 1),
+        "museum": (4, 2, 2),
         "rarity": Rarity.Common,
         "item": {
             "id": "green_dye",
@@ -5557,7 +5560,7 @@ ITEMS = {
         }
     },
     "Fabric": {
-        "museum": (4, 2, 2),
+        "museum": (4, 2, 5),
         "rarity": Rarity.Rare,
         "item": {
             "id": "paper",
@@ -5580,7 +5583,8 @@ ITEMS = {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDhlNDg1ODIwODZjNjFlNWVkZjczOTQwMTQzZGJmYTFlZGJjOTdhYTMzNmM5MGQzMWQxOTJhN2FjYWY2MTdhIn19fQ==",
             "cmd": 1868
-        }
+        },
+        "museum": (9, 1, 8)
     },
 
     "Guardian Helmet": {
@@ -6052,7 +6056,8 @@ ITEMS = {
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM5YzJlODViNDU4NGQ4NGZlMjBiMWQ0MTBlZmVhYjFkYzk0NzEzMWY3ZjdiNzkzZDJiM2YyZWFhYzc0MzM2ZSJ9fX0=",
             "cmd": 1920
         },
-        "use": ["Can be applied to the [Power Helmet MK2]."]
+        "use": ["Can be applied to the [Power Helmet MK2]."],
+        "museum": (9, 2, 2)
     },
 
     "Jonathan Skin": {
@@ -7407,7 +7412,7 @@ ITEMS = {
                 ["Bone", "Soul", "Bone"]
             ]
         },
-        "museum": (4, 2, 5),
+        "museum": (4, 2, 6),
         "rarity": Rarity.Godly,
         "item": {
             "id": "player_head",
@@ -7928,7 +7933,7 @@ ITEMS = {
         "obtain": [
             "Hit a player with the last durability of your [Child Smacker]."
         ],
-        "museum": (9, 3, 4),
+        "museum": (9, 3, 9),
         "forge": "Meatloaf",
         "rarity": Rarity.Epic,
         "item": {
@@ -7936,7 +7941,7 @@ ITEMS = {
         }
     },
     "Meatloaf": {
-        "museum": (9, 3, 5),
+        "museum": (9, 4, 1),
         "rarity": Rarity.Legendary,
         "item": {
             "id": "player_head",
@@ -8436,7 +8441,7 @@ ITEMS = {
     },
 
     "Prime Amethyst": {
-        "museum": (9, 2, 8),
+        "museum": (9, 3, 5),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8454,7 +8459,7 @@ ITEMS = {
     },
 
     "Prime Diamond": {
-        "museum": (9, 2, 5),
+        "museum": (9, 3, 4),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8472,7 +8477,7 @@ ITEMS = {
     },
 
     "Prime Hematite": {
-        "museum": (9, 3, 1),
+        "museum": (9, 3, 7),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8490,7 +8495,7 @@ ITEMS = {
     },
 
     "Prime Onyx": {
-        "museum": (9, 2, 9),
+        "museum": (9, 3, 6),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8508,7 +8513,7 @@ ITEMS = {
     },
 
     "Prime Orichalcum": {
-        "museum": (9, 3, 2),
+        "museum": (9, 3, 8),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8527,7 +8532,7 @@ ITEMS = {
     },
     
     "Prime Ruby": {
-        "museum": (9, 2, 6),
+        "museum": (9, 3, 2),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -8544,7 +8549,7 @@ ITEMS = {
     },
 
     "Prime Topaz": {
-        "museum": (9, 2, 7),
+        "museum": (9, 3, 3),
         "craft": {
             "tier": CraftTier.Walgo,
             "recipe": [
@@ -9799,7 +9804,7 @@ ITEMS = {
     },
 
     "Stone Ball": {
-        "museum": (7, 4, 8),
+        "museum": (9, 2, 4),
         "rarity": Rarity.Mundane,
         "item": {
             "id": "player_head",
@@ -10187,7 +10192,7 @@ ITEMS = {
     },
 
     "Treasured Stone": {
-        "museum": (9, 3, 3),
+        "museum": (9, 4, 2),
         "rarity": Rarity.Mythic,
         "lore": [
             "Can be used in an anvil to upgrade",
