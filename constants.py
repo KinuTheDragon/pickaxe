@@ -2632,7 +2632,8 @@ ITEMS = {
             "enchanted": True,
             "cmd": 1755
         },
-        "forge": "Astral Bar"
+        "forge": "Astral Bar",
+        "obtain": ["Tip: Wait until [Sea Lantern]s spawn in the mine, then use a [Dew Dripper] on one of the ones near the top. Dew Drippers activate more frequently the higher up you are."]
     },
     "Astral Bar": {
         "lore": [
@@ -6025,7 +6026,8 @@ ITEMS = {
         "item": {
             "id": "iron_ingot",
             "cmd": 1372
-        }
+        },
+        "obtain": ["Tip: Go to the mesa and use a [Red Herring] to refill the sand layer with [Red Sand], then forge the [Iron Sand] it drops."]
     },
 
     "Iron Pickaxe": {
