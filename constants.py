@@ -1239,6 +1239,14 @@ ARTIFACTS = {
             "Take good care of the scug."
         ]
     },
+    89: {
+        "color": "#FF5",
+        "name": "Surprisingly Well-Preserved Cheeseburger",
+        "lore": [
+            "Despite being previously buried in a chest,",
+            "it still looks good enough to eat."
+        ]
+    },
     90: {
         "color": "#FA0",
         "name": "Weird Gauntlet",
