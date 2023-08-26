@@ -9056,7 +9056,7 @@ ITEMS = {
     },
     "Cult Dagger": {
         "obtain": [
-            "Stab yourself with the [Sacrifical Knife] and walk over the redstone dust on the floor of the Walgo area, then give a [Player Head] as a sacrifice."
+            "Stab yourself with the [Sacrificial Knife] and walk over the redstone dust on the floor of the Walgo area, then give a [Player Head] as a sacrifice."
         ],
         "item": {
             "id": "netherite_sword",
