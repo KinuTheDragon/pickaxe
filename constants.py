@@ -9078,6 +9078,30 @@ ITEMS = {
         ]
     },
 
+    "Sage Charm": {
+        "item": {
+            "id": "player_head",
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTQ5ZDIxMmJmYzBhMzRhNzA3NjNlMmE2OGRlNGZhOTI3MGNjZjJkODA3MWIxY2M4MzgxM2U0MTA2YjlkMWRmZSJ9fX0=",
+            "cmd": 1917
+        },
+        "rarity": Rarity.Mythic,
+        "lore": [
+            "Adds +1 Sage enchantment level."
+        ],
+        "accessory": {
+            "use": "Adds +1 [Sage] level",
+            "slots": 1
+        },
+        "craft": {
+            "tier": CraftTier.Crafting3,
+            "recipe": [
+                ["String", "Sage Shard", "String"],
+                ["Sage Shard", "Astral Bar", "Sage Shard"],
+                [None, "Sage Shard", None]
+            ]
+        }
+    },
+
     "Sage Shard": {
         "item": {
             "id": "amethyst_shard",
