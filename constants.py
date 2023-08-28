@@ -1223,6 +1223,11 @@ ARTIFACTS = {
             "to make sure they cause no further damage."
         ]
     },
+    84: {
+        "color": "#FFF",
+        "name": "undefined",
+        "lore": []
+    },
     86: {
         "color": "#5F5",
         "name": "Saint Plushie",
@@ -3844,7 +3849,12 @@ ITEMS = {
         "item": {
             "id": "diamond_axe",
             "cmd": 1793
-        }
+        },
+        "lore": [
+            "Smacks people out of existance.",
+            "Literally.",
+            "Breaks after 5 uses."
+        ]
     },
 
     "Chocolate Chips": {
@@ -9060,7 +9070,7 @@ ITEMS = {
         ],
         "item": {
             "id": "netherite_sword",
-            "cmd": "Unknown"
+            "cmd": 1910
         },
         "rarity": Rarity.Godly,
         "lore": [
