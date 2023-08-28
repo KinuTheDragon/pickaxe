@@ -123,14 +123,6 @@ MEDALS = [
         ],
         "costs": [25]
     }, {
-        "name": "Reset Priority",
-        "icon": "reset-priority.png",
-        "description": [
-            "Gives you an additional mine",
-            "reset vote per level."
-        ],
-        "costs": [10, 30, 45]
-    }, {
         "name": "Fortune",
         "icon": "fortune.png",
         "description": [
