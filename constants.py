@@ -1216,7 +1216,7 @@ ARTIFACTS = {
     },
     81: {
         "color": "#F55",
-        "name": "Literaly TNT",
+        "name": "Literally TNT",
         "lore": [
             "Somebody cut the blue wire and it has been defused.",
             "It's standard practice to bury defused bombs underground",
@@ -8014,6 +8014,9 @@ ITEMS = {
                 [None, "Water Bottle", None]
             ]
         },
+        "use": [
+            "+25% to double drops from breaking blocks"
+        ],
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "potion",
@@ -8108,6 +8111,9 @@ ITEMS = {
                 [None, "Water Bottle", None]
             ]
         },
+        "use": [
+            "+50% luck (additive)"
+        ],
         "rarity": Rarity.Rare,
         "item": {
             "id": "potion",
@@ -8125,7 +8131,7 @@ ITEMS = {
             ]
         },
         "use": [
-            "+100% luck"
+            "+100% luck (additive)"
         ],
         "rarity": Rarity.Rare,
         "item": {
@@ -8145,7 +8151,7 @@ ITEMS = {
             ]
         },
         "use": [
-            "+20% mining speed"
+            "+10% mining speed (multiplicative)"
         ],
         "rarity": Rarity.Uncommon,
         "item": {
@@ -8163,6 +8169,9 @@ ITEMS = {
                 [None, "Potion of Haste", None]
             ]
         },
+        "use": [
+            "+20% mining speed (multiplicative)"
+        ],
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "potion",
@@ -8179,6 +8188,9 @@ ITEMS = {
                 [None, "Potion of Haste II", None]
             ]
         },
+        "use": [
+            "+30% mining speed (multiplicative)"
+        ],
         "rarity": Rarity.Rare,
         "item": {
             "id": "potion",
