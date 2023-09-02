@@ -66,6 +66,23 @@ class Layer(Enum):
     Ice = "Ice", False, 70, 119
     Cake = "Cake", False, 120, 180
 
+class PotionEffect(Enum):
+    Haste = "Haste"
+    Fortune = "Fortune"
+    StrongBones = "Strong Bones"
+    Cheating = "Cheating"
+    Abundance = "Abundance"
+    Beans = "beans"
+
+POTION_EFFECTS = {
+    PotionEffect.Haste: lambda i: f"+{i * 10}% mining speed (multiplicative)",
+    PotionEffect.Fortune: lambda i: f"+{i * 50}% luck (additive)",
+    PotionEffect.StrongBones: lambda i: "Prevents fall damage",
+    PotionEffect.Cheating: lambda i: "Doubles Waluigi Ticket drops",
+    PotionEffect.Abundance: lambda i: f"+{i * 25}% chance for double drops",
+    PotionEffect.Beans: lambda i: f"Gives {i * 2}% chance for Autoforge to trigger twice"
+}
+
 HERMIT_TAGS = [
     # more?
     ["&8[&5⏺&8]", 15], # speculative
@@ -2918,9 +2935,11 @@ ITEMS = {
             "color": "875132",
             "cmd": 1880
         },
-        "use": [
-            "Gives a 2% chance for [Autoforge] to trigger twice for 10 minutes."
-        ]
+        "potion": {
+            "effect": PotionEffect.Beans,
+            "level": 1,
+            "duration": [0, 10, 0]
+        }
     },
     "Beans Potion II": {
         "craft": {
@@ -2938,9 +2957,11 @@ ITEMS = {
             "color": "A84C25",
             "cmd": 1881
         },
-        "use": [
-            "Gives a 4% chance for [Autoforge] to trigger twice for 14 minutes."
-        ]
+        "potion": {
+            "effect": PotionEffect.Beans,
+            "level": 2,
+            "duration": [0, 14, 0]
+        }
     },
     "Beans Potion III": {
         "craft": {
@@ -2958,9 +2979,11 @@ ITEMS = {
             "color": "B54E22",
             "cmd": 1882
         },
-        "use": [
-            "Gives a 8% chance for [Autoforge] to trigger twice for 15 minutes."
-        ]
+        "potion": {
+            "effect": PotionEffect.Beans,
+            "level": 4,
+            "duration": [0, 15, 0]
+        }
     },
     "Beans Potion IV": {
         "craft": {
@@ -2978,9 +3001,11 @@ ITEMS = {
             "color": "D65720",
             "cmd": 1883
         },
-        "use": [
-            "Gives a 14% chance for [Autoforge] to trigger twice for 18 minutes."
-        ]
+        "potion": {
+            "effect": PotionEffect.Beans,
+            "level": 7,
+            "duration": [0, 18, 0]
+        }
     },
     "Beans Potion V": {
         "craft": {
@@ -2998,9 +3023,11 @@ ITEMS = {
             "color": "E34E0E",
             "cmd": 1884
         },
-        "use": [
-            "Gives a 36% chance for [Autoforge] to trigger twice for 36 minutes."
-        ]
+        "potion": {
+            "effect": PotionEffect.Beans,
+            "level": 18,
+            "duration": [0, 36, 0]
+        }
     },
 
     "Bean Liquid Potion": {
@@ -3023,9 +3050,11 @@ ITEMS = {
             "color": "DDF002",
             "cmd": 1895
         },
-        "use": [
-            "Gives a 8% chance for [Autoforge] to trigger twice for 1 minute."
-        ]
+        "potion": {
+            "effect": PotionEffect.Beans,
+            "level": 4,
+            "duration": [0, 1, 0]
+        }
     },
 
     "Bean Skin": {
@@ -3680,9 +3709,11 @@ ITEMS = {
                 [None] * 3
             ]
         },
-        "use": [
-            "Gives immunity to fall damage."
-        ],
+        "potion": {
+            "effect": PotionEffect.StrongBones,
+            "level": 1,
+            "duration": [0, 30, 0]
+        },
         "rarity": Rarity.Common,
         "item": {
             "id": "potion",
@@ -8014,9 +8045,11 @@ ITEMS = {
                 [None, "Water Bottle", None]
             ]
         },
-        "use": [
-            "+25% to double drops from breaking blocks"
-        ],
+        "potion": {
+            "effect": PotionEffect.Abundance,
+            "level": 1,
+            "duration": [0, 3, 0]
+        },
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "potion",
@@ -8033,9 +8066,11 @@ ITEMS = {
                 [None, "Potion of Abundance I", None]
             ]
         },
-        "use": [
-            "+50% to double drops from breaking blocks"
-        ],
+        "potion": {
+            "effect": PotionEffect.Abundance,
+            "level": 2,
+            "duration": [0, 3, 20]
+        },
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "potion",
@@ -8052,9 +8087,11 @@ ITEMS = {
                 [None, "Water Bottle", None]
             ]
         },
-        "use": [
-            "+75% to double drops from breaking blocks"
-        ],
+        "potion": {
+            "effect": PotionEffect.Abundance,
+            "level": 3,
+            "duration": [0, 3, 40]
+        },
         "rarity": Rarity.Rare,
         "item": {
             "id": "potion",
@@ -8071,9 +8108,11 @@ ITEMS = {
                 [None, "Honey", None]
             ]
         },
-        "use": [
-            "+100% to double drops from breaking blocks"
-        ],
+        "potion": {
+            "effect": PotionEffect.Abundance,
+            "level": 1,
+            "duration": [0, 4, 0]
+        },
         "rarity": Rarity.Epic,
         "item": {
             "id": "potion",
@@ -8091,9 +8130,11 @@ ITEMS = {
                 [None, "Water Bottle", None]
             ]
         },
-        "use": [
-            "Doubles Waluigi Ticket drops"
-        ],
+        "potion": {
+            "effect": PotionEffect.Cheating,
+            "level": 1,
+            "duration": [0, 2, 26]
+        },
         "rarity": Rarity.Epic,
         "item": {
             "id": "potion",
@@ -8111,9 +8152,11 @@ ITEMS = {
                 [None, "Water Bottle", None]
             ]
         },
-        "use": [
-            "+50% luck (additive)"
-        ],
+        "potion": {
+            "effect": PotionEffect.Fortune,
+            "level": 1,
+            "duration": [0, 4, 0]
+        },
         "rarity": Rarity.Rare,
         "item": {
             "id": "potion",
@@ -8130,9 +8173,11 @@ ITEMS = {
                 [None, "Potion of Fortune", None]
             ]
         },
-        "use": [
-            "+100% luck (additive)"
-        ],
+        "potion": {
+            "effect": PotionEffect.Fortune,
+            "level": 2,
+            "duration": [0, 5, 0]
+        },
         "rarity": Rarity.Rare,
         "item": {
             "id": "potion",
@@ -8150,9 +8195,11 @@ ITEMS = {
                 [None, "Water Bottle", None]
             ]
         },
-        "use": [
-            "+10% mining speed (multiplicative)"
-        ],
+        "potion": {
+            "effect": PotionEffect.Haste,
+            "level": 1,
+            "duration": [0, 3, 0]
+        },
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "potion",
@@ -8169,9 +8216,11 @@ ITEMS = {
                 [None, "Potion of Haste", None]
             ]
         },
-        "use": [
-            "+20% mining speed (multiplicative)"
-        ],
+        "potion": {
+            "effect": PotionEffect.Haste,
+            "level": 2,
+            "duration": [0, 4, 0]
+        },
         "rarity": Rarity.Uncommon,
         "item": {
             "id": "potion",
@@ -8188,9 +8237,11 @@ ITEMS = {
                 [None, "Potion of Haste II", None]
             ]
         },
-        "use": [
-            "+30% mining speed (multiplicative)"
-        ],
+        "potion": {
+            "effect": PotionEffect.Haste,
+            "level": 3,
+            "duration": [0, 5, 0]
+        },
         "rarity": Rarity.Rare,
         "item": {
             "id": "potion",

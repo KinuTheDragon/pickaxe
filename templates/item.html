@@ -82,6 +82,9 @@
             {% else %}
             <li>Unsellable</li>
             {% endif %}
+            {% if item.potion_effect %}
+            <li>Potion effect: {{ item.potion_effect.value }} {{ item.potion_level }} ({{ item.potion_effect_text }}, {{ item.potion_duration_text }})</li>
+            {% endif %}
             {% if item.crafting_uses %}
             <li>Used in crafting:</li>
             <ul>

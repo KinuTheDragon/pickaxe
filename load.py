@@ -85,6 +85,10 @@ for i, item in list(items.items()):
     if "modular" in item_data.keys():
         item.modular_armor_slots = item_data["modular"]["slots"]
         item.modular_armor_capacity = item_data["modular"]["capacity"]
+    if "potion" in item_data.keys():
+        item.potion_effect = item_data["potion"]["effect"]
+        item.potion_level = item_data["potion"]["level"]
+        item.potion_duration = item_data["potion"]["duration"]
     item.item_data = item_data["item"]
 
 for block in blocks.values():

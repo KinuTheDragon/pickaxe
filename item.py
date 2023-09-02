@@ -36,6 +36,9 @@ class Item:
         self.accessory_slots = None
         self.module_effect = None
         self.module_slots = None
+        self.potion_effect = None
+        self.potion_level = None
+        self.potion_duration = None
         self.modular_armor_slots = None
         self.modular_armor_capacity = None
         self.max_depth = None
@@ -170,6 +173,14 @@ class Item:
     def overclocked_color(self):
         return RARITY_COLORS.get(self.overclocked_rarity, "")
 
+    @property
+    def potion_effect_text(self):
+        return POTION_EFFECTS[self.potion_effect](self.potion_level)
+
+    @property
+    def potion_duration_text(self):
+        return "{0}h{1}m{2}s".format(*self.potion_duration)
+
     def icon(self, url_for):
         return f"""<a href="{self.href}" style="color:{self.color}"><img src="{url_for("static", filename=self.image_href)}" width=50 height=50 />{self.name}</a>"""
 
@@ -200,6 +211,9 @@ class Item:
             "accessory_slots": self.accessory_slots,
             "module_effect": self.module_effect,
             "module_slots": self.module_slots,
+            "potion_effect": self.potion_effect.value,
+            "potion_level": self.potion_level,
+            "potion_duration": self.potion_duration,
             "modular_armor_slots": self.modular_armor_slots,
             "modular_armor_capacity": self.modular_armor_capacity,
             "max_depth": self.max_depth,
