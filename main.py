@@ -356,12 +356,14 @@ def craft_tier(tier):
     return render_template("crafttier.html",
                            tier = this_tier,
                            required = Item.new(this_tier.value[1]) if isinstance(this_tier.value, tuple) else None,
-                           items = items_of_tier)
+                           items = items_of_tier,
+                           is_dev_version = is_dev_version)
 
 @app.route("/crafttiers")
 def craft_tiers():
     tiers = sorted(list(CraftTier),
                    key = lambda x: x.tier_name)
-    return render_template("crafttiers.html", tiers = tiers)
+    return render_template("crafttiers.html", tiers = tiers,
+                           is_dev_version = is_dev_version)
 
 app.run(host = "0.0.0.0", port = 8080)
