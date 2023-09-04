@@ -19,6 +19,10 @@ class CraftTier(Enum):
     Skin = "Skin Crafting"
     Pumpkin = "Pumpkin Crafting"
 
+    @property
+    def tier_name(self):
+        return self.value[0] if isinstance(self.value, tuple) else self.value
+
 class Rarity(Enum):
     Mundane = "Mundane"
     Common = "Common"

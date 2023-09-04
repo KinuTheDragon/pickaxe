@@ -6,6 +6,7 @@ from enchantment import Enchantment
 from constants import ACHIEVEMENTS, MEDALS
 from flask.app import HTTPException
 from jwt_util import create_jwt_token, verify_jwt_token
+from constants import CraftTier
 import re, hashlib, hmac, os, sys
 
 is_dev_version = "REPL_ID" in os.environ
@@ -341,5 +342,26 @@ def force_update():
     os.system("git reset --hard && git pull")
     os._exit(0)
     return redirect("/")
+
+@app.route("/crafttier/<tier>")
+def craft_tier(tier):
+    for x in CraftTier:
+        if x.name.lower() == tier:
+            this_tier = x
+            break
+    else: return abort(404)
+    items_of_tier = [item for item in Item.all_items
+                     if item.crafting_tier == this_tier]
+    items_of_tier.sort(key = sort_key)
+    return render_template("crafttier.html",
+                           tier = this_tier,
+                           required = Item.new(this_tier.value[1]) if isinstance(this_tier.value, tuple) else None,
+                           items = items_of_tier)
+
+@app.route("/crafttiers")
+def craft_tiers():
+    tiers = sorted(list(CraftTier),
+                   key = lambda x: x.tier_name)
+    return render_template("crafttiers.html", tiers = tiers)
 
 app.run(host = "0.0.0.0", port = 8080)

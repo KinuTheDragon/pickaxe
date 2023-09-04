@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Pickaxe Wiki: {{ tier.tier_name }}</title>
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body>
+        <a href="/">Home</a><br/>
+        <a href="/crafttiers">All crafting tiers</a>
+        <h1>Pickaxe Wiki: Crafting Tier - {{ tier.tier_name }}</h1>
+        {% if is_dev_version %}
+        <h2 style="color:#f80">This is the development version! Please check <a id="link" href="https://pickaxe.showierdata.xyz">the non-development version</a> instead.</h2>
+        {% endif %}
+        {% if required %}
+            Requires {{ required.icon(url_for)|safe }}
+        {% endif %}
+        <ul>
+        {% for item in items %}
+            <li>{{ item.icon(url_for)|safe }}</li>
+        {% endfor %}
+        </ul>
+        <script src="{{ url_for('static', filename='fixlink.js') }}"></script>
+    </body>
+</html>

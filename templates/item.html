@@ -152,7 +152,7 @@ playScaleButton.onclick = function() {
             {% if item.crafting_tier %}
             <li>
                 {% if reqhat %}
-                Crafting: {{ item.crafting_tier.value[0] }} (Requires {{ Item.new(item.crafting_tier.value[1]).icon(url_for)|safe }})
+                Crafting: <a href="/crafttier/{{ item.crafting_tier.name.lower() }}">{{ item.crafting_tier.value[0] }}</a> (Requires {{ Item.new(item.crafting_tier.value[1]).icon(url_for)|safe }})
                 {% else %}
                 Crafting: {{ item.crafting_tier.value }}
                 {% endif %}
