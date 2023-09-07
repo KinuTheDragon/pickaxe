@@ -3272,7 +3272,7 @@ ITEMS = {
         "use": [
             "Increases base luck of gear when combined in an anvil.<br/>"
             "<table class=\"lopad\"><tr><th>Number of times</th><td>" +
-            "</td><td>".join(str(x) for x in range(1, 7)) +
+            "</td><td>".join(str(x) for x in range(1, 5)) +
             "</td></tr><tr><th>Tool upgrade %</th><td>" +
             "</td><td>".join(str(x) for x in [3, 2, 3, 2]) +
             "</td></tr><tr><th>Armor upgrade %</th><td>" +
