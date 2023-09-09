@@ -3185,7 +3185,7 @@ ITEMS = {
 
     "Bedrock Piece": {
         "sell": 400000,
-        "museum": (4, 3, 9),
+        "museum": (7, 4, 5),
         "rarity": Rarity.Divine,
         "lore": [
             "Thought to be unbreakable."
@@ -7330,7 +7330,7 @@ ITEMS = {
             ]
         },
         "sell": 500000,
-        "museum": (4, 3, 8),
+        "museum": (4, 3, 9),
         "rarity": Rarity.Exotic,
         "item": {
             "id": "gold_ingot",
@@ -7428,7 +7428,7 @@ ITEMS = {
 
     "Omega Shard": {
         "sell": 100000,
-        "museum": (4, 3, 7),
+        "museum": (4, 3, 8),
         "rarity": Rarity.Exotic,
         "item": {
             "id": "player_head",
@@ -9187,6 +9187,7 @@ ITEMS = {
         "lore": [
             "Fragment of a fallen sage star."
         ],
+        "museum": (4, 3, 7),
         "forge": "Sage Crystal",
         "obtain": [
             "There is a hidden variable on the plot that dictates sage star spawning. Each time the bell behind the moon door is rung, it decreases by one. When it hits zero, a sage star spawns and the variable is reset to a random number between 1 and 10, including both endpoints."
