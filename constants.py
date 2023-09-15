@@ -1282,6 +1282,15 @@ ARTIFACTS = {
             "WARNING! DO NOT SUBMERGE, BREAKS UNDERWATER"
         ]
     },
+    92: {
+        "color": "#A0A",
+        "name": "Non-dimensional Backpack",
+        "lore": [
+            "This was previously a backpack that stored unlimited",
+            "items by transferring them to a pocket dimension.",
+            "Unfortunately, that dimension collapsed."
+        ]
+    },
     94: {
         "color": "#F55",
         "name": "Wayward Compass",
@@ -3885,7 +3894,8 @@ ITEMS = {
             ]
         },
         "use": [
-            "Upon hitting a player, it removes their chat formatting and turns them invisible, thus fake-banning them."
+            "Upon hitting a player, it removes their chat formatting and turns them invisible, thus fake-banning them.",
+            "If you hit a player with the last sliver of durability, you obtain their [Player Head] as well."
         ],
         "rarity": Rarity.Divine,
         "item": {
