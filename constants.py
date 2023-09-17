@@ -1257,6 +1257,19 @@ ARTIFACTS = {
             "Take good care of the scug."
         ]
     },
+    87: {
+        "color": "#A00",
+        "name": "Crazy Writings",
+        "lore": [
+            "Looks to be the ancient writings of a madman.",
+            "\"Crazy? I was crazy once.",
+            "They locked me in a room.",
+            "A rubber room.",
+            "A rubber room with rats.",
+            "And rats make me crazy.\"",
+            "This repeats a couple hundred times."
+        ]
+    },
     89: {
         "color": "#FF5",
         "name": "Surprisingly Well-Preserved Cheeseburger",
