@@ -1359,6 +1359,19 @@ ARTIFACTS = {
             "is put into an apple.",
             "Unsurprisingly, it's completely inedible."
         ]
+    },
+    100: {
+        "color": "#FFF",
+        "name": "Rabbit Plushie",
+        "lore": [
+            "bnuuy",
+            "buny",
+            "bun",
+            "bungy",
+            "bnuny",
+            "buney",
+            "bani"
+        ]
     }
 }
 
@@ -10210,6 +10223,30 @@ ITEMS = {
         "item": {
             "id": "netherite_boots",
             "cmd": 1664
+        }
+    },
+
+    "Treasure Hunter Helmet": {
+        "obtain": [
+            "Combine a [Treasured Stone] with a [Treasure Seeker Helmet] in an anvil."
+        ],
+        "rarity": Rarity.Legendary,
+        "lore": [
+            "Increases chest find rate by 20%",
+            "per armor piece (multiplicatively)."
+        ],
+        "use": [
+            "Gives -20% mining speed",
+            "Gives +40% luck",
+            "Gives +20% multiplicative chest find rate"
+        ],
+        "item": {
+            "id": "golden_helmet",
+            "trim": {
+                "material": "emerald",
+                "pattern": "silence"
+            },
+            "cmd": 1900
         }
     },
 
