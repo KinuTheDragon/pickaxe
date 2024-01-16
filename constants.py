@@ -1664,7 +1664,8 @@ BLOCKS = {
         "drops": [
             "Honeycomb",
             ("Honey", 108)
-        ]
+        ],
+        "hardness": 500
     },
     "Black Stained Glass": {
         "drops": [
