@@ -311,8 +311,9 @@ def enable_admin():
     if double_hash != "37272436e6d46402d8525b52b65e49ab664af82e97f6ce560d328f006da72071fef9494e95bc168dece19898ca8489c9ce0374c785022e798a4415a1bd8677ec":
         return redirect("/admin?error=wrong")
     response = make_response(redirect("/?msg=admin"))
-    response.set_cookie("token",
-                        create_jwt_token({"admin": True}).encode())
+    cookie_data = create_jwt_token({"admin": True})
+    if is_dev_version: cookie_data = cookie_data.encode()
+    response.set_cookie("token", cookie_data)
     return response
 
 @app.route("/suggestions")
