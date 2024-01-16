@@ -1,6 +1,6 @@
 let link = document.getElementById("link");
 if (link)
     link.href = location.href.replaceAll(
-        "pickaxe.monochromeninja.repl.co",
+        /[^\/]*\.replit\.dev/g,
         "pickaxe.showierdata.xyz"
     );

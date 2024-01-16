@@ -1617,7 +1617,8 @@ BLOCKS = {
             "Netherite Scrap",
             "Netherite Ingot"
         ],
-        "rbp": 4
+        "rbp": 4,
+        "hardness": 2800
     },
     "Andesite": {
         "drops": [
@@ -1627,7 +1628,8 @@ BLOCKS = {
             Layer.Stone,
             Layer.Blackstone
         ],
-        "rbp": 1
+        "rbp": 1,
+        "hardness": 75
     },
     "Basalt": {
         "drops": [
@@ -1639,21 +1641,24 @@ BLOCKS = {
             "Soul Fragments",
             "Soul Shard"
         ],
-        "rbp": 4
+        "rbp": 4,
+        #"hardness": 1250
     },
     "Beacon": {
         "drops": [
             "Present",
             "Black Present",
             "Gold Present"
-        ]
+        ],
+        "hardness": 1000
     },
     "Bedrock": {
         "drops": [
             "Bedrock Piece"
         ],
         "dew": "Chiseled Deepslate",
-        "rbp": 9
+        "rbp": 9,
+        "hardness": 5000000
     },
     "Beehive": {
         "drops": [
@@ -1669,7 +1674,8 @@ BLOCKS = {
             ("Void Alloy", 250)
         ],
         "dew": "Gray Stained Glass",
-        "rbp": 7
+        "rbp": 7,
+        "hardness": 15000
     },
     "Black Terracotta": {
         "drops": [
@@ -1689,7 +1695,8 @@ BLOCKS = {
             Layer.Blackstone,
             Layer.Brimstone
         ],
-        "rbp": 3
+        "rbp": 3,
+        #"hardness": 225
     },
     "Block of Coal": {
         "drops": [
@@ -1698,7 +1705,8 @@ BLOCKS = {
             "Graphite"
         ],
         "rbp": 3,
-        "id": "coal_block"
+        "id": "coal_block",
+        "hardness": 1750
     },
     "Block of Copper": {
         "id": "copper_block",
@@ -1709,14 +1717,16 @@ BLOCKS = {
             "Impure Orichalcum",
             "Orichalcum"
         ],
-        "id": "diamond_block"
+        "id": "diamond_block",
+        "hardness": 17250
     },
     "Block of Emerald": {
         "drops": [
             "Uranium Ore",
             "Uranium"
         ],
-        "id": "emerald_block"
+        "id": "emerald_block",
+        #"hardness": 25000
     },
     "Block of Gold": {
         "drops": [
@@ -1724,20 +1734,23 @@ BLOCKS = {
             "Gold Ingot"
         ],
         "rbp": 5,
-        "id": "gold_block"
+        "id": "gold_block",
+        "hardness": 5000
     },
     "Block of Iron": {
         "drops": [
             "Iron Ore",
             "Iron Ingot"
         ],
-        "id": "iron_block"
+        "id": "iron_block",
+        "hardness": 5000
     },
     "Block of Lapis Lazuli": {
         "drops": [
             "Water Orb"
         ],
-        "id": "lapis_lazuli_block"
+        "id": "lapis_lazuli_block",
+        "hardness": 250
     },
     "Block of Netherite": {
         "drops": [
@@ -1745,21 +1758,24 @@ BLOCKS = {
             "Adamantium Scraps"
         ],
         "dew": "Chiseled Nether Bricks",
-        "id": "netherite_block"
+        "id": "netherite_block",
+        "hardness": 75000
     },
     "Block of Raw Copper": {
         "id": "raw_copper_block",
         "drops": [
             "Beans",
             "Baked Beans"
-        ]
+        ],
+        "hardness": 500
     },
     "Blue Ice": {
         "drops": [
             "Ice",
             "Aquamarine"
         ],
-        "dew": "Light Blue Stained Glass"
+        "dew": "Light Blue Stained Glass",
+        "hardness": 30000
     },
     "Blue Stained Glass": {
         "drops": [
@@ -1767,46 +1783,54 @@ BLOCKS = {
             "Sog Gem"
         ],
         "dew": "Block of Lapis Lazuli",
-        "rbp": 0
+        "rbp": 0,
+        "hardness": 250
     },
     "Brain Coral Block": {
         "drops": [
             "Bacon",
             "Pig Steel"
         ],
-        "rbp": 3
+        "rbp": 3,
+        "hardness": 1000
     },
     "Brown Mushroom Block": {
         "drops": [
             "Meteorite Core"
-        ]
+        ],
+        "hardness": 25000
     },
     "Brown Wool": {
         "drops": [
             "Chocolate Chips"
-        ]
+        ],
+        "hardness": 40000
     },
     "Chiseled Deepslate": {
         "drops": [
             "Reinforced Bedrock"
-        ]
+        ],
+        "hardness": 25000000
     },
     "Chiseled Nether Bricks": {
         "drops": [
             "Adamantium"
-        ]
+        ],
+        "hardness": 100000
     },
     "Chiseled Stone Bricks": {
         "drops": [
             "Hypercompact Stone"
-        ]
+        ],
+        "hardness": 30000
     },
     "Clay": {
         "drops": [
             "Clay",
             "Sog Stone",
             "Aluminium Ore"
-        ]
+        ],
+        "hardness": 800
     },
     "Coal Ore": {
         "drops": [
@@ -1816,7 +1840,8 @@ BLOCKS = {
         "layers": [
             Layer.Stone,
             Layer.Blackstone
-        ]
+        ],
+        #"hardness": 125
     },
     "Coarse Dirt": {
         "drops": [
@@ -1831,7 +1856,8 @@ BLOCKS = {
             "Amogus"
         ],
         "layers": [Layer.Dirt],
-        "rbp": 0
+        "rbp": 0,
+        "hardness": 18
     },
     "Cobblestone": {
         "drops": [
@@ -1839,24 +1865,28 @@ BLOCKS = {
             "Cobblestone Chunk"
         ],
         "layers": [Layer.Stone],
-        "rbp": 1
+        "rbp": 1,
+        "hardness": 45
     },
     "Conduit": {
         "drops": [
             "Arkenstone Fragment"
-        ]
+        ],
+        "hardness": 500000
     },
     "Crimson Hyphae": {
         "drops": [
             "Blood"
         ],
-        "rbp": 4
+        "rbp": 4,
+        "hardness": 500
     },
     "Crimson Nylium": {
         "drops": [
             "Crimson Sod",
             "Refined Ruby"
-        ]
+        ],
+        "hardness": 500
     },
     "Crying Obsidian": {
         "drops": [
@@ -1864,12 +1894,14 @@ BLOCKS = {
             "Obsidian"
         ],
         "dew": "Bedrock",
-        "rbp": 5
+        "rbp": 5,
+        "hardness": 3000
     },
     "Dark Prismarine": {
         "drops": [
             "Orichalcum Scrap"
-        ]
+        ],
+        #"hardness": 2000
     },
     "Dead Brain Coral Block": {
         "drops": [
@@ -1878,7 +1910,8 @@ BLOCKS = {
             ("Water Amethyst", 400),
             "Cobblestone Chunk"
         ],
-        "dew": "Dead Bubble Coral Block"
+        "dew": "Dead Bubble Coral Block",
+        "hardness": 1250
     },
     "Dead Horn Coral Block": {
         "drops": [
@@ -1886,20 +1919,23 @@ BLOCKS = {
             "Impure Lead",
             "Lead Ingot"
         ],
-        "dew": "Polished Blackstone"
+        "dew": "Polished Blackstone",
+        "hardness": 450
     },
     "Diamond Ore": {
         "drops": [
             "Orichalcum Chips",
             "Orichalcum Scrap",
             "Orichalcum Shards"
-        ]
+        ],
+        "hardness": 1250
     },
     "Diorite": {
         "drops": [
             "Aluminium Ore",
             "Impure Aluminium"
-        ]
+        ],
+        "hardness": 8000
     },
     "Dirt": {
         "drops": [
@@ -1915,7 +1951,7 @@ BLOCKS = {
             "Amogus"
         ],
         "dew": "Rooted Dirt",
-        "hardness": 15,
+        "hardness": 10,
         "rbp": 0,
         "layers": [Layer.Dirt]
     },
@@ -1927,7 +1963,8 @@ BLOCKS = {
     "Emerald Ore": {
         "drops": [
             "Uranium Ore"
-        ]
+        ],
+        "hardness": 8000
     },
     "End Stone": {
         "drops": [
@@ -1936,7 +1973,8 @@ BLOCKS = {
             "Topaz"
         ],
         "dew": "End Stone Bricks",
-        "rbp": 6
+        "rbp": 6,
+        "hardness": 5000
     },
     "End Stone Bricks": {
         "drops": [
@@ -1945,12 +1983,14 @@ BLOCKS = {
             "Topaz"
         ],
         "dew": "Yellow Stained Glass",
-        "rbp": 6
+        "rbp": 6,
+        #"hardness": 27000
     },
     "Fire": {
         "drops": [
             "Stone"
-        ]
+        ],
+        "hardness": 0
     },
     "Flowering Azalea Leaves": {
         "drops": [
@@ -1967,14 +2007,16 @@ BLOCKS = {
             Layer.Blackstone,
             Layer.Brimstone
         ],
-        "rbp": 3
+        "rbp": 3,
+        "hardness": 800
     },
     "Gold Ore": {
         "drops": [
             "Gold Ore"
         ],
         "dew": "Block of Gold",
-        "layers": [Layer.Stone]
+        "layers": [Layer.Stone],
+        "hardness": 250
     },
     "Grass Block": {
         "drops": [
@@ -1986,7 +2028,8 @@ BLOCKS = {
             ("Potato", 1500)
         ],
         "dew": "Moss Block",
-        "rbp": 0
+        "rbp": 0,
+        "hardness": 10
     },
     "Gravel": {
         "drops": [
@@ -1995,18 +2038,21 @@ BLOCKS = {
             "Rough Flint",
             "Aquatic Pebble"
         ],
-        "dew": "Dead Brain Coral Block"
+        "dew": "Dead Brain Coral Block",
+        "hardness": 400
     },
     "Gray Stained Glass": {
         "drops": [
             "Adamantium Scraps"
-        ]
+        ],
+        "hardness": 30000
     },
     "Horn Coral Block": {
         "drops": [
             ("Omega Shard", 1)
         ],
-        "rbp": 8
+        "rbp": 8,
+        #"hardness": 250000
     },
     "Ice": {
         "drops": [
@@ -2014,7 +2060,8 @@ BLOCKS = {
             "Ice Shard",
             ("Ice", 620)
         ],
-        "dew": "Packed Ice"
+        "dew": "Packed Ice",
+        "hardness": 750
     },
     "Iron Ore": {
         "drops": [
@@ -2026,31 +2073,36 @@ BLOCKS = {
             Layer.Stone,
             Layer.Blackstone
         ],
-        "rbp": 2
+        "rbp": 2,
+        "hardness": 175
     },
     "Lapis Lazuli Ore": {
         "drops": [
             "Cobalt Ore"
-        ]
+        ],
+        "hardness": 40000
     },
     "Light Blue Wool": {
         "drops": [
             "Orichalcum Lump",
             "Impure Orichalcum",
             "Orichalcum"
-        ]
+        ],
+        "hardness": 10000
     },
     "Light Gray Glazed Terracotta": {
         "drops": [
             "Plutonium Ore"
-        ]
+        ],
+        "hardness": 25000
     },
     "Magma Block": {
         "drops": [
             "Magma Stone"
         ],
         "dew": "Fire",
-        "rbp": 5
+        "rbp": 5,
+        "hardness": 8000
     },
     "Moss Block": {
         "drops": [
@@ -2060,13 +2112,15 @@ BLOCKS = {
             "Diamond Grass",
             ("Iridite Sod", 160)
         ],
-        "rbp": 0
+        "rbp": 0,
+        "hardness": 50
     },
     "Mycelium": {
         "drops": [
             "Meteorite"
         ],
-        "dew": "Brown Mushroom Block"
+        "dew": "Brown Mushroom Block",
+        "hardness": 4000
     },
     "Nether Gold Ore": {
         "drops": [
@@ -2074,7 +2128,8 @@ BLOCKS = {
             "Gold Ingot",
             "Sulfur"
         ],
-        "dew": "Yellow Wool"
+        "dew": "Yellow Wool",
+        "hardness": 800
     },
     "Nether Quartz Ore": {
         "drops": [
@@ -2082,7 +2137,8 @@ BLOCKS = {
             "Iron Ore",
             "Iron Ingot"
         ],
-        "dew": "White Wool"
+        "dew": "White Wool",
+        "hardness": 900
     },
     "Netherrack": {
         "drops": [
@@ -2095,13 +2151,15 @@ BLOCKS = {
             "Quartz"
         ],
         "dew": "Nether Quartz Ore",
-        "layers": [Layer.Brimstone]
+        "layers": [Layer.Brimstone],
+        "hardness": 500
     },
     "Oak Wood": {
         "drops": [
             ("Wood", 1)
         ],
-        "layers": [Layer.Dirt]
+        "layers": [Layer.Dirt],
+        "hardness": 500
     },
     "Obsidian": {
         "drops": [
@@ -2110,7 +2168,8 @@ BLOCKS = {
             ("Onyx", 200)
         ],
         "dew": "Bedrock",
-        "rbp": 5
+        "rbp": 5,
+        "hardness": 2000
     },
     "Orange Glazed Terracotta": {
         "drops": [
@@ -2118,13 +2177,15 @@ BLOCKS = {
             "Impure Copper",
             ("Copper Ingot", 400)
         ],
-        "dew": "Polished Granite"
+        "dew": "Polished Granite",
+        "hardness": 3200
     },
     "Orange Terracotta": {
         "drops": [
             "Palladium Ore",
             "Impure Palladium"
-        ]
+        ],
+        "hardness": 8000
     },
     "Packed Ice": {
         "drops": [
@@ -2132,13 +2193,15 @@ BLOCKS = {
             ("Ice", 630)
         ],
         "dew": "Blue Ice",
-        "layers": [Layer.Ice]
+        "layers": [Layer.Ice],
+        "hardness": 5000
     },
     "Pearlescent Froglight": {
         "drops": [
             ("Sage Shard", 50, 49),
             ("Sage Crystal", 50)
-        ]
+        ],
+        "hardness": 7500
     },
     "Polished Andesite": {
         "drops": [
@@ -2151,7 +2214,8 @@ BLOCKS = {
             Layer.Stone,
             Layer.Blackstone
         ],
-        "rbp": 3
+        "rbp": 3,
+        "hardness": 750
     },
     "Polished Basalt": {
         "drops": [
@@ -2161,7 +2225,8 @@ BLOCKS = {
             "Salt",
             "Boron Nitride"
         ],
-        "rbp": 5
+        "rbp": 5,
+        "hardness": 20000
     },
     "Polished Blackstone": {
         "drops": [
@@ -2169,14 +2234,16 @@ BLOCKS = {
             "Lead Ingot"
         ],
         "dew": "Chiseled Polished Blackstone",
-        "rbp": 6
+        "rbp": 6,
+        "hardness": 17500
     },
     "Polished Blackstone Bricks": {
         "drops": [
             "Rockite Chunk",
             "Processed Rockite",
             "Compressed Rockite"
-        ]
+        ],
+        "hardness": 10000
     },
     "Polished Granite": {
         "drops": [
@@ -2184,13 +2251,15 @@ BLOCKS = {
             "Copper Ingot"
         ],
         "dew": "Block of Copper",
-        "rbp": 6
+        "rbp": 6,
+        "hardness": 10000
     },
     "Prismarine": {
         "drops": [
             "Orichalcum Shards",
             "Orichalcum Ore"
-        ]
+        ],
+        "hardness": 4000
     },
     "Prismarine Bricks": {
         "drops": [
@@ -2198,14 +2267,16 @@ BLOCKS = {
             "Orichalcum Piece",
             "Orichalcum Lump",
             "Orichalcum Ore"
-        ]
+        ],
+        "hardness": 6250
     },
     "Pumpkin": {
         "drops": [
             "Pumpkin",
             "Pumpkin Seeds",
             ("Exquisite Pumpkin", 100)
-        ]
+        ],
+        "hardness": 250
     },
     "Red Glazed Terracotta": {
         "drops": [
@@ -2218,7 +2289,12 @@ BLOCKS = {
             ("Red Herring", 2000)
         ],
         "dew": "Block of Raw Copper",
-        "rbp": 0
+        "rbp": 0,
+        #"hardness": 112
+    },
+    "Red Sandstone": {
+        "drops": None,
+        "hardness": 2200
     },
     "Redstone Ore": {
         "drops": [
@@ -2227,7 +2303,8 @@ BLOCKS = {
             "Ruby"
         ],
         "layers": [Layer.Stone],
-        "rbp": 4
+        "rbp": 4,
+        "hardness": 450
     },
     "Rooted Dirt": {
         "drops": [
@@ -2240,7 +2317,8 @@ BLOCKS = {
             "Elusive Fossil",
             "Iridite Sod",
             "Huge Compressed Stone"
-        ]
+        ],
+        "hardness": 40
     },
     "Sand": {
         "drops": [
@@ -2263,7 +2341,8 @@ BLOCKS = {
             ("Kawaii Amogus", 2000000)
         ],
         "dew": "Red Sand",
-        "rbp": 0
+        "rbp": 0,
+        "hardness": 75
     },
     "Sandstone": {
         "drops": [
@@ -2273,14 +2352,16 @@ BLOCKS = {
             ("Fossil", 700),
             "Roots"
         ],
-        "dew": "Red Sandstone"
+        "dew": "Red Sandstone",
+        "hardness": 750
     },
     "Sea Lantern": {
         "drops": [
             "Celestial Ingot",
             "Starite"
         ],
-        "dew": "Tinted Glass"
+        "dew": "Tinted Glass",
+        "hardness": 4000
     },
     "Smooth Quartz Block": {
         "drops": None,
@@ -2297,7 +2378,8 @@ BLOCKS = {
             "Hypercompact Stone",
             "Synthetic Diamond"
         ],
-        "dew": "Chiseled Stone Bricks"
+        "dew": "Chiseled Stone Bricks",
+        "hardness": 25000
     },
     "Snow": {
         "drops": [
@@ -2309,7 +2391,8 @@ BLOCKS = {
             "Black Present",
             ("Gold Present", 45000),
             ("Arctic Amogus", 1000000)
-        ]
+        ],
+        "hardness": 15
     },
     "Snow Block": {
         "drops": [
@@ -2322,7 +2405,8 @@ BLOCKS = {
             ("Gold Present", 45000),
             ("Arctic Amogus", 1000000)
         ],
-        "dew": "Packed Ice"
+        "dew": "Packed Ice",
+        "hardness": 15
     },
     "Soul Soil": {
         "drops": [
@@ -2330,12 +2414,14 @@ BLOCKS = {
             "Soul Fragments"
         ],
         "dew": "Soul Sand",
-        "rbp": 0
+        "rbp": 0,
+        "hardness": 250
     },
     "Spruce Wood": {
         "drops": [
             "Wood Ingot"
-        ]
+        ],
+        "hardness": 5000
     },
     "Stone": {
         "drops": [
@@ -2345,29 +2431,34 @@ BLOCKS = {
         ],
         "dew": "Polished Andesite",
         "layers": [Layer.Stone],
-        "rbp": 1
+        "rbp": 1,
+        "hardness": 60
     },
     "Stripped Oak Wood": {
         "drops": [
             "Dough"
-        ]
+        ],
+        "hardness": 12500
     },
     "Terracotta": {
         "drops": [
             "Clay",
             "Stone Chunk",
             "Palladium Ore"
-        ]
+        ],
+        "hardness": 3000
     },
     "Tinted Glass": {
         "drops": [
             "Astral Ore"
-        ]
+        ],
+        "hardness": 5000
     },
     "Tube Coral Block": {
         "drops": [
             "Oxycoral"
-        ]
+        ],
+        "hardness": 250
     },
     "Warped Hyphae": {
         "drops": [
@@ -2381,29 +2472,34 @@ BLOCKS = {
             "Soul Fragments"
         ],
         "dew": "Crimson Nylium",
-        "rbp": 4
+        "rbp": 4,
+        "hardness": 500
     },
     "White Concrete Powder": {
         "drops": [
             "Cake Frosting"
-        ]
+        ],
+        "hardness": 25000
     },
     "White Wool": {
         "drops": [
             "Potassium",
             "Silica",
             "Magnesium Ingot"
-        ]
+        ],
+        "hardness": 250
     },
     "Yellow Stained Glass": {
         "drops": [
             "Topaz"
-        ]
+        ],
+        "hardness": 50000
     },
     "Yellow Wool": {
         "drops": [
             "Sulfuric Acid"
-        ]
+        ],
+        "hardness": 500
     }
 }
 
