@@ -2110,7 +2110,7 @@ BLOCKS = {
             "Plant Fibre",
             "Clover",
             ("Clover Bag", 400),
-            "Diamond Grass",
+            ("Diamond Grass", 400),
             ("Iridite Sod", 160)
         ],
         "rbp": 0,
