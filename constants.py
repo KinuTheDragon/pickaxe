@@ -2087,7 +2087,7 @@ BLOCKS = {
         "drops": [
             "Orichalcum Lump",
             "Impure Orichalcum",
-            "Orichalcum"
+            ("Orichalcum", 400)
         ],
         "hardness": 10000
     },
