@@ -4057,6 +4057,7 @@ ITEMS = {
     },
     "Chocolate Bar": {
         "forge": "Luxury Chocolate",
+        "sell": 30000,
         "museum": (6, 3, 9),
         "rarity": Rarity.Epic,
         "item": {
@@ -5084,6 +5085,7 @@ ITEMS = {
     },
     "Bread": {
         "forge": "Baguette",
+        "sell": 25000,
         "museum": (6, 3, 1),
         "rarity": Rarity.Rare,
         "item": {
