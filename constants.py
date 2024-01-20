@@ -1918,7 +1918,7 @@ BLOCKS = {
         "drops": [
             "Lead Ore",
             "Impure Lead",
-            "Lead Ingot"
+            ("Lead Ingot", 400)
         ],
         "dew": "Polished Blackstone",
         "hardness": 450
@@ -3828,6 +3828,7 @@ ITEMS = {
         "forge": "Sugar",
         "museum": (6, 3, 4),
         "rarity": Rarity.Rare,
+        "sell": 2000,
         "item": {
             "id": "player_head",
             "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzkyYjJiMDQxNGNlZTM2YjI0ZDgzZjVjZmEwNzFkODYzODUyNzI0OWMyZGNkZGZhNTgwYmUzN2UwN2M2MGUwOCJ9fX0=",
@@ -3835,6 +3836,7 @@ ITEMS = {
         }
     },
     "Sugar": {
+        "sell": 10000,
         "museum": (6, 3, 5),
         "rarity": Rarity.Rare,
         "item": {
@@ -4034,6 +4036,7 @@ ITEMS = {
 
     "Chocolate Chips": {
         "forge": "Chocolate",
+        "sell": 1200,
         "museum": (6, 3, 7),
         "rarity": Rarity.Rare,
         "item": {
@@ -4043,6 +4046,7 @@ ITEMS = {
     },
     "Chocolate": {
         "forge": "Chocolate Bar",
+        "sell": 6000,
         "museum": (6, 3, 8),
         "rarity": Rarity.Rare,
         "item": {
@@ -5286,6 +5290,27 @@ ITEMS = {
             "cmd": 1666
         }
     },
+
+    # "Extreme Insight Apparatus": {
+    #     "craft": {
+    #         "tier": CraftTier.Tech?,
+    #         "recipe": [
+    #             ["Impure Palladium", "Lead Plate", "Impure Palladium"],
+    #             ["Cobalt", "Extreme Insight Tech Helmet", "Cobalt"],
+    #             ["Impure Palladium", "Aluminium Ingot", "Impure Palladium"]
+    #         ]
+    #     },
+    #     "accessory": {
+    #         "use": "Unlocks tier 3 tech recipes.",
+    #         "slots": 0
+    #     },
+    #     "rarity": Rarity.Legendary,
+    #     "item": {
+    #         "id": "player_head",
+    #         "value": ?,
+    #         "cmd": ?
+    #     }
+    # },
 
     "Ferrosilicon": {
         "craft": {
