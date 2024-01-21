@@ -114,7 +114,7 @@ MEDALS = [
             "forge recipes by around 10%",
             "per level (multiplicative)"
         ],
-        "costs": list(range(1, 31))
+        "costs": list(range(1, 51))
     }, {
         "name": "Big Smart",
         "icon": "big-smart.png",
@@ -5731,6 +5731,15 @@ ITEMS = {
         "obtain": [
             "The @waluigi shop offers this for 20 Waluigi Tokens."
         ],
+        "use": [
+            "Mining blocks in the dirt layer after consuming this has a chance of dropping [Lush Candy].",
+            "Mining blocks in the stone/coal layer after consuming this has a chance of dropping [Rock Candy].",
+            "Mining blocks in the upper mesa mine after consuming this has a chance of dropping [Glowing Candy].",
+            "Mining blocks in the end/void layer after consuming this has a chance of dropping [Liquorice Candy].",
+            "Mining blocks in the lower mesa layer after consuming this has a chance of dropping [Caramel Candy].",
+            "Mining blocks in the nether layer after consuming this has a chance of dropping [Spicy Candy].",
+            "Mining blocks in the water mine after consuming this has a chance of dropping [Wrapped Candy]."
+        ],
         "museum": (8, 4, 2),
         "rarity": Rarity.Legendary,
         "item": {
@@ -6601,6 +6610,9 @@ ITEMS = {
     },
 
     "Liquorice Candy": {
+        "obtain": [
+            "Mining blocks in the end/void layer after consuming [Grapes of Jonathan] has a chance of dropping this."
+        ],
         "museum": (8, 3, 6),
         "rarity": Rarity.Epic,
         "item": {
