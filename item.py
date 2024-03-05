@@ -211,7 +211,7 @@ class Item:
             "accessory_slots": self.accessory_slots,
             "module_effect": self.module_effect,
             "module_slots": self.module_slots,
-            "potion_effect": self.potion_effect.value,
+            "potion_effect": self.potion_effect.value if self.potion_effect else None,
             "potion_level": self.potion_level,
             "potion_duration": self.potion_duration,
             "modular_armor_slots": self.modular_armor_slots,
